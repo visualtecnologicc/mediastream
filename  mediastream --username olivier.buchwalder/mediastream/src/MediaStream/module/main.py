@@ -1033,7 +1033,7 @@ class UserConfig:
         ####################
         #init defautl optional value
         self.podcastDownloadPath    = MEDIA_PODCAST_DIR
-        self.podcastDownload        = True
+        self.podcastDownload        = PODCAST_DOWNLOAD
         self.logvalue               = LOG_VALUE
         self.mediaUpdateURL         = MEDIA_UPDATE_URL
 
@@ -1075,7 +1075,10 @@ def readScriptConfig():
         
         podcastNode = elemConfig.find('podcast')
         podcastDownload = podcastNode.get('download')
-        ispodcastDownload = podcastDownload != None and podcastDownload.lower() == "true"
+        
+        ispodcastDownload = PODCAST_DOWNLOAD
+        if podcastDownload != None:
+            ispodcastDownload = podcastDownload.lower() == "true"
         
         podcastDownloadPath = podcastNode.get('localpath')
 

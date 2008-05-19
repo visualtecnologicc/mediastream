@@ -25,6 +25,8 @@ LOG_VALUE = 3
 ##############################################
 # Script Properties
 
+PODCAST_DOWNLOAD     = True
+
 MEDIA_CONF           = 'media.xml'
 MEDIA_TMP_CONF       = '_tempmedia.xml'
 
