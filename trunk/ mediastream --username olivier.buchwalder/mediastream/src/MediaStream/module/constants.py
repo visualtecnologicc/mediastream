@@ -13,7 +13,7 @@ MEDIA_UPDATE_URL       = 'http://olivier.euromobile.ch/mediastream/media.xml'
 
 ##############################################
 # The current version
-VERSION                = '0.84'
+VERSION                = '0.85'
 
 ##############################################
 # 0 no print, no log

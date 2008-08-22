@@ -8,6 +8,10 @@
 
     << Thanks to alexsolex, nuka1195 for help and to Kochka, JaHeLLthe the authors of cdanslair.py >>
 
+    Version 0.85
+    - fix a problem with the storing of the configuration of podcast properties.
+    - fix tsr channels rm -> flv
+    
     Version 0.82
     - updated witv.com base
     - fixed the images positionning
@@ -194,41 +198,44 @@ class ChannelWindow(xbmcgui.Window):
                             # the selected pod info
                             selPodItem = podcastInfo.itemsInfo[eltIdx]
                             
+                            # if exist and finish always play
+                            if os.path.exists(selPodItem.fileLocation) and selPodItem.flagfinish:
+                                urlemission = selPodItem.fileLocation   
                             #---------------
                             # download activated and not a local file
-                            if config.podcastDownload and selPodItem.url != None and selPodItem.url != '':
+                            elif config.podcastDownload and selPodItem.url != None and selPodItem.url != '':
                                 
                                 # try to create dir or pass if exist
                                 if not createDirectory(podcastInfo.targetDirectory):
                                     raise MyCancel('Exit')
                                 
                                 # if exist and flag finished is true, use the local path
-                                if os.path.exists(selPodItem.fileLocation) and selPodItem.flagfinish:
-                                     urlemission = selPodItem.fileLocation   
+                                #if False and os.path.exists(selPodItem.fileLocation) and selPodItem.flagfinish:
+                                #     urlemission = selPodItem.fileLocation   
                                                                                     
                                 # file doesn't exist, or not fully downloaded, launch download or continue
+                                #else:
+                                # not fully downloaded
+                                dlRet =  downloadFile(selPodItem.url, selPodItem.fileLocation, showDialog=False)
+                                
+                                ### TODO get a possible reditection..???
+                                
+                                if dlRet == -1 or dlRet == -2:
+                                    # Can only stream this file, don't add this entry in the xml
+                                    dialog3 = xbmcgui.Dialog()
+                                    dialog3.ok('Information', 'The element cannot be downloaded','Will try to stream URL')            
+                                    urlemission = selPodItem.url
+                                    # error occur, cannot download, (mms:// or ..)
                                 else:
-                                    # not fully downloaded
-                                    dlRet =  downloadFile(selPodItem.url, selPodItem.fileLocation, showDialog=False)
-                                    
-                                    ### TODO get a possible reditection..???
-                                    
-                                    if dlRet == -1 or dlRet == -2:
-                                        # Can only stream this file, don't add this entry in the xml
-                                        dialog3 = xbmcgui.Dialog()
-                                        dialog3.ok('Information', 'The element cannot be downloaded','Will try to stream URL')            
-                                        urlemission = selPodItem.url
-                                        # error occur, cannot download, (mms:// or ..)
-                                    else:
-                                        isfinished = dlRet == 1
-                                        urlemission = selPodItem.fileLocation
-                                        # add the entry to the index
-                                        appendItem2Local(podcastInfo, selPodItem, isfinished)
-                                            
-                                        # download canceled by user
-                                        if dlRet == 0:
-                                            raise MyCancel('Exit')                                         
-                            
+                                    isfinished = dlRet == 1
+                                    urlemission = selPodItem.fileLocation
+                                    # add the entry to the index
+                                    appendItem2Local(podcastInfo, selPodItem, isfinished)
+                                        
+                                    # download canceled by user
+                                    if dlRet == 0:
+                                        raise MyCancel('Exit')                                         
+                        
                             #---------------
                             # url doesn't exist -> local file
                             elif selPodItem.url == None or selPodItem.url == '':  ### isLocal ?!
