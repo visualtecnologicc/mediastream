@@ -44,3 +44,50 @@
  $PR_OPTIONi	: optional value selected by the user from the program 'prooptions' value
 
 }}}
+
+= Example of media.xml file =
+
+{{{
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+<media version="0.85b" author="oli_AT_euromobile.ch" date="18.08.2008" >
+	
+	<category id="ch" imagelink="dp\dp_suisse.jpg">Switzerland</category>
+
+	<channel baseurl="http://www.tsr.ch/xobix_media/tsr" imagelink="tsr\tsr.jpg" category="ch">
+
+		<name>TSR</name>
+		<description>Télévision Suisse Romande</description>
+				
+		<option>
+			<descr>Archive Quality</descr>
+			<item value="501k">High 16/9</item>
+		</option>
+
+		<program ispodcast="true" 
+			url="http://xml.tsr.ch/xml/index.xml?siteSect=674000&amp;programId=$PR_OPTION1">
+			
+			<name>TSR (Podcast)</name>
+			<prooption>
+				<descr>Emissions</descr>
+				<item value="55">Temps Présent</item>
+				<item value="90">Nouvo</item>
+				<item value="235939">Nouvo (Minute)</item>
+			</prooption>
+		</program>
+
+		<program imagelink="tsr\info.jpg"
+			url="$URL/$PR_OPTION1/$YEAR4/$PR_OPTION1_$MONTH$DAY$YEAR4-$CH_OPTION1.flv">
+			<name>Le Journal</name>
+			<diffusion id="7"/>
+			<prooption>
+				<descr>Edition</descr>
+				<item value="tj">TJ 19h30</item>
+				<item value="rg">Journal des Régions (19h)</item>
+				<!-- item value="tj_midi">Journal de 12h45</item-->
+			</prooption>
+		</program>
+
+	</channel>
+</media>
+}}}
