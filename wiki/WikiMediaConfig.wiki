@@ -1,11 +1,6 @@
 #summary Media Configuration (media.xml)
 
-= Introduction =
-
-List of all configuration properties
-
-
-= Details =
+= Configuration Properties =
 {{{
  ----------------------------------------------------
  Channel parameters
