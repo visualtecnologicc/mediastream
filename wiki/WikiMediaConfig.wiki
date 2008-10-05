@@ -1,0 +1,51 @@
+#summary Media Configuration (media.xml)
+
+= Introduction =
+
+List of all configuration properties
+
+
+= Details =
+{{{
+ ----------------------------------------------------
+ Channel parameters
+ ----------------------------------------------------
+ name			: the string name of the channel (mandatory)
+ baseurl		: base url (string), accessible in a program URL value with '$URL' (and '$URL2' when come from the options?)
+ options   		: a list of option, defined using a dico, selected value -> '$CH_OPTIONi', i = 1->n
+ desc			: the description string
+ imagelink		: the image relative path in from dir 'images'
+ category		: the category id
+ 
+ ----------------------------------------------------
+ Program parameters
+ ----------------------------------------------------
+ name			: the string name of the channel (mandatory)
+ url			: url (string) of the program (can use string replacement keys, as $MONTH, $URL, ..)
+ prooption	    : list of option, defined using a dico, selected value -> '$PR_OPTIONi', i = 1->n
+ desc			: the description string
+ imagelink		: the image relative path in from dir 'images'
+ diffusion		: the diffusion time (string list, by default  '-1'), can be cumulated e.g. '0','2' -> monday and wednesday
+ 	'-1'		: live (no dated archived)
+ 	'0'->'6'	: hebdo, a specific day, monday:'0' -> sunday:'6' 
+ 	'7'			: all days 
+ 	'8'			: monday -> friday
+ 	'9'			: saturday -> sunday
+ avail			: Availaility of the program, 
+					start -> the older possible date	
+					nbdays -> the maximum of days where a program is available 
+					nbdiff -> the maximum available diffusions 
+ ispodcast		: boolean flag
+ filemode="title" : for podcast, to force the file name to download to be built with the title
+ 
+ ----------------------------------------------------
+ Replacement keys (can be used in baseURL and URL)
+ ----------------------------------------------------
+ $DAY			: day indentifier 00-31
+ $MONTH			: month identifier 00-12
+ $YEAR2			: year identifier in 2 decimals, e.g. 07
+ $YEAR4			: year identifier in 4 decimals, e.g. 2007
+ $CH_OPTIONi	: optional value selected by the user from the channel 'options' value
+ $PR_OPTIONi	: optional value selected by the user from the program 'prooptions' value
+
+}}}
