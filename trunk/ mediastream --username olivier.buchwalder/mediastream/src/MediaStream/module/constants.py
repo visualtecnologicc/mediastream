@@ -8,12 +8,12 @@ import os
 
 # The directory where are saved the media file
 MEDIA_PODCAST_DIR      = 'F:\\media\\Podcasts\\'
-MEDIA_PODCAST_DIR_ALT  = 'E:\\media\\Podcasts\\'
+MEDIA_PODCAST_DIR_ALT  = 'Podcasts\\'
 MEDIA_UPDATE_URL       = 'http://olivier.euromobile.ch/mediastream/media.xml'
 
 ##############################################
 # The current version
-VERSION                = '0.85'
+VERSION                = '0.85c'
 
 ##############################################
 # 0 no print, no log
@@ -30,7 +30,7 @@ PODCAST_DOWNLOAD     = True
 MEDIA_CONF           = 'media.xml'
 MEDIA_TMP_CONF       = '_tempmedia.xml'
 
-HOME                 = os.getcwd()[:-1]+'\\'
+HOME                 = os.getcwd().replace(';','') + os.sep
 
 CONFIG_DIR_ROOT      = 'P:\\script_data\\'
 CONFIG_DIR_MEDIA     = 'mediastream\\'

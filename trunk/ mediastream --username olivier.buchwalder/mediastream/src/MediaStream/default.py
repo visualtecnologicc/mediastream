@@ -8,6 +8,10 @@
 
     << Thanks to alexsolex, nuka1195 for help and to Kochka, JaHeLLthe the authors of cdanslair.py >>
 
+
+    Version 0.85b
+    - fix a path problem with XBMC beta multi platform (Thanks to Temhil)
+
     Version 0.85
     - fix a problem with the storing of the configuration of podcast properties.
     - fix tsr channels rm -> flv

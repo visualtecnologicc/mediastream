@@ -1,6 +1,6 @@
 #####################################################
 #         Media Stream script for XBMC by Oliv      #
-#                Version 0.84                       #
+#                Version 0.85                       #
 #              oli@euromobile.ch                    #
 ##################################################### 
 
@@ -18,6 +18,13 @@ please read the configuration tips below, and enter your settings into the file 
 
 ##################################################### 
  History:
+
+    Version 0.85b
+    - fix a path problem with XBMC beta multi platform (Thanks to Temhil)
+
+    Version 0.85
+    - fix a problem with the storing of the configuration of podcast properties.
+    - fix tsr channels rm -> flv
 
     Version 0.84
     - fix a bug on new beta XBMC
