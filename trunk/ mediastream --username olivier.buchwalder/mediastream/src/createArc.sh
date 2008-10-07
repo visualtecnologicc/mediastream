@@ -1,0 +1,1 @@
+zip -r MediaStream.zip MediaStream/ -x@exclude.lst
