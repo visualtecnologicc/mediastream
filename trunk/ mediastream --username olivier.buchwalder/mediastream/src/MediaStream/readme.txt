@@ -1,20 +1,23 @@
 #####################################################
 #         Media Stream script for XBMC by Oliv      #
-#                Version 0.85                       #
-#              oli@euromobile.ch                    #
+#                Version 0.85c                      #
+#              oli AT euromobile.ch                 #
 ##################################################### 
 
 Media Stream is an XBMC script for streaming / downloading audio, videos and RSS podcasts.
-The following topic can be used for more information: http://gueux-forum.net/index.php?showtopic=146820
+The following topic can be used for more information:
 
-    !!! PLEASE HELP ME TO ADD CHANNELS !!!! 
+http://code.google.com/p/mediastream/ 
+http://gueux-forum.net/index.php?showtopic=146820
+http://passion-xbmc.org/scripts/mediastream
  
 You can send me Radio/TV/Podcasts accessing information and I will add them to the script, 
 please read the configuration tips below, and enter your settings into the file media.xml
 
 ##################################################### 
  Usage:
-	- For Accessing to the preference window, press Y in the root window
+	- For Accessing to the preference window, press Y in the root window or "i" in non-XBOX platforms
+	- You can also edit modules/constants.py for choosing your configuration
 
 ##################################################### 
  History:
