@@ -186,7 +186,7 @@ class ChannelWindow(xbmcgui.Window):
                     ### podcast empty 
                     if podcastInfo == None :
                         dialog2 = xbmcgui.Dialog()
-                        dialog2.ok('Information', titlePodcast + ' is empty...')
+                        dialog2.ok('Information', program.podcast + ' is empty...')
                     
                     ##########################################
                     # podcastInfo valid
@@ -413,8 +413,8 @@ class PrefsWindow(xbmcgui.Window):
                 self.config.podcastDownload = self.checkDownloadPodcast.getSelected()
             
             elif control == self.aboutButton:
-                 dialog = xbmcgui.Dialog()
-                 dialog.ok('About', 'Media Stream v. %s'%(VERSION),'Contact me at oli@euromobile.ch')
+                dialog = xbmcgui.Dialog()
+                dialog.ok('About', 'Media Stream v. %s'%(VERSION),'Contact me at oli@euromobile.ch')
         
         except Exception, ex:                        
             dialog2 = xbmcgui.Dialog()

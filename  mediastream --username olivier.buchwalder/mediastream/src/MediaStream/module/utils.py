@@ -100,14 +100,14 @@ def downloadFile(URL, filelocalPath, minSize = 50000, showDialog=True):
         # WARNING when the file is not downloadedable, asx, ra
         remainSize = -1
         try:
-           remainSize = int(webPage.headers['Content-Length']) 
+            remainSize = int(webPage.headers['Content-Length']) 
            
-           if minSize > 0 and existSize == 0 and remainSize < minSize:
-               # consider as a stream
-               progress1.close()
-               webPage.close()
-               #outputFile.close()
-               return -1
+            if minSize > 0 and existSize == 0 and remainSize < minSize:
+                # consider as a stream
+                progress1.close()
+                webPage.close()
+                #outputFile.close()
+                return -1
         except Exception, ex:
             # cannot find a length to download
             progress1.close()
@@ -145,8 +145,8 @@ def downloadFile(URL, filelocalPath, minSize = 50000, showDialog=True):
         percent = 0
         # set the progress bar
         if existSize > 0:
-           percent = (100 * existSize) / (remainSize + existSize)
-           progress.update(percent)
+            percent = (100 * existSize) / (remainSize + existSize)
+            progress.update(percent)
             
         numBytes = 0
         while 1:
@@ -335,62 +335,3 @@ def cleanString(str):
     """
     return str.replace('/','_').replace("\000","_").replace("\\","_").replace(":","_").replace("*","_").replace("?","_").replace("\"","_").replace("<","_").replace(">","_").replace("|","_").replace("\'","_").replace("-","_").replace("!","_").replace("&","_").replace("%","_").replace("/","_").replace("+","_").replace(",","_").replace(";","_").replace("=","_").replace("(","_").replace(")","_").replace("\`","_").replace("\^","_")
 
-
-
-
-
-### THESE methods have been taken from another script...., but are not used currently!!!
-def checkU(text):
-        if text is not None and type(text) != UnicodeType:
-            raise Error, (u"text \"%s\" is not a unicode string" %
-                                         text)
-# Raise an exception if input isn't a binary string
-def checkB(text):
-    if text is not None and type(text) != StringType:
-        raise Error, (u"text \"%s\" is not a binary string" %
-                                     text)
-
-# Takes in a unicode string representation of a filename and creates a
-# valid byte representation of it attempting to preserve extensions
-#
-# This is not guaranteed to give the same results every time it is run,
-# not is it garanteed to reverse the results of filenameToUnicode
-def unicodeToFilename(filename, path = None):
-    def shortenFilename(filename):
-        checkU(filename)
-        # Find the first part and the last part
-        pieces = filename.split(u".")
-        lastpart = pieces[-1]
-        if len(pieces) > 1:
-            firstpart = u".".join(pieces[:-1])
-        else:
-            firstpart = u""
-        # If there's a first part, use that, otherwise shorten what we have
-        if len(firstpart) > 0:
-            return u"%s.%s" % (firstpart[:-1],lastpart)
-        else:
-            return filename[:-1]
-
-    checkU(filename)
-    if path:
-        checkB(path)
-    else:
-        path = os.getcwd()
-
-    # Keep this a little shorter than the max length, so we can run
-    # nextFilename
-    MAX_LEN = os.statvfs(path)[statvfs.F_NAMEMAX]-5
-   
-    filename.replace('/','_').replace("\000","_").replace("\\","_").replace(":","_").replace("*","_").replace("?","_").replace("\"","_").replace("<","_").replace(">","_").replace("|","_")
-    try:
-        newFilename = filename.encode(locale.getpreferredencoding())
-    except:
-        newFilename = filename.encode('ascii','replace')
-    while len(newFilename) > MAX_LEN:
-        filename = shortenFilename(filename)
-        try:
-            newFilename = filename.encode(locale.getpreferredencoding())
-        except:
-            newFilename = filename.encode('ascii','replace')
-
-    return newFilename
