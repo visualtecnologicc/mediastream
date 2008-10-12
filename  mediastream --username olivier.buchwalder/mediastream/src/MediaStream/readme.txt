@@ -1,6 +1,6 @@
 #####################################################
 #         Media Stream script for XBMC by Oliv      #
-#                Version 0.85c                      #
+#                Version 0.86                       #
 #              oli AT euromobile.ch                 #
 ##################################################### 
 
@@ -21,6 +21,9 @@ please read the configuration tips below, and enter your settings into the file 
 
 ##################################################### 
  History:
+
+    Version 0.86
+    - fix the config saving
 
     Version 0.85b
     - fix a path problem with XBMC beta multi platform (Thanks to Temhil)

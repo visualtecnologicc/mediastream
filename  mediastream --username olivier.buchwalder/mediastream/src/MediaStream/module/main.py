@@ -880,26 +880,26 @@ def appendLocalMedia(podcastInfo, podcastLocalInfo) :
     # search in the folder if already downloaded file are available, and not refferenced in the xml
     if  os.path.exists(targetDirectory) and os.path.isdir ( targetDirectory ):
         for itemLocal in podcastLocalInfo.itemsInfo:
-           try:
-               # TODO control that podcastInfo.itemFilenames when already exist ... no automatic name !!!
-               if podcastInfo.itemFilenames.__contains__(itemLocal.filename):
-                   continue
+            try:
+                # TODO control that podcastInfo.itemFilenames when already exist ... no automatic name !!!
+                if podcastInfo.itemFilenames.__contains__(itemLocal.filename):
+                    continue
                    
-               localFileLocation = targetDirectory + '\\' + itemLocal.filename
-               if os.path.exists(localFileLocation) == False :
-                   ## ??????? remove it ?
-                   continue
+                localFileLocation = targetDirectory + '\\' + itemLocal.filename
+                if os.path.exists(localFileLocation) == False :
+                    ## ??????? remove it ?
+                    continue
                
-               # add the local element to the downloaded element
-               podcastInfo.itemsInfo.append(itemLocal)
-               podcastInfo.itemFilenames.append(itemLocal.filename)
-               podcastInfo.titles2display.append('<< ' + itemLocal.title)
+                # add the local element to the downloaded element
+                podcastInfo.itemsInfo.append(itemLocal)
+                podcastInfo.itemFilenames.append(itemLocal.filename)
+                podcastInfo.titles2display.append('<< ' + itemLocal.title)
 
-       ###
-       ## TODO pehaps add the file that are not in the xml...
+            ###
+            ## TODO pehaps add the file that are not in the xml...
        
-           except Exception, ex:
-               outPrint('problem when accessing to already downloaded podcasts', ex)
+            except Exception, ex:
+                outPrint('problem when accessing to already downloaded podcasts', ex)
                
 
 #############################################################################################
@@ -1037,7 +1037,7 @@ class UserConfig:
         ####################
         #init defautl optional value
         self.podcastDownloadPath    = MEDIA_PODCAST_DIR
-        self.podcastDownload        = PODCAST_DOWNLOAD
+        self.podcastDownload        = podcastDownload
         self.logvalue               = LOG_VALUE
         self.mediaUpdateURL         = MEDIA_UPDATE_URL
 
@@ -1129,7 +1129,11 @@ def saveScriptConfig(config):
     elemConfig.append(mediaNode)
     
     podcastNode = Element("podcast")
-    podcastNode.attrib["download"] = str(config.podcastDownload)
+    if config.podcastDownload:
+        podcastNode.attrib["download"] = 'true'
+    else:
+        podcastNode.attrib["download"] = 'false'
+        
     podcastNode.attrib["localpath"] = config.podcastDownloadPath
     elemConfig.append(podcastNode)
     
