@@ -3,50 +3,49 @@
 
 import os
 
-##############################################
-# User Parameters
+PODCAST_DOWNLOAD       = True
 
-# The directory where are saved the media file
-MEDIA_PODCAST_DIR      = 'Podcasts'+ os.sep
+# The default directory where are saved the media file, you can change it here or in the preference
+MEDIA_PODCAST_DIR      = 'Podcasts'
+
 MEDIA_UPDATE_URL       = 'http://olivier.euromobile.ch/mediastream/media.xml'
 
-##############################################
-# The current version
 VERSION                = '0.86'
 
-##############################################
 # 0 no print, no log
 # 1 print
 # 2 print, exception
 # 3 log to file "debug.log"
 LOG_VALUE = 3
 
-##############################################
-# Script Properties
+if os.name=='posix':
+    # Linux/MAC case
+    HOME = os.path.abspath(os.curdir).replace(';','')
+else:
+    # Xbox and Windows case
+    HOME = os.getcwd().replace(';','')
 
-PODCAST_DOWNLOAD     = True
+DEBUG_FILE           = os.path.join(HOME, 'debug.log')
 
-MEDIA_CONF           = 'media.xml'
-MEDIA_TMP_CONF       = '_tempmedia.xml'
+MEDIA_CONF           = os.path.join(HOME, 'media.xml')
+MEDIA_TMP_CONF       = os.path.join(HOME, '_tempmedia.xml')
 
-HOME                 = os.getcwd().replace(';','') + os.sep
+CONFIG_DIR_ROOT      = os.path.join(HOME, '..', '..', 'UserData') #HOME #P:\\script_data\\'
+CONFIG_DIR_MEDIA     = 'mediastream'
 
-CONFIG_DIR_ROOT      = HOME #P:\\script_data\\'
-CONFIG_DIR_MEDIA     = '' #'mediastream\\'
-
-CONFIG_DIR           = CONFIG_DIR_ROOT + CONFIG_DIR_MEDIA
-CONFIG_FULL_PATH     = CONFIG_DIR + "userconfig.xml"
+CONFIG_DIR           = os.path.join(CONFIG_DIR_ROOT, CONFIG_DIR_MEDIA)
+CONFIG_FULL_PATH     = os.path.join(CONFIG_DIR, "userconfig.xml")
 
 SIZE_WIDTH           = 720
 SIZE_HEIGHT          = 576
 ENCODING_OUT         = 'iso-8859-1'
 ENCODING_IN          = 'utf-8'        # for parsing xml using minidom
 
-IMAGES               = HOME+'images'+ os.sep
-BACKGROUND           = IMAGES+'background.png'
-BACKGROUND2          = IMAGES+'background2.png'
-LIST_SELECT_BG       = IMAGES+'listbg.png'
-LIST_SELECT_BG_FOCUS = IMAGES+'listbg_focus.png'
+IMAGES               = os.path.join(HOME,'images')
+BACKGROUND           = os.path.join(IMAGES,'background.png')
+BACKGROUND2          = os.path.join(IMAGES,'background2.png')
+LIST_SELECT_BG       = os.path.join(IMAGES,'listbg.png')
+LIST_SELECT_BG_FOCUS = os.path.join(IMAGES,'listbg_focus.png')
 
 DEF_CHANNEL_PIC      = 'defchannel.png'
 DEF_PROGRAM_PIC      = 'defprogram.png'

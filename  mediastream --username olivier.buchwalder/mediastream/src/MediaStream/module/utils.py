@@ -35,7 +35,7 @@ def outPrint (message, e=None):
         if e:
             traceback.print_exc()
     if LOG_VALUE >= 3:
-        logfile = open(HOME +'debug.log','a')
+        logfile = open(DEBUG_FILE,'a')
         logfile.write ( outstr )
         if e:
             traceback.print_exc(file=logfile)

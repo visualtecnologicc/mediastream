@@ -720,7 +720,7 @@ def parsePodcast(podcastXML, config, filemode=None):
     ## TODO support the podcast named the same way... add a hashcode after the title, and a main podcast.xml file at the root
     
     # the target local directory
-    targetDirectory = config.podcastDownloadPath + titlePodcastAscii
+    targetDirectory = os.path.join(config.podcastDownloadPath, titlePodcastAscii)
     chandescription   = channelNode.findtext('description', '')
     #chanImage         = getXMLAttrText(channeldom, 'itunes:image', 'href')
 
