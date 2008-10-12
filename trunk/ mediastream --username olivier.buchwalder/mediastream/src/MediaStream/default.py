@@ -379,10 +379,10 @@ class PrefsWindow(xbmcgui.Window):
     
             elif control == self.mediaButton:
                 # load the media.xml and exit...
-                redown = downloadFile(self.config.mediaUpdateURL, HOME + MEDIA_TMP_CONF, 0)
-                if redown == 1 and os.path.exists(HOME + MEDIA_TMP_CONF):
+                redown = downloadFile(self.config.mediaUpdateURL, MEDIA_TMP_CONF, 0)
+                if redown == 1 and os.path.exists(MEDIA_TMP_CONF):
                     # test the media file, and version
-                    startf = readFile(HOME + MEDIA_TMP_CONF, 10000)
+                    startf = readFile(MEDIA_TMP_CONF, 10000)
                     newMediaVersion = "0.0"
                     versionRet = RE_MEDIA_VERSION.findall(startf)
                     if versionRet and versionRet[0]  :
@@ -390,13 +390,13 @@ class PrefsWindow(xbmcgui.Window):
                     
                     if self.mediaVersion < newMediaVersion:
                         # rename the orig file, and 
-                        oldmedia = HOME + MEDIA_CONF + '_old_'+ self.mediaVersion
+                        oldmedia = MEDIA_CONF + '_old_'+ self.mediaVersion
                         #delete old if exist
                         if os.path.exists(oldmedia):
                             os.remove(oldmedia)
                             
-                        os.rename(HOME + MEDIA_CONF, oldmedia)
-                        os.rename(HOME + MEDIA_TMP_CONF, HOME + MEDIA_CONF)
+                        os.rename(MEDIA_CONF, oldmedia)
+                        os.rename(MEDIA_TMP_CONF, MEDIA_CONF)
         
                         dialog2 = xbmcgui.Dialog()
                         dialog2.ok('Media file has been updated', '', 'Please Restart MediaStream !')  
@@ -406,8 +406,8 @@ class PrefsWindow(xbmcgui.Window):
                         dialog2.ok('Information', 'No new version available...')  
     
                 # Delete tmp file when not renamed to new file
-                if os.path.exists(HOME + MEDIA_TMP_CONF):
-                    os.remove(HOME + MEDIA_TMP_CONF)
+                if os.path.exists(MEDIA_TMP_CONF):
+                    os.remove(MEDIA_TMP_CONF)
     
             elif control == self.checkDownloadPodcast:
                 self.config.podcastDownload = self.checkDownloadPodcast.getSelected()
@@ -439,7 +439,7 @@ class RootWindow(xbmcgui.Window):
         self.mainConfig = mainConfig
         
         try:
-            self.channels, self.categories, self.mediaVersion = readMediaElementTree(HOME + MEDIA_CONF, ENCODING_OUT)            
+            self.channels, self.categories, self.mediaVersion = readMediaElementTree(MEDIA_CONF, ENCODING_OUT)            
         except Exception, ex:
             outPrint('Unable to init the channel list', ex)
             return
