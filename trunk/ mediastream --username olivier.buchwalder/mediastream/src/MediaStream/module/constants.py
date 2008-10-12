@@ -7,13 +7,12 @@ import os
 # User Parameters
 
 # The directory where are saved the media file
-MEDIA_PODCAST_DIR      = 'F:\\media\\Podcasts\\'
-MEDIA_PODCAST_DIR_ALT  = 'Podcasts\\'
+MEDIA_PODCAST_DIR      = 'Podcasts'+ os.sep
 MEDIA_UPDATE_URL       = 'http://olivier.euromobile.ch/mediastream/media.xml'
 
 ##############################################
 # The current version
-VERSION                = '0.85c'
+VERSION                = '0.86'
 
 ##############################################
 # 0 no print, no log
@@ -32,8 +31,8 @@ MEDIA_TMP_CONF       = '_tempmedia.xml'
 
 HOME                 = os.getcwd().replace(';','') + os.sep
 
-CONFIG_DIR_ROOT      = 'P:\\script_data\\'
-CONFIG_DIR_MEDIA     = 'mediastream\\'
+CONFIG_DIR_ROOT      = HOME #P:\\script_data\\'
+CONFIG_DIR_MEDIA     = '' #'mediastream\\'
 
 CONFIG_DIR           = CONFIG_DIR_ROOT + CONFIG_DIR_MEDIA
 CONFIG_FULL_PATH     = CONFIG_DIR + "userconfig.xml"
@@ -43,7 +42,7 @@ SIZE_HEIGHT          = 576
 ENCODING_OUT         = 'iso-8859-1'
 ENCODING_IN          = 'utf-8'        # for parsing xml using minidom
 
-IMAGES               = HOME+'images\\'
+IMAGES               = HOME+'images'+ os.sep
 BACKGROUND           = IMAGES+'background.png'
 BACKGROUND2          = IMAGES+'background2.png'
 LIST_SELECT_BG       = IMAGES+'listbg.png'

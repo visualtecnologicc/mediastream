@@ -639,7 +639,7 @@ def chooseOptions(optionsList):
                     listLabels = values
                 
                 if values == None or len(values) < 1:
-                    outPrint('problem when accessing to options values list: '+ optionsList, ex)
+                    outPrint('problem when accessing to options values list: '+ optionsList)
                     raise Exception
                 else:
                     dialog = xbmcgui.Dialog()
@@ -1101,14 +1101,14 @@ def readScriptConfig():
             #dialog2 = xbmcgui.Dialog()
             #dialog2.ok('Warning','Cannot Access to:' , config.podcastDownloadPath, 'Will use: ' + MEDIA_PODCAST_DIR_ALT)      
             
-            config.podcastDownloadPath = MEDIA_PODCAST_DIR_ALT
-            saveScriptConfig(config)
+            #config.podcastDownloadPath = MEDIA_PODCAST_DIR_ALT
+            #saveScriptConfig(config)
 
-            if not os.path.exists(config.podcastDownloadPath):
-                retc = createDirectory(config.podcastDownloadPath, False)
-                if retc == False: 
-                    dialog2 = xbmcgui.Dialog()
-                    dialog2.ok('Warning', 'Cannot Access to:', MEDIA_PODCAST_DIR_ALT, 'Will not be able to download podcasts.')      
+            #if not os.path.exists(config.podcastDownloadPath):
+            #    retc = createDirectory(config.podcastDownloadPath, False)
+            #    if retc == False: 
+            dialog2 = xbmcgui.Dialog()
+            dialog2.ok('Warning', 'Cannot Access to:', config.podcastDownloadPath, 'Will not be able to download podcasts.')      
 
     return config
     
@@ -1139,7 +1139,7 @@ def saveScriptConfig(config):
         createDirectory(CONFIG_DIR, recursive=False)
     
     if os.path.exists(CONFIG_DIR):
-        createXmlFile(CONFIG_FULL_PATH, elemConfig, encoding='ascii')
+        createXmlFile(CONFIG_FULL_PATH, elemConfig) #, encoding='ascii')
     else:
         outPrint('Cannot create the user config file: '+ CONFIG_FULL_PATH)
 
