@@ -34,7 +34,7 @@ class Channel:
             self.baseURL = baseURL
         if imagelink:
             # test image before assigning
-            if os.path.exists(IMAGES + imagelink):            
+            if os.path.exists(os.path.join(IMAGES, imagelink)):            
                 self.imagelink = imagelink
             else:
                 # use default
@@ -80,7 +80,7 @@ class Program:
             self.description = description
         if imagelink:
             # test image before assigning
-            if os.path.exists(IMAGES + imagelink):            
+            if os.path.exists(os.path.join(IMAGES, imagelink)):            
                 self.imagelink = imagelink
             else:
                 # use default
@@ -273,7 +273,7 @@ class Category:
             self.id = id
         if imagelink:
             # test image before assigning
-            if os.path.exists(IMAGES + imagelink):            
+            if os.path.exists(os.path.join(IMAGES, imagelink)):            
                 self.imagelink = imagelink
             else:
                 # use default
@@ -1037,7 +1037,7 @@ class UserConfig:
         ####################
         #init defautl optional value
         self.podcastDownloadPath    = MEDIA_PODCAST_DIR
-        self.podcastDownload        = podcastDownload
+        self.podcastDownload        = PODCAST_DOWNLOAD
         self.logvalue               = LOG_VALUE
         self.mediaUpdateURL         = MEDIA_UPDATE_URL
 
@@ -1080,9 +1080,9 @@ def readScriptConfig():
         podcastNode = elemConfig.find('podcast')
         podcastDownload = podcastNode.get('download')
         
-        ispodcastDownload = PODCAST_DOWNLOAD
+        ispodcastDownload = None
         if podcastDownload != None:
-            ispodcastDownload = podcastDownload.lower() == "true"
+            ispodcastDownload = podcastDownload.lower() == 'true' # 0 or 1
         
         podcastDownloadPath = podcastNode.get('localpath')
 
@@ -1136,14 +1136,14 @@ def saveScriptConfig(config):
         
     podcastNode.attrib["localpath"] = config.podcastDownloadPath
     elemConfig.append(podcastNode)
-    
+
     # create the userdata dir when not exist
-    if not os.path.exists(CONFIG_DIR):
-        createDirectory(CONFIG_DIR_ROOT, recursive=False)
-        createDirectory(CONFIG_DIR, recursive=False)
+    if not os.path.exists(CONFIG_DIR_ROOT):
+        createDirectory(CONFIG_DIR_ROOT, recursive=True)
+    #    createDirectory(CONFIG_DIR, recursive=False)
     
-    if os.path.exists(CONFIG_DIR):
-        createXmlFile(CONFIG_FULL_PATH, elemConfig) #, encoding='ascii')
-    else:
-        outPrint('Cannot create the user config file: '+ CONFIG_FULL_PATH)
+    #if os.path.exists(CONFIG_DIR):
+    createXmlFile(CONFIG_FULL_PATH, elemConfig) #, encoding='ascii')
+    #else:
+    #    outPrint('Cannot create the user config file: '+ CONFIG_FULL_PATH)
 

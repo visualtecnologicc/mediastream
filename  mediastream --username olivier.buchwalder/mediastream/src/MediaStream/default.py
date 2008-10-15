@@ -99,7 +99,7 @@ class ChannelWindow(xbmcgui.Window):
             # add the background
             self.addControl(xbmcgui.ControlImage(0, 0, self.getScX(SIZE_WIDTH), self.getScY(SIZE_HEIGHT), BACKGROUND2))
             # add the channel image element
-            self.addControl(xbmcgui.ControlImage(self.getScX(90), self.getScY(60), self.getScX(90), self.getScY(60), IMAGES +channel.imagelink))
+            self.addControl(xbmcgui.ControlImage(self.getScX(90), self.getScY(60), self.getScX(90), self.getScY(60), os.path.join(IMAGES,channel.imagelink)))
             # add the label of the channel
             self.strActionInfo = xbmcgui.ControlLabel(self.getScX(220), self.getScY(70), self.getScX(500), self.getScY(30), "", "font14", "0xDDDDDDFF") 
             self.addControl(self.strActionInfo) 
@@ -122,7 +122,7 @@ class ChannelWindow(xbmcgui.Window):
         
             # add the programs into the list 
             for program in channel.programs:
-                self.list.addItem(xbmcgui.ListItem(program.name + ' ' + program.description, thumbnailImage=IMAGES+program.imagelink))
+                self.list.addItem(xbmcgui.ListItem(program.name + ' ' + program.description, thumbnailImage=os.path.join(IMAGES,program.imagelink)))
             self.setFocus(self.list)
         
         except Exception, ex:
@@ -170,11 +170,8 @@ class ChannelWindow(xbmcgui.Window):
                 
                 # Podcast processing , no date to choose, but read the xml links, and proposes the links
                 if self.program.podcast:
-                    dialog = None
-                    
                     # get the url with modification option
                     urlemission = program.getFullURL(program.podcast, None)
-                    dialog = None
                     # get the content
                     podcastXML = retriveURLContent(urlemission)
                     # get the podcast list, in the xml, and local
@@ -317,8 +314,10 @@ class PrefsWindow(xbmcgui.Window):
         
         self.checkDownloadPodcast = xbmcgui.ControlCheckMark(self.getScX(100), self.getScY(280), self.getScX(300), self.getScY(30), "Download Podcasts When Possible?", font="font13", textColor="0xDDDDDDFF") 
         self.addControl(self.checkDownloadPodcast)        
-        self.checkDownloadPodcast.setSelected(self.config.podcastDownload)
-
+        if self.config.podcastDownload:
+            self.checkDownloadPodcast.setSelected(1)
+        else:
+            self.checkDownloadPodcast.setSelected(0)
         self.mediaButton =     xbmcgui.ControlButton(self.getScX(100), self.getScY(350), self.getScX(200), self.getScY(30), 'Update Media base') 
         self.addControl(self.mediaButton)
         
@@ -470,7 +469,7 @@ class RootWindow(xbmcgui.Window):
         # add the root categories, no parent, and also the channels without a category
         for category in self.categories:
             if category.parentid == None:
-                self.list.addItem(xbmcgui.ListItem(category.name , thumbnailImage=IMAGES + category.imagelink)) 
+                self.list.addItem(xbmcgui.ListItem(category.name , thumbnailImage=os.path.join(IMAGES, category.imagelink))) 
                 elements.append(category)   
         
         # add the channels
@@ -479,7 +478,7 @@ class RootWindow(xbmcgui.Window):
                 chanstr = channel.name
                 if channel.description and len(channel.description) > 1:
                     chanstr = chanstr + '\n  '+ channel.description
-                self.list.addItem(xbmcgui.ListItem(chanstr, thumbnailImage=IMAGES+channel.imagelink))
+                self.list.addItem(xbmcgui.ListItem(chanstr, thumbnailImage=os.path.join(IMAGES, channel.imagelink)))
                 elements.append(channel)   
  
         # append the list into the element list...
@@ -518,14 +517,14 @@ class RootWindow(xbmcgui.Window):
                         if isinstance(selElement, Category) :
                             # a Category
                             category = selElement
-                            self.list.addItem(xbmcgui.ListItem(category.name , thumbnailImage=IMAGES + category.imagelink)) 
+                            self.list.addItem(xbmcgui.ListItem(category.name , thumbnailImage=os.path.join(IMAGES, category.imagelink))) 
                         else: 
                             # a channel
                             channel = selElement
                             chanstr = channel.name
                             if channel.description and len(channel.description) > 1:
                                 chanstr = chanstr + '\n  '+ channel.description
-                            self.list.addItem(xbmcgui.ListItem(chanstr, thumbnailImage=IMAGES+channel.imagelink))
+                            self.list.addItem(xbmcgui.ListItem(chanstr, thumbnailImage=os.path.join(IMAGES,channel.imagelink)))
                 else:
                     # root level, quit the script, TODO add a window
                     self.close()
@@ -565,7 +564,7 @@ class RootWindow(xbmcgui.Window):
                     # add the categories
                     for category in self.categories:
                         if category.parentid == parentcategory.id:
-                            self.list.addItem(xbmcgui.ListItem(category.name , thumbnailImage=IMAGES + category.imagelink)) 
+                            self.list.addItem(xbmcgui.ListItem(category.name , thumbnailImage=os.path.join(IMAGES,category.imagelink))) 
                             newElements.append(category)   
                     
                     # add the channels
@@ -574,7 +573,7 @@ class RootWindow(xbmcgui.Window):
                             chanstr = channel.name
                             if channel.description and len(channel.description) > 1:
                                 chanstr = chanstr + '\n  '+ channel.description
-                            self.list.addItem(xbmcgui.ListItem(chanstr, thumbnailImage=IMAGES+channel.imagelink))
+                            self.list.addItem(xbmcgui.ListItem(chanstr, thumbnailImage=os.path.join(IMAGES,channel.imagelink)))
                             newElements.append(channel)                   
                                         
                 elif isinstance(selElement, Channel) :

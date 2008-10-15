@@ -1,40 +1,35 @@
 #!/usr/bin/python
 # -*- coding: iso-8859-1 -*-
 
-import os
+import os, xbmc
 
-PODCAST_DOWNLOAD       = True
+XBMC_USER_DATA       = xbmc.translatePath('T:\\')
+HOME                 = os.getcwd().replace(';','')
 
-# The default directory where are saved the media file, you can change it here or in the preference
-MEDIA_PODCAST_DIR      = 'Podcasts'
+# default directory where are saved the media file
+# you can change it here or in the preference
+MEDIA_PODCAST_DIR    =  os.path.join(HOME,'Podcasts')
+# update url
+MEDIA_UPDATE_URL     = 'http://olivier.euromobile.ch/mediastream/media.xml'
+# config file
+CONFIG_DIR_ROOT      = os.path.join(XBMC_USER_DATA, 'script_data', 'mediastream')
+CONFIG_FULL_PATH     = os.path.join(CONFIG_DIR_ROOT, 'userconfig.xml')
+# media file
+MEDIA_CONF           = os.path.join(HOME, 'media.xml')
+MEDIA_TMP_CONF       = os.path.join(HOME, '_tempmedia.xml')
 
-MEDIA_UPDATE_URL       = 'http://olivier.euromobile.ch/mediastream/media.xml'
+VERSION              = '0.86'
 
-VERSION                = '0.86'
+PODCAST_DOWNLOAD     = True
 
+# LOG LEVEL:
 # 0 no print, no log
 # 1 print
 # 2 print, exception
 # 3 log to file "debug.log"
 LOG_VALUE = 3
 
-if os.name=='posix':
-    # Linux/MAC case
-    HOME = os.path.abspath(os.curdir).replace(';','')
-else:
-    # Xbox and Windows case
-    HOME = os.getcwd().replace(';','')
-
 DEBUG_FILE           = os.path.join(HOME, 'debug.log')
-
-MEDIA_CONF           = os.path.join(HOME, 'media.xml')
-MEDIA_TMP_CONF       = os.path.join(HOME, '_tempmedia.xml')
-
-CONFIG_DIR_ROOT      = os.path.join(HOME, '..', '..', 'UserData') #HOME #P:\\script_data\\'
-CONFIG_DIR_MEDIA     = 'mediastream'
-
-CONFIG_DIR           = os.path.join(CONFIG_DIR_ROOT, CONFIG_DIR_MEDIA)
-CONFIG_FULL_PATH     = os.path.join(CONFIG_DIR, "userconfig.xml")
 
 SIZE_WIDTH           = 720
 SIZE_HEIGHT          = 576
