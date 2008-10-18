@@ -28,25 +28,25 @@ class Channel:
         self.categoryId   = None 
         self.catChanList  = []
         ####################
-        if name:
+        if name != None:
             self.name = name
-        if baseURL:
+        if baseURL != None:
             self.baseURL = baseURL
-        if imagelink:
+        if imagelink != None:
             # test image before assigning
             if os.path.exists(os.path.join(IMAGES, imagelink)):            
                 self.imagelink = imagelink
             else:
                 # use default
                 pass
-        if description:
+        if description != None:
             self.description = description
-        if options and len(options) > 0:
+        if options != None and len(options) > 0:
             self.options = options
             
-        if categoryId:
+        if categoryId != None:
             self.categoryId = categoryId
-        if catChanList:
+        if catChanList != None:
             self.catChanList = catChanList
 
 
@@ -267,18 +267,18 @@ class Category:
         self.parentid     = None
 
         ####################
-        if name:
+        if name != None:
             self.name = name
-        if id:
+        if id != None:
             self.id = id
-        if imagelink:
+        if imagelink != None:
             # test image before assigning
             if os.path.exists(os.path.join(IMAGES, imagelink)):            
                 self.imagelink = imagelink
             else:
                 # use default
                 pass
-        if parentid:
+        if parentid != None:
             self.parentid = parentid
 
 
@@ -1042,13 +1042,13 @@ class UserConfig:
         self.mediaUpdateURL         = MEDIA_UPDATE_URL
 
         ####################
-        if podcastDownloadPath:
+        if podcastDownloadPath != None:
             self.podcastDownloadPath = podcastDownloadPath
-        if podcastDownload:
+        if podcastDownload != None:
             self.podcastDownload = podcastDownload
-        if logvalue:
+        if logvalue != None:
             self.logvalue = logvalue
-        if mediaUpdateURL:
+        if mediaUpdateURL != None:
             self.mediaUpdateURL = mediaUpdateURL
 
 
@@ -1085,11 +1085,12 @@ def readScriptConfig():
             ispodcastDownload = podcastDownload.lower() == 'true' # 0 or 1
         
         podcastDownloadPath = podcastNode.get('localpath')
-
+                
         # init the config
         config = UserConfig(podcastDownloadPath, ispodcastDownload, mediaUpdateURL, intLogValue)
     else:
         #create the default config 
+        outPrint('Unable to find the config, create a default')
         config  = UserConfig(None,None,None,None)
         # save it
         saveScriptConfig(config)
@@ -1098,15 +1099,6 @@ def readScriptConfig():
     if os.path.exists(config.podcastDownloadPath) == False:
         retc = createDirectory(config.podcastDownloadPath, False)
         if retc == False:
-            #dialog2 = xbmcgui.Dialog()
-            #dialog2.ok('Warning','Cannot Access to:' , config.podcastDownloadPath, 'Will use: ' + MEDIA_PODCAST_DIR_ALT)      
-            
-            #config.podcastDownloadPath = MEDIA_PODCAST_DIR_ALT
-            #saveScriptConfig(config)
-
-            #if not os.path.exists(config.podcastDownloadPath):
-            #    retc = createDirectory(config.podcastDownloadPath, False)
-            #    if retc == False: 
             dialog2 = xbmcgui.Dialog()
             dialog2.ok('Warning', 'Cannot Access to:', config.podcastDownloadPath, 'Will not be able to download podcasts.')      
 
@@ -1140,7 +1132,6 @@ def saveScriptConfig(config):
     # create the userdata dir when not exist
     if not os.path.exists(CONFIG_DIR_ROOT):
         createDirectory(CONFIG_DIR_ROOT, recursive=True)
-    #    createDirectory(CONFIG_DIR, recursive=False)
     
     #if os.path.exists(CONFIG_DIR):
     createXmlFile(CONFIG_FULL_PATH, elemConfig) #, encoding='ascii')

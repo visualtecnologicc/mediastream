@@ -9,6 +9,8 @@
     << Thanks to alexsolex, nuka1195 for help and to Kochka, JaHeLLthe the authors of cdanslair.py >>
 
 
+    Problem continue download and debugg.log .. problem on osx
+
     Version 0.85b
     - fix a path problem with XBMC beta multi platform (Thanks to Temhil)
 
@@ -310,14 +312,18 @@ class PrefsWindow(xbmcgui.Window):
 
         self.labelMediaPath =       xbmcgui.ControlLabel(self.getScX(100), self.getScY(240), self.getScX(600), self.getScY(30), "", "font13", "0xCCCCCCFF") 
         self.addControl(self.labelMediaPath) 
+        
         self.labelMediaPath.setLabel(' > ' +self.config.podcastDownloadPath) 
         
         self.checkDownloadPodcast = xbmcgui.ControlCheckMark(self.getScX(100), self.getScY(280), self.getScX(300), self.getScY(30), "Download Podcasts When Possible?", font="font13", textColor="0xDDDDDDFF") 
-        self.addControl(self.checkDownloadPodcast)        
+        
+        self.addControl(self.checkDownloadPodcast)  
+        
         if self.config.podcastDownload:
             self.checkDownloadPodcast.setSelected(1)
         else:
             self.checkDownloadPodcast.setSelected(0)
+               
         self.mediaButton =     xbmcgui.ControlButton(self.getScX(100), self.getScY(350), self.getScX(200), self.getScY(30), 'Update Media base') 
         self.addControl(self.mediaButton)
         
@@ -357,10 +363,6 @@ class PrefsWindow(xbmcgui.Window):
             self.setFocus(self.checkDownloadPodcast)
         elif self.getFocus()  == self.aboutButton and action == ACTION_MOVE_UP : 
             self.setFocus(self.mediaButton)
-
-        #elif action == ACTION_Y:
-        #    dialog = xbmcgui.Dialog()
-        #    dialog.ok('About', 'Media Stream v. %s'%(VERSION),'Contact me at oli@euromobile.ch')
             
 
     # -------------------------------------------------------------------------------------------
@@ -409,7 +411,7 @@ class PrefsWindow(xbmcgui.Window):
                     os.remove(MEDIA_TMP_CONF)
     
             elif control == self.checkDownloadPodcast:
-                self.config.podcastDownload = self.checkDownloadPodcast.getSelected()
+                self.config.podcastDownload = self.checkDownloadPodcast.getSelected() == 1
             
             elif control == self.aboutButton:
                 dialog = xbmcgui.Dialog()
@@ -430,13 +432,11 @@ class RootWindow(xbmcgui.Window):
         self.scaleY = ( float(self.getHeight()) / float(SIZE_HEIGHT) )
         
         try:
-            mainConfig = readScriptConfig()                      
+            self.mainConfig = readScriptConfig()                      
         except Exception, ex:
             outPrint('Unable to init the config, use the default', ex)
-            mainConfig  = UserConfig(None,None,None,None)
+            self.mainConfig  = UserConfig(None,None,None,None)
 
-        self.mainConfig = mainConfig
-        
         try:
             self.channels, self.categories, self.mediaVersion = readMediaElementTree(MEDIA_CONF, ENCODING_OUT)            
         except Exception, ex:
@@ -536,13 +536,10 @@ class RootWindow(xbmcgui.Window):
 
         except Exception, ex:
             outPrint('unexpected error rootwin', ex)
-            
-            #dialog = xbmcgui.Dialog()
-            #dialog.ok('About', 'Media Stream v. %s'%(VERSION),'Contact me at oli@euromobile.ch')
                 
     # -------------------------------------------------------------------------------------------
     def onControl(self, control=None):
-        try:
+        try:            
             if control == self.list and len(self.listElements) > 0 and self.listElements[len(self.listElements) -1]:
                 # get the last list of elements, the displayed list
                 elements = self.listElements[len(self.listElements) -1]
