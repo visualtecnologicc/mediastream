@@ -26,9 +26,10 @@ PODCAST_DOWNLOAD     = True
 # 0 no print, no log
 # 1 print
 # 2 print, exception
-# 3 log to file "debug.log"
+# 3 log to file "debug.log" -> problem on osx
 LOG_VALUE = 3
 
+# FIX ME !!
 DEBUG_FILE           = os.path.join(HOME, 'debug.log')
 
 SIZE_WIDTH           = 720

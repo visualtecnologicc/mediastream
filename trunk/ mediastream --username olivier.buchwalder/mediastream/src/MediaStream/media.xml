@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<media version="0.85b" author="oli_AT_euromobile.ch" date="18.08.2008" >
+<media version="0.86" author="oli_AT_euromobile.ch" date="18.10.2008" >
 	
 	<category id="ch" imagelink="dp\dp_suisse.jpg">Switzerland</category>
 
@@ -449,6 +449,11 @@
 	<channel category="fr" >
 		<name>Divers</name>
 		
+        <program ispodcast="true"
+            url="http://www.arretsurimages.net/podcast.xml">
+            <name>Arret sur Images (Podcast)</name>
+        </program>
+
 		<program url="mms://live.france24.com/france24_fr.wsx" imagelink="fr\div_france24.jpg">
 			<name>France 24 (Live)</name>
 		</program>
