@@ -35,7 +35,7 @@ def outPrint (message, e=None):
         if e:
             traceback.print_exc()
     if LOG_VALUE >= 3:
-        logfile = open(DEBUG_FILE,'a')
+        logfile = open(DEBUG_FILE,'a+')
         logfile.write ( outstr )
         if e:
             traceback.print_exc(file=logfile)
@@ -133,7 +133,7 @@ def downloadFile(URL, filelocalPath, minSize = 50000, showDialog=True):
         
         # create here the file link
         if os.path.exists(filelocalPath):
-            outputFile = open(filelocalPath,"ab")
+            outputFile = open(filelocalPath,"ab+")
         else:
             outputFile = open(filelocalPath,"wb")
         

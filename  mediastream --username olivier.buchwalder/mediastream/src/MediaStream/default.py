@@ -11,6 +11,10 @@
 
     Problem continue download and debugg.log .. problem on osx
 
+    Version 0.86
+    - fix the user config saving (location on all platforms)
+    - fix reload flag download podcast
+
     Version 0.85b
     - fix a path problem with XBMC beta multi platform (Thanks to Temhil)
 
