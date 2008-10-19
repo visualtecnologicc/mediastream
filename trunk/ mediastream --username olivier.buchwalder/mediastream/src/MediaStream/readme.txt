@@ -17,13 +17,14 @@ please read the configuration tips below, and enter your settings into the file 
 ##################################################### 
  Usage:
 	- For Accessing to the preference window, press Y in the root window or "i" in non-XBOX platforms
-	- You can also edit modules/constants.py for choosing your configuration
+	- You can also edit modules/constants.py for specifying a configuration
 
 ##################################################### 
  History:
 
     Version 0.86
-    - fix the config saving
+    - fix the user config saving (location on all platforms)
+    - fix reload flag download podcast
 
     Version 0.85b
     - fix a path problem with XBMC beta multi platform (Thanks to Temhil)
