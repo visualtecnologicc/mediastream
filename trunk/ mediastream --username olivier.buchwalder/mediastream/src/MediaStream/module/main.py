@@ -56,7 +56,7 @@ class Channel:
 
 #############################################################################################
 class Program:
-    def __init__(self, name, description, URLPattern, podcast, imagelink, prooptions, diffusionInfo, avail, categoryId, filemode = None):
+    def __init__(self, name, description, URLPattern, podcast, imagelink, prooptions, diffusionInfo, avail, categoryId, filemode = None, mustDownload =None):
         ####################               
         self.channel = None
         self.prooptionsSelectedValue = [] # selected values 
@@ -73,6 +73,7 @@ class Program:
         self.podcast       = None # when a podcast is defined, override other properties
         self.categoryId    = None
         self.filemode      = None # when podcast, the download name is processed using the title when = "title"
+        self.mustDownload  = None
         ####################
         if name:
             self.name = name
@@ -99,6 +100,8 @@ class Program:
             self.categoryId = categoryId
         if filemode:
             self.filemode = filemode
+        if mustDownload != None:
+            self.mustDownload = mustDownload
   
              
     # -------------------------------------------------------------------------------------------
@@ -286,7 +289,7 @@ class Category:
 class PodcastInfo:
     """
     Main information
-                TODO make it valis also with other non-podcast media, to be able to downlaod them...
+                TODO make it valid also with other non-podcast media, to be able to downlaod them...
     """
     def __init__(self):
         
@@ -312,11 +315,12 @@ class PodcastInfo:
         # the local node reference to the file report node
         self.localElementRoot = None
         
+        #TODO only got from media.xml, TODO make it changeable...
+        #self.mustDownload = None
+ 
         # TODO
         self.useTitleForName = False
         
-        # TODO
-        #self.mustDownload = False
         
         
 #############################################################################################
@@ -466,6 +470,12 @@ def readMediaElementTree(filePath, encoding = ENCODING_IN):
                         podcast = url
                         url = None
                     
+                    downloadValue = elemProgram.get('download') 
+                    mustDownload = None                   
+                    if downloadValue != None:
+                        mustDownload = downloadValue.lower() == "true"
+                        
+                    
                     filemode = elemProgram.get('filemode')     
                     
                     imagelink= elemProgram.get('imagelink') 
@@ -522,7 +532,7 @@ def readMediaElementTree(filePath, encoding = ENCODING_IN):
                     ## -> PRogram
                     #
                     categoryId = None #not implemented yet
-                    aprogram = Program(progname, description, url, podcast, imagelink, options, diffusionInfo, avail, categoryId, filemode)
+                    aprogram = Program(progname, description, url, podcast, imagelink, options, diffusionInfo, avail, categoryId, filemode, mustDownload)
                     achannel.addProgram(aprogram)
                     elemProgram.clear()
                     
