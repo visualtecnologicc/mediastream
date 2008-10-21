@@ -11,6 +11,9 @@
 
     Problem continue download and debugg.log .. problem on osx
 
+    Version 0.87
+    - add streaming/download choice in each entry of media.xml
+
     Version 0.86
     - fix the user config saving (location on all platforms)
     - fix reload flag download podcast
@@ -209,8 +212,14 @@ class ChannelWindow(xbmcgui.Window):
                             if os.path.exists(selPodItem.fileLocation) and selPodItem.flagfinish:
                                 urlemission = selPodItem.fileLocation   
                             #---------------
+                            
+                            # read the prefs
+                            mustDownload = program.mustDownload   # overrides global when defined
+                            if mustDownload == None:
+                                mustDownload = config.podcastDownload
+                                
                             # download activated and not a local file
-                            elif config.podcastDownload and selPodItem.url != None and selPodItem.url != '':
+                            elif mustDownload and selPodItem.url != None and selPodItem.url != '':
                                 
                                 # try to create dir or pass if exist
                                 if not createDirectory(podcastInfo.targetDirectory):

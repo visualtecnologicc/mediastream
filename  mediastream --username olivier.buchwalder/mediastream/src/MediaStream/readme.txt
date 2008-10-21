@@ -22,6 +22,9 @@ please read the configuration tips below, and enter your settings into the file 
 ##################################################### 
  History:
 
+   Version 0.87
+    - add streaming/download choice in each entry of media.xml
+
     Version 0.86
     - fix the user config saving (location on all platforms)
     - fix reload flag download podcast
@@ -123,6 +126,8 @@ please read the configuration tips below, and enter your settings into the file 
  ispodcast		: boolean flag
  filemode="title" : for podcast, to force the file name to download to be built with the title
  
+ download       : boolean flag that overrides the global preference
+
  ----------------------------------------------------
  Replacement keys (can be used in baseURL and URL)
  ----------------------------------------------------
