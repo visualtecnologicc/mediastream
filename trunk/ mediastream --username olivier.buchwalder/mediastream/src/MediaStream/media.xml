@@ -454,6 +454,11 @@
             <name>Arret sur Images (Podcast)</name>
         </program>
 
+        <program ispodcast="true" download="false"
+            url="http://www.arretsurimages.net/podcast.xml">
+            <name>Arret sur Images (Podcast download false)</name>
+        </program>
+
 		<program url="mms://live.france24.com/france24_fr.wsx" imagelink="fr\div_france24.jpg">
 			<name>France 24 (Live)</name>
 		</program>
