@@ -20,9 +20,7 @@
 				<descr>Emissions</descr>
                 <item value="55">Temps Présent</item>
 				<item value="90">Nouvo</item>
-                <item value="235939">Nouvo (Minute)</item>
                 <item value="43">ABE</item>
-                <item value="182040">ABE Test</item>
                 <item value="44">Mise au Point</item>
                 <item value="144">Infrarouge</item>
                 <item value="178736">TTC</item>
@@ -31,6 +29,8 @@
                 <item value="147789">36.9</item>
                 <item value="155003">Dolce Vita</item>
                 <item value="144208">Illlico</item>
+                <item value="235939">Nouvo (Minute)</item>
+                <item value="182040">ABE Test</item>
                 <item value="148063">Singulier</item>
                 <item value="273650">Mabule</item>
                 <item value="197494">Cash</item>
@@ -494,15 +494,15 @@
         <program  ispodcast="true" url="http://www.rss-one.com/rss-4456-Le-Monde.fr--podcast-telezapping">
             <name>Le Monde.fr, Télézapping (Podcast)</name>
         </program>      
-
-		<program url="mms://live.france24.com/france24_fr.wsx" imagelink="fr\div_france24.jpg">
-			<name>France 24 (Live)</name>
-		</program>
 		
 		<program url="mms://vipmms9.yacast.net/bfm_bfmtv" imagelink="fr\div_bfmtv.jpg">
 			<name>BFM TV (Live)</name>
 		</program>
 		
+        <!-- program url="mms://live.france24.com/france24_fr.wsx" imagelink="fr\div_france24.jpg">
+            <name>France 24 (Live)</name>
+        </program>
+
 		<program url="http://www.direct8.fr/live.asx.php" imagelink="fr\div_direct8.jpg">
 			<name>Direct 8 (Live)</name>
 		</program>
@@ -521,7 +521,7 @@
 			</program>
 			<program url="http://wwitv.com/t1/b3694.asx">
 				<name> TF1 </name>
-			</program>
+			</program-->
 		
 	</channel>
 		<!-- ************************************************************************************* -->
