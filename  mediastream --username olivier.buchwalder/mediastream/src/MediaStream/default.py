@@ -11,7 +11,7 @@
 
     Problem continue download and debugg.log .. problem on osx
 
-    Version 0.87
+    Version 0.87b
     - add streaming/download choice in each entry of media.xml
 
     Version 0.86
@@ -219,7 +219,7 @@ class ChannelWindow(xbmcgui.Window):
                                 mustDownload = config.podcastDownload
                                 
                             # download activated and not a local file
-                            elif mustDownload and selPodItem.url != None and selPodItem.url != '':
+                            if mustDownload and selPodItem.url != None and selPodItem.url != '':
                                 
                                 # try to create dir or pass if exist
                                 if not createDirectory(podcastInfo.targetDirectory):

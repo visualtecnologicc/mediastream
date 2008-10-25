@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<media version="0.86" author="oli_AT_euromobile.ch" date="18.10.2008" >
+<media version="0.87b" author="oli_AT_euromobile.ch" date="25.10.2008" >
 	
 	<category id="ch" imagelink="dp\dp_suisse.jpg">Switzerland</category>
 
@@ -8,18 +8,14 @@
 		<name>TSR</name>
 		<description>Télévision Suisse Romande</description>
 				
-		<option>
+		<!-- option>
 			<descr>Archive Quality</descr>
 			<item value="501k">High 16/9</item>
-		</option>
+		</option-->
 		
-		<program imagelink="tsr\info.jpg" url="mms://a1729.l2168648138.c21686.e.lm.akamaistream.net/D/1729/21686/v00001/reflector:55556">
-			<name>TSR Info (Live)</name>
-		</program>
-
 		<program ispodcast="true"
 			url="http://xml.tsr.ch/xml/index.xml?siteSect=674000&amp;programId=$PR_OPTION1">
-			<name>TSR (Podcast)</name>
+			<name>TSR (Podcasts)</name>
 			<prooption>
 				<descr>Emissions</descr>
                 <item value="55">Temps Présent</item>
@@ -30,19 +26,21 @@
                 <item value="44">Mise au Point</item>
                 <item value="144">Infrarouge</item>
                 <item value="178736">TTC</item>
-                <item value="76">Pardonnez-moi</item>
-                <item value="155003">Dolce Vita</item>
                 <item value="242956">Geopolitis</item>
+                <item value="76">Pardonnez-moi</item>
+                <item value="147789">36.9</item>
+                <item value="155003">Dolce Vita</item>
                 <item value="144208">Illlico</item>
                 <item value="148063">Singulier</item>
+                <item value="273650">Mabule</item>
+                <item value="197494">Cash</item>
                 <item value="257714">Futurofoot</item>
                 
 			</prooption>
 		</program>
 
-
 		<program imagelink="tsr\info.jpg"
-			url="$URL/$PR_OPTION1/$YEAR4/$PR_OPTION1_$MONTH$DAY$YEAR4-$CH_OPTION1.flv">
+			url="$URL/$PR_OPTION1/$YEAR4/$PR_OPTION1_$MONTH$DAY$YEAR4-501k.flv">
 			<name>Le Journal</name>
 			<diffusion id="7"/>
 			<prooption>
@@ -53,56 +51,59 @@
 			</prooption>
 		</program>
 		
-		
 		<program imagelink="tsr\meteo.jpg"
-			url="$URL/meteo/$YEAR4/meteo20_$MONTH$DAY$YEAR4-$CH_OPTION1.flv">
+			url="$URL/meteo/$YEAR4/meteo20_$MONTH$DAY$YEAR4-501k.flv">
 			<name>La Météo</name>
 			<diffusion id="7"/>
 		</program>
-		<program imagelink="tsr\nouvo2.jpg"
-			url="$URL/nouvo/$YEAR4/nouvo_$MONTH$DAY$YEAR4-$CH_OPTION1.flv">
-			<name>Nouvo</name>
-			<description>(bi-hebdo)</description>
-			<diffusion id="3"/>
-		</program>
-		<program imagelink="tsr\illico.jpg"
-			url="$URL/illic/$YEAR4/illic_$MONTH$DAY$YEAR4-$CH_OPTION1.flv">
-			<name>Illico</name>
-			<description>(bi-hebdo)</description>
-			<diffusion id="3"/>
-		</program>
-		<program imagelink="tsr\abe.jpg"
-			url="$URL/abe/$YEAR4/abe_$MONTH$DAY$YEAR4-$CH_OPTION1.flv">
-			<name>A Bon Entendeur</name>
-			<diffusion id="1"/>
-		</program>
+		
+        <program 
+          url="http://akastreaming.tsr.ch/ch/doc/$YEAR4/docex_$MONTH$DAY$YEAR4-501k-fl.flv">
+            <name>Les Docs</name>
+            <description>(Diffusion Mensuelle)</description>
+            <diffusion id="6"/>
+        </program>
+
+        <program imagelink="tsr\scenes.jpg"
+            url="http://helix-v0.sri.ch/ramgen/tsr/scenesmenage/$YEAR4/scenesmenage_$MONTH$DAY$YEAR4-451k.rm">
+            <name>Scènes de Ménage</name>
+            <description>(Diffusion Mensuelle)</description>
+            <diffusion id="2"/>
+        </program>
+        <program url="$URL/paju/$YEAR4/paju_$MONTH$DAY$YEAR4-501k.flv">
+            <name>Passe-moi les jumelles</name>
+            <description>(Diffusion Mensuelle)</description>
+            <diffusion id="2"/>
+        </program>
+		
+		
+        <program imagelink="tsr\abe.jpg"
+            url="$URL/abe/$YEAR4/abe_$MONTH$DAY$YEAR4-501k.flv">
+            <name>A Bon Entendeur</name>
+            <diffusion id="1"/>
+        </program>
         <program imagelink="tsr\mpa.jpg"
-            url="$URL/map/$YEAR4/mpa_$MONTH$DAY$YEAR4-$CH_OPTION1.flv">
+            url="$URL/map/$YEAR4/map_$MONTH$DAY$YEAR4-501k.flv">
             <name>Mise au Point</name>
             <diffusion id="6"/>
         </program>		
 		<program imagelink="tsr\tp.jpg"
-			url="$URL/tp/$YEAR4/tp_$MONTH$DAY$YEAR4-$CH_OPTION1.flv">
+			url="$URL/tp/$YEAR4/tp_$MONTH$DAY$YEAR4-501k.flv">
 			<name>Temps Présent</name>
 			<diffusion id="3"/>
 		</program>
-		<program imagelink="tsr\infra.jpg"
-			url="$URL/ir/$YEAR4/ir_$MONTH$DAY$YEAR4-$CH_OPTION1.flv">
-			<name>Infrarouge</name>
-			<diffusion id="1"/>
-		</program>
 		<program imagelink="tsr\pardon.jpg"
-            url="$URL/par/$YEAR4/par_$MONTH$DAY$YEAR4-$CH_OPTION1.flv">
+            url="$URL/par/$YEAR4/par_$MONTH$DAY$YEAR4-501k.flv">
             <name>Pardonnez-moi</name>
             <diffusion id="6"/>
         </program>
         <program 
-            url="$URL/ttc/$YEAR4/ttc_$MONTH$DAY$YEAR4-$CH_OPTION1.flv">
+            url="$URL/ttc/$YEAR4/ttc_$MONTH$DAY$YEAR4-501k.flv">
             <name>TTC</name>
             <diffusion id="0"/>
         </program>
 
-        <program url="$URL/dolvi/$YEAR4/dolvi_$MONTH$DAY$YEAR4-$CH_OPTION1.flv">
+        <program url="$URL/dolvi/$YEAR4/dolvi_$MONTH$DAY$YEAR4-501k.flv">
             <name>Dolce vita</name>
             <diffusion id="0"/>
             <diffusion id="1"/>
@@ -112,53 +113,67 @@
             <diffusion id="5"/>
         </program>
         
-		<program imagelink="tsr\dial.jpg"
-			url="$URL/tsrdi/$YEAR4/tsrdi_$MONTH$DAY$YEAR4-$CH_OPTION1.flv">
-			<name>TSR Dialogue</name>
-			<diffusion id="4"/>
-		</program>
-		<program imagelink="tsr\scenes.jpg"
-			url="$URL/scenesmenage/$YEAR4/scenesmenage_$MONTH$DAY$YEAR4-$CH_OPTION1.flv">
-			<name>Scènes de Ménage</name>
-			<description>(Diffusion Mensuelle)</description>
-			<diffusion id="2"/>
-		</program>
-		<program url="$URL/36/$YEAR4/36_$MONTH$DAY$YEAR4-$CH_OPTION1.flv">
+		<program 
+		  url="http://helix-v0.sri.ch/ramgen/tsr/36/$YEAR4/36_$MONTH$DAY$YEAR4-451k.rm">
 			<name>36.9</name>
 			<description>(Diffusion Mensuelle)</description>
 			<diffusion id="2"/>
 		</program>
-		<program url="$URL/teena/$YEAR4/teena_$MONTH$DAY$YEAR4-$CH_OPTION1.flv">
-			<name>Têtes en l'Air</name>
-			<diffusion id="4"/>
-		</program>
-        <program url="$URL/paju/$YEAR4/paju_$MONTH$DAY$YEAR4-$CH_OPTION1.flv">
-            <name>Passe-moi les jumelles</name>
-            <description>(Diffusion Mensuelle)</description>
-            <diffusion id="2"/>
-        </program>
 
-		<!-- program url="$URL/cmoje/$YEAR4/cmoje_$MONTH$DAY$YEAR4-$CH_OPTION1.flv">
-			<name>C Mon Jeux</name>
-			<diffusion id="0"/>
-			<diffusion id="1"/>
-			<diffusion id="2"/>
-			<diffusion id="4"/>
-		</program-->
-		<program url="$URL/vutel/$YEAR4/vutel_$MONTH$DAY$YEAR4-$CH_OPTION1.flv">
+
+	   <!-- program url="$URL/vutel/$YEAR4/vutel_$MONTH$DAY$YEAR4-501k.flv">
 			<name>Vue à la Télé</name>
 			<diffusion id="6"/>
 		</program>
-		<program url="$URL/singu/$YEAR4/singu_$MONTH$DAY$YEAR4-$CH_OPTION1.flv">
+		<program url="$URL/singu/$YEAR4/singu_$MONTH$DAY$YEAR4-501k.flv">
 			<name>Singulier</name>
 			<diffusion id="6"/>
-		</program>
+		</program-->
+		
+        <!-- program url="$URL/teena/$YEAR4/teena_$MONTH$DAY$YEAR4-501k.flv">
+            <name>Têtes en l'Air</name>
+            <diffusion id="4"/>
+        </program-->
+        <!-- program imagelink="tsr\info.jpg" url="mms://a1729.l2168648138.c21686.e.lm.akamaistream.net/D/1729/21686/v00001/reflector:55556">
+            <name>TSR Info (Live) FIXME</name>
+        </program-->	
+        	
+        <!--program imagelink="tsr\dial.jpg"
+            url="$URL/tsrdi/$YEAR4/tsrdi_$MONTH$DAY$YEAR4-501k.flv">
+            <name>TSR Dialogue</name>
+            <diffusion id="4"/>
+        </program-->
+        <!-- program imagelink="tsr\infra.jpg"
+            url="$URL/ir/$YEAR4/ir_$MONTH$DAY$YEAR4-501k.flv">
+            <name>Infrarouge</name>
+            <diffusion id="1"/>
+        </program-->
+        <!--program imagelink="tsr\nouvo2.jpg"
+            url="$URL/nouvo/$YEAR4/nouvo_$MONTH$DAY$YEAR4-501k.flv">
+            <name>Nouvo</name>
+            <description>(bi-hebdo)</description>
+            <diffusion id="3"/>
+        </program>
+        <program imagelink="tsr\illico.jpg"
+            url="$URL/illic/$YEAR4/illic_$MONTH$DAY$YEAR4-501k.flv">
+            <name>Illico</name>
+            <description>(bi-hebdo)</description>
+            <diffusion id="3"/>
+        </program-->		
         <!-- program imagelink="tsr\cle.jpg"
-            url="$URL/cle/$YEAR4/cle_$MONTH$DAY$YEAR4-$CH_OPTION1.flv">
+            url="$URL/cle/$YEAR4/cle_$MONTH$DAY$YEAR4-501k.flv">
             <name>Classe Eco (Archives -> 2007)</name>
             <diffusion id="0"/>
         </program-->
-	</channel>
+        <!-- program url="$URL/cmoje/$YEAR4/cmoje_$MONTH$DAY$YEAR4-501k.flv">
+            <name>C Mon Jeux</name>
+            <diffusion id="0"/>
+            <diffusion id="1"/>
+            <diffusion id="2"/>
+            <diffusion id="4"/>
+        </program-->
+
+   	</channel>
 	
 	<channel baseurl="http://helix-1.sri.ch/ramgen/rsr" imagelink="tsr\rsr.jpg"
 		category="ch">
@@ -276,22 +291,22 @@
 
 	<channel baseurl="http://s.tf1.fr" imagelink="fr\tf1.jpg" category="fr">
 		<name>TF1</name>
-		<program imagelink="fr\tf1_20h.jpg" 
-			url="$URL/FluxJt/jt20d$DAY$MONTH$YEAR4/jt20d$DAY$MONTH$YEAR4r01.asx">
-			<name>JT 20 Heures</name>
-			<diffusion id="7"/>
-		</program>
-		<program imagelink="fr\tf1_13h.jpg" 
-			url="$URL/FluxJt/jt13d$DAY$MONTH$YEAR4/jt13d$DAY$MONTH$YEAR4r01.asx">
-			<name>JT 13 Heures</name>
-			<diffusion id="7"/>
-		</program>
 		<program imagelink="fr\lci_journal.jpg" ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,14,00.xml">
 			<name>JT LCI (Podcast)</name>
 		</program>
 		<program ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,23,00.xml">
 			<name>Meteo (Podcast)</name>
 		</program>
+        <!-- program imagelink="fr\tf1_20h.jpg" 
+            url="$URL/FluxJt/jt20d$DAY$MONTH$YEAR4/jt20d$DAY$MONTH$YEAR4r01.asx">
+            <name>JT 20 Heures</name>
+            <diffusion id="7"/>
+        </program>
+        <program imagelink="fr\tf1_13h.jpg" 
+            url="$URL/FluxJt/jt13d$DAY$MONTH$YEAR4/jt13d$DAY$MONTH$YEAR4r01.asx">
+            <name>JT 13 Heures</name>
+            <diffusion id="7"/>
+        </program-->		
 	</channel>
 	
 	<channel baseurl="mms://sdmc.contents.edgestreams.net" imagelink="fr\fr2.jpg"
@@ -305,11 +320,10 @@
 		</program>
 	</channel>
 	
-	<channel baseurl="http://vod-flash.canalplus.fr" imagelink="fr\cp2.jpg"
+	<channel baseurl="" imagelink="fr\cp2.jpg"
 		category="fr">
 		<name>Canal+</name>
-
-
+		
 		<program ispodcast="true" url="http://www.rss-one.com/rss-3950-Canal-Plus---Le-Zapping" imagelink="fr\cp_zapping.jpg" >
 			<name>Le Zapping (Podcast)</name>
 		</program>
@@ -343,11 +357,7 @@
 		baseurl="mms://a533.v55778.c5577.e.vm.akamaistream.net/7/533/5577/42c40fe4/lacinq.download.akamai.com/5577/internet"
 		imagelink="fr\fr5.jpg" category="fr">
 		<name>France 5</name>
-		<!--program imagelink="fr\fr5_asimages.jpg"
-			url="$URL/asi/arretimages_$YEAR4$MONTH$DAY.wmv">
-			<name>Arrêt sur Images</name>
-			<diffusion id="6"/>
-		</program-->
+		
         <program url="mms://a988.v101995.c10199.e.vm.akamaistream.net/7/988/10199/3f97c7e6/ftvigrp.download.akamai.com/10199/horsgv/regions/siege/france5/revu-et-corrige/revuetcorrige_$YEAR4$MONTH$DAY.wmv">
             <name>Revu et Corrigé</name>
             <avail type="nbdays" value="8"/>
@@ -454,9 +464,9 @@
             <name>Arret sur Images (Podcast)</name>
         </program>
 
-        <program ispodcast="true" download="false"
-            url="http://www.arretsurimages.net/podcast.xml">
-            <name>Arret sur Images (Podcast download false)</name>
+        <program ispodcast="true"
+            url="http://www.explicit-tv.com/v3/index.php/feed/">
+            <name>Explicit TV (Podcast)</name>
         </program>
 
 		<program url="mms://live.france24.com/france24_fr.wsx" imagelink="fr\div_france24.jpg">
