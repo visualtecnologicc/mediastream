@@ -357,10 +357,6 @@
 			<name>7 Jours au Groland (Podcast)</name>
 		</program>
 
-		<!--program ispodcast="true" url="http://www.rss-one.com/rss-7323-Canal-Plus---Ppites-sur-le-Net"  >
-			<name>Pepites sur le Net (Podcast)</name>
-		</program-->
-
 		<program ispodcast="true" url="http://www.rss-one.com/rss-6705-Le-journal-des-jeux-video" >
 			<name>le Journal des jeux video (Podcast)</name>
 		</program>
