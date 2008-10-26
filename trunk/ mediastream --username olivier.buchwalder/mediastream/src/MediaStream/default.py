@@ -512,7 +512,7 @@ class RootWindow(xbmcgui.Window):
     def onAction(self, action):
         try:
             if (action == ACTION_PREVIOUS_MENU or action == ACTION_B) :
-                if len(self.listElements) > 1 :
+                if self.listElements != None and len(self.listElements) > 1 :
                     
                     #pop the last list of elements
                     lastlist = self.listElements.pop(len(self.listElements) -1)
@@ -627,8 +627,8 @@ except Exception, ex:
         
     if dialog :
         dialog.close()       
-    if rootWin :
-        rootWin.close()
-        del rootWin
+    #if rootWin :
+    #    rootWin.close()
+    #    del rootWin
         
         
