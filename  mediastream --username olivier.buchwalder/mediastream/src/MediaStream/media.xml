@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<media version="0.87b" author="oli_AT_euromobile.ch" date="25.10.2008" >
-	
+<media version="0.87c" author="oli_AT_euromobile.ch" date="26.10.2008" >
+
 	<category id="ch" imagelink="dp\dp_suisse.jpg">Switzerland</category>
 
 	<channel baseurl="http://www.tsr.ch/xobix_media/tsr" imagelink="tsr\tsr.jpg"
 		category="ch">
 		<name>TSR</name>
 		<description>Télévision Suisse Romande</description>
-				
-		<!-- option>
-			<descr>Archive Quality</descr>
-			<item value="501k">High 16/9</item>
-		</option-->
 		
 		<program ispodcast="true"
 			url="http://xml.tsr.ch/xml/index.xml?siteSect=674000&amp;programId=$PR_OPTION1">
@@ -49,7 +44,12 @@
 				<item value="rg">Journal des Régions (19h)</item>
 				<!-- item value="tj_midi">Journal de 12h45</item-->
 			</prooption>
-		</program>
+		</program>		
+		
+		<!--program imagelink="tsr\info.jpg" url="http://wwitv.com/a1/b3487.asx">
+            <name>TSR Info (Live)</name>
+        </program-->
+		
 		
 		<program imagelink="tsr\meteo.jpg"
 			url="$URL/meteo/$YEAR4/meteo20_$MONTH$DAY$YEAR4-501k.flv">
@@ -70,12 +70,22 @@
             <description>(Diffusion Mensuelle)</description>
             <diffusion id="2"/>
         </program>
+        <program url="http://akastreaming.tsr.ch/ch/hisvi/$YEAR4/hisvi_$MONTH$DAY$YEAR4-501k-fl.flv">
+            <name>Histoire Vivante</name>
+            <description></description>
+            <diffusion id="6"/>
+        </program>
+        
+        <program url=" http://real.xobix.ch/ramgen/tsr/vutel/$YEAR4/vutel_$MONTH$DAY$YEAR4-451k.rm">
+            <name>Vue à la Télé</name>
+            <diffusion id="6"/>
+        </program>
+        
         <program url="$URL/paju/$YEAR4/paju_$MONTH$DAY$YEAR4-501k.flv">
             <name>Passe-moi les jumelles</name>
             <description>(Diffusion Mensuelle)</description>
             <diffusion id="2"/>
         </program>
-		
 		
         <program imagelink="tsr\abe.jpg"
             url="$URL/abe/$YEAR4/abe_$MONTH$DAY$YEAR4-501k.flv">
@@ -120,59 +130,6 @@
 			<diffusion id="2"/>
 		</program>
 
-
-	   <!-- program url="$URL/vutel/$YEAR4/vutel_$MONTH$DAY$YEAR4-501k.flv">
-			<name>Vue à la Télé</name>
-			<diffusion id="6"/>
-		</program>
-		<program url="$URL/singu/$YEAR4/singu_$MONTH$DAY$YEAR4-501k.flv">
-			<name>Singulier</name>
-			<diffusion id="6"/>
-		</program-->
-		
-        <!-- program url="$URL/teena/$YEAR4/teena_$MONTH$DAY$YEAR4-501k.flv">
-            <name>Têtes en l'Air</name>
-            <diffusion id="4"/>
-        </program-->
-        <!-- program imagelink="tsr\info.jpg" url="mms://a1729.l2168648138.c21686.e.lm.akamaistream.net/D/1729/21686/v00001/reflector:55556">
-            <name>TSR Info (Live) FIXME</name>
-        </program-->	
-        	
-        <!--program imagelink="tsr\dial.jpg"
-            url="$URL/tsrdi/$YEAR4/tsrdi_$MONTH$DAY$YEAR4-501k.flv">
-            <name>TSR Dialogue</name>
-            <diffusion id="4"/>
-        </program-->
-        <!-- program imagelink="tsr\infra.jpg"
-            url="$URL/ir/$YEAR4/ir_$MONTH$DAY$YEAR4-501k.flv">
-            <name>Infrarouge</name>
-            <diffusion id="1"/>
-        </program-->
-        <!--program imagelink="tsr\nouvo2.jpg"
-            url="$URL/nouvo/$YEAR4/nouvo_$MONTH$DAY$YEAR4-501k.flv">
-            <name>Nouvo</name>
-            <description>(bi-hebdo)</description>
-            <diffusion id="3"/>
-        </program>
-        <program imagelink="tsr\illico.jpg"
-            url="$URL/illic/$YEAR4/illic_$MONTH$DAY$YEAR4-501k.flv">
-            <name>Illico</name>
-            <description>(bi-hebdo)</description>
-            <diffusion id="3"/>
-        </program-->		
-        <!-- program imagelink="tsr\cle.jpg"
-            url="$URL/cle/$YEAR4/cle_$MONTH$DAY$YEAR4-501k.flv">
-            <name>Classe Eco (Archives -> 2007)</name>
-            <diffusion id="0"/>
-        </program-->
-        <!-- program url="$URL/cmoje/$YEAR4/cmoje_$MONTH$DAY$YEAR4-501k.flv">
-            <name>C Mon Jeux</name>
-            <diffusion id="0"/>
-            <diffusion id="1"/>
-            <diffusion id="2"/>
-            <diffusion id="4"/>
-        </program-->
-
    	</channel>
 	
 	<channel baseurl="http://helix-1.sri.ch/ramgen/rsr" imagelink="tsr\rsr.jpg"
@@ -196,8 +153,9 @@
                 <item value="virus">Virus</item>
 				<item value="15minutes">15 Minutes</item>
                 <item value="tas-entendu">T'as entendu ?</item>
-				<item value="a-premiere-vue">A première vue</item>
-				<item value="atlas">Atlas</item>
+				<item value="a-premiere-vue">A première vue</item>				
+                <item value="atlas">Atlas</item>
+                <item value="bande-a-part">Bande à part</item>
 				<item value="betty">Betty</item>
 				<item value="comme-un-soleil">Comme un soleil</item>
 				<item value="de-quoi-j-me-mele">De Quoi J'me mêle</item>
@@ -275,14 +233,12 @@
 
 	<channel
 		category="ch">
-		<name>Local TV</name>
-		
-		<program url="http://wwitv.com/t1/b1503.asx">
-				<name> Leman Bleu </name>
-		</program>
+		<name>Divers</name>
+						
 		<program ispodcast="true" url="http://olivier.euromobile.ch/mediastream/olipodcast.xml">
 				<name> My Podcast </name>
 		</program>
+
 	</channel>
 	
 	
@@ -305,18 +261,7 @@
 		<program ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,23,00.xml">
 			<name>Meteo (Podcast)</name>
 		</program>
-		
-		
-        <!-- program imagelink="fr\tf1_20h.jpg" 
-            url="$URL/FluxJt/jt20d$DAY$MONTH$YEAR4/jt20d$DAY$MONTH$YEAR4r01.asx">
-            <name>JT 20 Heures</name>
-            <diffusion id="7"/>
-        </program>
-        <program imagelink="fr\tf1_13h.jpg" 
-            url="$URL/FluxJt/jt13d$DAY$MONTH$YEAR4/jt13d$DAY$MONTH$YEAR4r01.asx">
-            <name>JT 13 Heures</name>
-            <diffusion id="7"/>
-        </program-->		
+	
 	</channel>
 
 	<channel baseurl="mms://sdmc.contents.edgestreams.net" imagelink="fr\fr2.jpg"
@@ -398,15 +343,7 @@
 		<program imagelink="fr\fr5_scheffer.jpg" url="$URL/dossier-scheffer/dossier-scheffer.wmv">
 			<name>Dossier Scheffer</name>
 		</program>
-		<!--program imagelink="fr\fr5_ubik.jpg" url="$URL/ubik/ubik.wmv">
-			<name>Ubik</name>
-		</program>
-		<program imagelink="fr\fr5_madame.jpg" url="$URL/madamemonsieur/madamemonsieur.wmv">
-			<name>Madame Monsieur</name>
-		</program>
-        <program imagelink="fr\fr5_mondes.jpg" url="$URL/mondesmerveilles/mondesmerveilles.wmv">
-            <name>Mondes et Merveilles</name>
-        </program-->		
+	
 	</channel>
 	
 	
@@ -418,68 +355,24 @@
             <name>Six Minutes National (Podcast)</name>
         </program>
 		
-		<!-- program imagelink="fr\m6_six.jpg" 
-			url="$URL/d/$PR_OPTION1/d$YEAR2$MONTH$DAY190000SARAV$PR_OPTION100000.wmv">
-			<name>Info Soir</name>
-			<diffusion id="7"/>
-			<prooption>
-				<descr>Edition</descr>
-				<item value="92">Principal</item>
-				<item value="33">Bordeaux</item>
-				<item value="38">Grenoble</item>
-				<item value="59">Lille</item>
-				<item value="69">Lyon</item>
-				<item value="13">Marseille</item>
-				<item value="34">Montpellier</item>
-				<item value="54">Nancy</item>
-				<item value="06">Nice</item>
-				<item value="35">Rennes</item>
-				<item value="31">Toulouse</item>
-			</prooption>
-		</program>
-		<program
-			url="$URL/b/$YEAR2/$MONTH/$DAY/b$YEAR2$MONTH$DAY112010SWRAA9220100.wmv">
-			<name>Paris Premiere</name>
-			<diffusion id="0"/>
-		</program-->
+
 	</channel>
 	
-	<!--channel imagelink="fr\arte.jpg" category="fr">
-		<name>Arte</name>
-		<program url="http://stream.arte-tv.com/ramgen/permanent/c7/info/INFO_FR.rmvb">
-			<name>Arte (Live)</name>
-		</program>
-		<program ispodcast="true" imagelink="fr\arte_tracks.jpg"
-			url="http://podcast.arte-tv.com/tracks/tracks.xml">
-			<name>Tracks (Podcast)</name>
-		</program>
-		<program ispodcast="true" imagelink="fr\arte_klang.jpg"
-			url="http://www.arte.tv/podcast/rss/klang_f.xml">
-			<name>Klang (Podcast)</name>
-		</program>
-	</channel-->
-	
-	<!--channel category="fr"
-		baseurl="http://a455.g.akamai.net/7/455/1879/v4/www.viewontv.com/tv5">
-		<name>TV5</name>
-				
-		<program url="mms://mytv.ctn1.net/tv5monde">
-			<name>Live</name>
-		</program>
+    <channel category="fr" >
+        <name>Divers Live</name>
 
-		<program url="$URL/jt_monde/videos/10$DAY$MONTH$YEAR2/titre1.asx" imagelink="fr\tv5_jt.jpg">
-			<name>journal de l'actualité</name>
-			<diffusion id="7"/>
-		</program>
-		<program url="$URL/7jours/videos/jt$DAY$MONTH$YEAR2/titre1.asx" imagelink="fr\tv5_7jours.jpg">
-			<name>7 jours sur la planète</name>
-			<diffusion id="5"/>
-		</program>
-	</channel-->
-	
-	
+        <program url="mms://vipmms9.yacast.net/bfm_bfmtv" imagelink="fr\div_bfmtv.jpg">
+            <name>BFM TV (Live)</name>
+        </program>
+        
+        <!-- program url="http://wwitv.com/a1/b2743.asx" imagelink="fr\div_france24.jpg">
+            <name>France 24 (Live)</name>
+        </program-->
+
+    </channel>
+
 	<channel category="fr" >
-		<name>Divers</name>
+		<name>Divers Podcast</name>
 		
         <program ispodcast="true"
             url="http://www.arretsurimages.net/podcast.xml">
@@ -494,34 +387,49 @@
         <program  ispodcast="true" url="http://www.rss-one.com/rss-4456-Le-Monde.fr--podcast-telezapping">
             <name>Le Monde.fr, Télézapping (Podcast)</name>
         </program>      
+
+        <program  ispodcast="true" url="http://www.ericetramzy.com/podcast/index.xml">
+            <name>Eric et Ramzy (Podcast)</name>
+        </program>      
+
+        <program  ispodcast="true" url="http://www.lezappingduweb.com/LZWpodcasts/podcast.xml">
+            <name>Le Zapping du Web (Podcast)</name>
+        </program>      
+
+        <program  ispodcast="true" url="http://www.tetesaclaques.blip.tv/rss/">
+            <name>Têtes à Claques (Podcast)</name>
+        </program>      
 		
-		<program url="mms://vipmms9.yacast.net/bfm_bfmtv" imagelink="fr\div_bfmtv.jpg">
-			<name>BFM TV (Live)</name>
-		</program>
+        <program ispodcast="true" 
+            url="http://rss.allocine.fr/bandesannonces/ipod">
+            <name>allocine (Podcast)</name>
+        </program>
+        
+         <program ispodcast="true" 
+            url="http://feeds.feedburner.com/concertsaemporter">
+            <name>Concerts à Emporter (Podcast)</name>
+        </program>
+                
+         <program ispodcast="true" 
+            url="http://www.apple.com/podcasts/apple_keynotes/apple_keynotes.xml">
+            <name>Apple Keynotes (Podcast)</name>
+        </program>
 		
-        <!-- program url="mms://live.france24.com/france24_fr.wsx" imagelink="fr\div_france24.jpg">
-            <name>France 24 (Live)</name>
+        <program ispodcast="true"
+            url="http://feeds.feedburner.com/Euronews-NoComment">
+            <name>Euronews No Comment</name>
         </program>
 
-		<program url="http://www.direct8.fr/live.asx.php" imagelink="fr\div_direct8.jpg">
-			<name>Direct 8 (Live)</name>
-		</program>
-		
-		<program url="mms://www.libertytv.com:1234/livebefr" imagelink="fr\div_libertytv.jpg">
-			<name>Liberty TV (Live)</name>
-		</program>
-		
-		<program 
-			url="http://mytvonline.batcave.net/files/TVA.ASX" imagelink="fr\div_tva_quebec.jpg">
-			<name>TVA (Quebec) Live</name>
-		</program>
-		
-			<program url="http://wwitv.com/t1/8216.asx" >
-				<name> Eurosport </name>
-			</program>
-			<program url="http://wwitv.com/t1/b3694.asx">
-				<name> TF1 </name>
-			</program-->
+        <program ispodcast="true"
+            url="http://www.lequipe.fr/Podcast/flashETV_rss.xml">
+            <name>L Equipe</name>
+        </program>
+        
+        <program ispodcast="true"
+            url="http://www.lelab.tv/rss">
+            <name>Le Lab</name>
+        </program>
+        
 		
 	</channel>
 		<!-- ************************************************************************************* -->
@@ -1057,15 +965,6 @@ url="http://www.radioschool.fm/downloads/podcasts/rss.xml?feed=$PR_OPTION1">
 	<channel category="div_pod">
 		<name>Info</name>
 
-        <program ispodcast="true"
-            url="http://www.lemonde.fr/pod/fil/0,57-0,64-876502,0.xml">
-            <name>Le Monde</name>
-        </program>
-        <program ispodcast="true"
-            url="http://feeds.feedburner.com/Euronews-NoComment">
-            <name>Euronews No Comment</name>
-        </program>
-
 		<program ispodcast="true"
 			url="http://downloads.bbc.co.uk/rmhttp/downloadtrial/bbc2/newsnightvideopodcast/rss.xml">
 			<name>newsnightvideopodcast</name>
@@ -1077,23 +976,6 @@ url="http://www.radioschool.fm/downloads/podcasts/rss.xml?feed=$PR_OPTION1">
 				
 	</channel>
 			
-	<channel category="div_pod">
-		<name>Movies</name>
-		<program ispodcast="true" 
-			url="http://rss.allocine.fr/bandesannonces/ipod">
-			<name>allocine</name>
-		</program>
-	</channel>
-
-	<channel category="div_pod">
-		<name>TV</name>
-		<program ispodcast="true"  filemode="title"
-			url="http://www.nouvellestar.fr/podcast/podcast.xml">
-			<name>nouvellestar</name>
-		</program>
-
-	</channel>
-
 	<channel category="div_pod">
 		<name>Techno</name>
 		
@@ -1130,7 +1012,7 @@ url="http://www.radioschool.fm/downloads/podcasts/rss.xml?feed=$PR_OPTION1">
 			<name>Manu Chao</name>
 		</program>
 	
-		<program ispodcast="true"
+        <program ispodcast="true"
 			url="http://www.labels.tm.fr/fr/podcast/labels.xml">
 			<name>labels</name>
 		</program>
@@ -1154,13 +1036,6 @@ url="http://www.radioschool.fm/downloads/podcasts/rss.xml?feed=$PR_OPTION1">
 		</program>
 	</channel>
 	
-	<channel category="div_pod">
-		<name>Sport</name>
-		<program ispodcast="true"
-			url="http://www.lequipe.fr/Podcast/flashETV_rss.xml">
-			<name>lequipe</name>
-		</program>
-	</channel>
 	
 	<channel category="div_pod">
 		<name>Earth</name>
@@ -1234,10 +1109,7 @@ url="http://www.radioschool.fm/downloads/podcasts/rss.xml?feed=$PR_OPTION1">
             url="http://www.idprod.ch/podcast/?feed=rss2">
             <name>ID Prod.ch</name>
         </program>
-        <program ispodcast="true"
-            url="http://www.lelab.tv/rss">
-            <name>Le Lab</name>
-        </program>
+
         <program ispodcast="true"
             url="http://feeds.feedburner.com/Iprodwebhd?format=xml">
             <name>Iprodwebhd</name>
