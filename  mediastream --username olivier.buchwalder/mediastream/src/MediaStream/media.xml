@@ -358,11 +358,58 @@
 
 	</channel>
 	
+	<channel category="fr" >
+		<name>Sport</name>
+        
+		<program url="mms://livewm.orange.fr/live-multicanaux" imagelink="fr\orangesporttv.jpg">
+			<name> Orange Sports TV</name>
+			<description> Toute l'actualité du sport 24 heures sur 24 </description>
+		</program>
+            
+		<program url="mms://quik4.impek.tv/brtv" imagelink="fr\boardriderstv.jpg">
+			<name> Boardriders TV </name>
+			<description> Chaîne de sport nautique avec Quicksilver </description>
+		</program>
+            
+	</channel>
+    
     <channel category="fr" >
         <name>Divers Live</name>
 
         <program url="mms://vipmms9.yacast.net/bfm_bfmtv" imagelink="fr\div_bfmtv.jpg">
             <name>BFM TV (Live)</name>
+        </program>
+        
+        <program url="mms://a1807.l2489855499.c24898.n.lm.akamaistream.net/D/1807/24898/v0001/reflector:55499" imagelink="fr\bloomberg.jpg">
+            <name>Bloomberg TV</name>
+        </program>
+        
+        <program url="mms://stream1.france24.yacast.net/f24_livefr" imagelink="fr\france24.jpg">
+            <name>France 24</name>
+			<description> France 24 propose des bulletins d’informations toutes les 30 minutes, des magazines et émissions de plateau </description>
+        </program>
+        
+        <program url="mms://vipmms9.yacast.net/mcm_top" imagelink="fr\mcmtop.jpg">
+            <name>MCM Top</name>
+        </program>
+        
+        <program url="mms://vipnrj.yacast.net/nrj_tvhit" imagelink="fr\nrjhits.jpg">
+            <name>NRJ Hits</name>
+        </program>
+        
+        <program url="mms://stream2.canal.qc.ca/enOndes_haut_debit" imagelink="fr\canalsavoir.jpg">
+            <name>Canal Savoir</name>
+			<description> Chaîne éducative Quebequoise </description>
+        </program>
+        
+        <program url="http://movix.sdv.fr:8083/orleanstv.asf" imagelink="fr\orleanstv.jpg">
+            <name>Orléans TV </name>
+			<description> Généraliste - Orléans TV se veut "une chaîne généraliste de proximité". Information, environnement, sport, société et culture font partie de la grille des programmes. </description>
+        </program>
+        
+        <program url="mms://www.tele102.net/tele102">
+            <name>Télé102 </name>
+			<description> Télévision locale de Vendée </description>
         </program>
         
         <!-- program url="http://wwitv.com/a1/b2743.asx" imagelink="fr\div_france24.jpg">
@@ -432,6 +479,19 @@
         
 		
 	</channel>
+	<channel category="fr" >
+		<name>Radios</name>
+        
+        <program url="http://streaming.radio.funradio.fr:80/fun-1-44-96" imagelink="fr\funradio.jpg">
+            <name> Fun Radio </name>
+        </program>
+                    
+        <program url="http://ns57.ovh.net:80/" imagelink="fr\alouette.jpg">
+            <name> Alouette FM </name>
+        </program>
+                    
+	</channel>
+    
 		<!-- ************************************************************************************* -->
 	<category id="ger" imagelink="dp\dp_allemagne.jpg" >Germany</category>
 	
@@ -755,6 +815,14 @@
 	</channel>
 	
 	<channel category="en">
+		<name>Sports</name>
+			<program url="http://wwitv.com/t1/b2520.asx">
+				<name> ESPN </name>
+				<description> Sports network. (100K) </description>
+			</program>
+	</channel>
+
+	<channel category="en">
 		<name>Divers</name>
 	
 
@@ -781,10 +849,6 @@
 			<program url="http://wwitv.com/t1/b2521.asx">
 				<name> Cyber comic </name>
 				<description> Comedy channel. (512K) </description>
-			</program>
-			<program url="http://wwitv.com/t1/b2520.asx">
-				<name> ESPN </name>
-				<description> Sports network. (100K) </description>
 			</program>
 			<program url="http://wwitv.com/t1/b3236.asx">
 				<name> Galaxy cartoons </name>
