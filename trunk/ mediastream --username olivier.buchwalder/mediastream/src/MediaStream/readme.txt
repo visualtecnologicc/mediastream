@@ -23,7 +23,7 @@ please read the configuration tips below, and enter your settings into the file 
  History:
 
    Version 0.90
-    - clean and add media entries into media.xml
+    - clean and add media entries into media.xml (Thanks to Temhil)
 
    Version 0.87b
     - add streaming/download choice in each entry of media.xml
