@@ -72,7 +72,6 @@
         </program>
         <program url="http://akastreaming.tsr.ch/ch/hisvi/$YEAR4/hisvi_$MONTH$DAY$YEAR4-501k-fl.flv">
             <name>Histoire Vivante</name>
-            <description></description>
             <diffusion id="6"/>
         </program>
         
