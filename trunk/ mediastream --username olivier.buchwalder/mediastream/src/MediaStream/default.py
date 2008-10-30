@@ -6,81 +6,18 @@
     
         oli@euromobile.ch  < http://gueux-forum.net/index.php?showtopic=146820  >
 
-    << Thanks to alexsolex, nuka1195 for help and to Kochka, JaHeLLthe the authors of cdanslair.py >>
+    << Thanks to alexsolex, Temhil, nuka1195 for help or contributions >>
 
-
-    Problem continue download and debugg.log .. problem on osx
-
-    Version 0.87b
-    - add streaming/download choice in each entry of media.xml
-
-    Version 0.86
-    - fix the user config saving (location on all platforms)
-    - fix reload flag download podcast
-
-    Version 0.85b
-    - fix a path problem with XBMC beta multi platform (Thanks to Temhil)
-
-    Version 0.85
-    - fix a problem with the storing of the configuration of podcast properties.
-    - fix tsr channels rm -> flv
-    
-    Version 0.82
-    - updated witv.com base
-    - fixed the images positionning
-    - fixed user directory creation
-
-    Version 0.81
-    - added country images (thanks dekani)
-    - fixed when image not available -> use default
-    
-    Version 0.8
-    - added user properties
-    - added preference window, press Y
-    - added internet update of media.xml
-    - Modification of the podcast management, only one xml report file foreach item
-    - Modularization and cleaning
-    - Portugal radio added (thanks to cfjrocha)
-    
-    Version 0.7c
-    - added images (thanks dekani)
-    - added witv.com TV stream (thanks to Gan)
-    - conversion to elementTree xml
-
-    Version 0.7b
-    - continue downloading when canceled
-    - added the list of podcast also include the already downloaded podcast
-    - added a flag for downloading or not podcast in the program window
-    - updated media german entries (thanks to warsheep)
-    
-    Version 0.7
-    - added reading podcast using xml dom, fix the decoding problem
-    - added using xml for the media config file
-    - added multiresolution
-    - add sub categories, in the channel window and in the program window (like hierarchical categories folders)
-    
-    Version 0.6
-    - fix a bug when listening podcast mp3 -> download
-    - added RSS podcast support (w downloading)
-    - added multiple list of options with labels and titles
-    - added availability of a program
-    - added M6infos thanks to Dekani (script M6Infos)
-    - added Tf1 JT, podcast
-    - added divers podcast
-    
-    Version 0.5
-    - added externalization of the media config    
-    
     TODO:
-    - urlopen before playing, test redirect, test content type, test RESPOND,  and remove always parameters after '?' ??
-    - support divers site web with regex parsing, sub menus.
-    - the podcast must be presented in a specific window, with image and description, support all type of podcast, not only with media audio and videos
+    - fix continue download, or debug.log file on MacOSX
+    - add urlopen before playing, test redirect, test content type, test RESPOND,  and remove always parameters after '?' ??
+    - add support divers site web with regex parsing, sub menus.
+    - add: the podcast must be presented in a specific window, with image and description, support all type of podcast, not only with media audio and videos
     - add multi download in external thread, with a window that presents all download state
-    - be able to download also the non-podcast
-	- test dead links, before playing?
-    - support badly named podcast for downloading
+    - add support be able to download also the non-podcast
+	- add test dead links, before playing?
+    - add support badly named podcast for downloading
     - add support window XML skins
-        
 """
 
 
