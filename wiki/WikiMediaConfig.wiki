@@ -32,7 +32,8 @@
 					nbdiff -> the maximum available diffusions 
  ispodcast		: boolean flag
  filemode="title" : for podcast, to force the file name to download to be built with the title
- 
+ download            : boolean flag that overrides the global preference
+
  ----------------------------------------------------
  Replacement keys (can be used in baseURL and URL)
  ----------------------------------------------------
