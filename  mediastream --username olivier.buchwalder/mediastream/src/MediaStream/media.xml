@@ -257,10 +257,23 @@
         <program imagelink="fr\lci_journal.jpg" ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,14,00.xml">
             <name>JT LCI (Podcast)</name>
         </program>
+		<program ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,150,00.xml">
+			<name>LCI est à vous (Podcast)</name>
+		</program>
+		<program ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,304,00.xml">
+			<name>Le journal du monde  (Podcast)</name>
+		</program>
 		<program ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,23,00.xml">
 			<name>Meteo (Podcast)</name>
 		</program>
-	
+		<program ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,74,00.xml">
+			<name>Le Journal du web - par LCI (Podcast)</name>
+            <description> L'actualité du web dans des épisodes quotidiens de 15mn. Présentation des dernières nouveautés technologiques et des avancées du monde numérique vues par Internet. </description> 
+		</program>
+		<program ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,19,00.xml">
+			<name>Plein écran 2.0 - Les nouveautés High Tech par LCI (Podcast)</name>
+            <description> Rubriques informatives sur ce que l'on trouve de mieux sur le web, du maillot de bain solaire au mp3 à manivelles, en passant par les sex-toys écolos. Un condensé du meilleur comme du pire dans l'univers du web. A ne pas manquer également, l'emission :"Le zapping du web". </description> 
+		</program>
 	</channel>
 
 	<channel baseurl="mms://sdmc.contents.edgestreams.net" imagelink="fr\fr2.jpg"
@@ -344,7 +357,19 @@
 		</program>
 	
 	</channel>
-	
+    
+	<channel imagelink="fr\arte.jpg" category="fr">
+		<name>ARTE</name>
+		<program ispodcast="true" url="http://feeds.feedburner.com/arte/fr/Metropolis?format=xml">
+			<name>Metropolis (Podcast)</name>
+            <description> L'émission Metropolis Le magazine culturel d'ARTE tous les samedis à 20h15 et les dimanches à 12h00. Streaming après la diffusion du dimanche pendant 7 jours sur www.arte.tv/metropolis </description> 
+		</program>
+
+		<program ispodcast="true" url="http://feeds.feedburner.com/arte/fr/Tracks?format=xml" imagelink="fr\arte_tracks.jpg"  >
+			<name>Mini Tracks (Podcast)</name>
+            <description> Tracks, le magazine qui ne fait rien comme les autres, déboule, défriche et décrypte partout où ça bouge... Tous les vendredi soirs sur Arte. Découvrez plus d'informations sur l'émission grâce au site www.arte.tv/tracks </description> 
+		</program>
+	</channel>	
 	
 	<channel baseurl="mms://stream1.m6.fr.ipercast.net/m6.fr/6minutes"
 		imagelink="fr\m6.jpg" category="fr">
@@ -353,10 +378,18 @@
         <program ispodcast="true" url="http://www.rss-one.com/rss-4997-M6---Six-Minutes" >
             <name>Six Minutes National (Podcast)</name>
         </program>
-		
-
+        
 	</channel>
-	
+        
+	<channel imagelink="fr\13emerue.jpg" category="fr">
+		<name>13ème Rue</name>
+        
+		<program ispodcast="true" url="http://podcast.13emerue.fr/13emeruepodcast.xml">
+			<name>13ème Rue (Podcast)</name>
+            <description> la chaîne action et suspense - Les magazines de la chaîne 13ème Rue </description> 
+		</program>
+	</channel>	
+			
 	<channel category="fr" >
 		<name>Sport</name>
         
@@ -370,7 +403,71 @@
 			<description> Chaîne de sport nautique avec Quicksilver </description>
 		</program>
             
+        <program ispodcast="true"
+            url="http://www.lequipe.fr/Podcast/flashETV_rss.xml">
+            <name>L Equipe</name>
+        </program>
+        
 	</channel>
+    
+	<channel category="fr" >
+		<name>Musique</name>
+        
+        <program url="mms://vipmms9.yacast.net/mcm_top" imagelink="fr\mcmtop.jpg">
+            <name>MCM Top</name>
+        </program>
+        
+        <program url="mms://vipnrj.yacast.net/nrj_tvhit" imagelink="fr\nrjhits.jpg">
+            <name>NRJ Hits</name>
+        </program>
+        
+	</channel>
+    
+	<channel category="fr" >
+		<name>Educatif</name>
+        
+        <program url="mms://stream2.canal.qc.ca/enOndes_haut_debit" imagelink="fr\canalsavoir.jpg">
+            <name>Canal Savoir</name>
+			<description> Chaîne éducative Quebequoise </description>
+        </program>
+        
+        <program ispodcast="true"
+            url="http://www.canaleducatif.fr/p.xml">
+            <name>Canal Educatif à la Demande (Podcast)</name>
+            <description> Le meilleur des vidéos éducatives sur l'économie, les sciences et les arts </description>
+        </program>
+        
+		<program ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,74,00.xml">
+			<name>Le Journal du web - par LCI (Podcast)</name>
+            <description> L'actualité du web dans des épisodes quotidiens de 15mn. Présentation des dernières nouveautés technologiques et des avancées du monde numérique vues par Internet. </description> 
+		</program>
+        
+		<program ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,19,00.xml">
+			<name>Plein écran 2.0 - Les nouveautés High Tech par LCI (Podcast)</name>
+            <description> Rubriques informatives sur ce que l'on trouve de mieux sur le web, du maillot de bain solaire au mp3 à manivelles, en passant par les sex-toys écolos. Un condensé du meilleur comme du pire dans l'univers du web. A ne pas manquer également, l'emission :"Le zapping du web". </description> 
+		</program>
+        
+		<program ispodcast="true" url="http://feeds.feedburner.com/lepodcasthightechfrance?format=xml">
+			<name>Le podcast High-Tech France (Podcast)</name>
+            <description> Les nouveautés High Tech </description> 
+		</program>
+        
+		<program ispodcast="true" url="http://feeds.feedburner.com/lepodcasthightechbelgique?format=xml">
+			<name>Le podcast High-Tech Belgique (Podcast)</name>
+            <description> Les nouveautés High Tech </description> 
+		</program>
+        
+		<program ispodcast="true" url="http://www.cite-sciences.fr/francais/ala_cite/science_actualites/sitesactu/podcast-video-actualites-science.xml">
+			<name>Cité des sciences et de l'industrie (Podcast)</name>
+            <description> Science Actualités </description> 
+		</program>
+
+		<program ispodcast="true" url="http://feeds.loiclemeur.com/loiclemeurfr/">
+			<name>Loic Lemeur (Podcast)</name>
+            <description> Idées (presque) quotidiennes sur la France, la création d'entreprise, le web, les blogs, et tout ce qui me passe par la tête. </description> 
+		</program>
+
+ 	</channel>
     
     <channel category="fr" >
         <name>Divers Live</name>
@@ -386,19 +483,6 @@
         <program url="mms://stream1.france24.yacast.net/f24_livefr" imagelink="fr\france24.jpg">
             <name>France 24</name>
 			<description> France 24 propose des bulletins d’informations toutes les 30 minutes, des magazines et émissions de plateau </description>
-        </program>
-        
-        <program url="mms://vipmms9.yacast.net/mcm_top" imagelink="fr\mcmtop.jpg">
-            <name>MCM Top</name>
-        </program>
-        
-        <program url="mms://vipnrj.yacast.net/nrj_tvhit" imagelink="fr\nrjhits.jpg">
-            <name>NRJ Hits</name>
-        </program>
-        
-        <program url="mms://stream2.canal.qc.ca/enOndes_haut_debit" imagelink="fr\canalsavoir.jpg">
-            <name>Canal Savoir</name>
-			<description> Chaîne éducative Quebequoise </description>
         </program>
         
         <program url="http://movix.sdv.fr:8083/orleanstv.asf" imagelink="fr\orleanstv.jpg">
@@ -467,11 +551,6 @@
         </program>
 
         <program ispodcast="true"
-            url="http://www.lequipe.fr/Podcast/flashETV_rss.xml">
-            <name>L Equipe</name>
-        </program>
-        
-        <program ispodcast="true"
             url="http://www.lelab.tv/rss">
             <name>Le Lab</name>
         </program>
@@ -488,7 +567,19 @@
         <program url="http://ns57.ovh.net:80/" imagelink="fr\alouette.jpg">
             <name> Alouette FM </name>
         </program>
-                    
+        
+        <program ispodcast="true" url="http://www.france-info.com/rss/accueil.xml">
+            <name>France info - A la Une (Podcast)</name>
+        </program>
+                
+        <program ispodcast="true" url="http://www.france-info.com/rss/france.xml">
+            <name>France info - France (Podcast)</name>
+        </program>
+        
+        <program ispodcast="true" url="http://www.france-info.com/rss/monde.xml">
+            <name>France info -Monde (Podcast)</name>
+        </program>
+                
 	</channel>
     
 		<!-- ************************************************************************************* -->
@@ -820,16 +911,33 @@
 				<description> Sports network. (100K) </description>
 			</program>
 	</channel>
+    
+	<channel category="en">
+		<name>National Geographic</name>
+            <program ispodcast="true"
+                url="http://podcast.nationalgeographic.com/ng-video-shorts/">
+                <name>Wild Chronicles Digital Shorts (Video Podcast)</name>
+				<description> Watch videos from National Geographic, including Mysteries of Lost Civilizations, the World's Most Unusual Foods, Extreme Healing, the World's Toughest Jobs, Spotlights of countries around the world, and more! </description>
+            </program>
+            <program ispodcast="true"
+                url="http://podcast.nationalgeographic.com/dog-whisperer/">
+                <name>Dog Whisperer (Video Podcast)</name>
+				<description> Watch sneak peeks and favorite moments from National Geographic Channel's popular series Dog Whisperer with Cesar Millan. </description>
+            </program>
+            <program ispodcast="true"
+                url="http://podcast.nationalgeographic.com/walks-of-a-lifetime?format=xml">
+                <name>Walks of a Lifetime (Audio Podcast)</name>
+				<description> Narrated by radio and television travel authority Rudy Maxa and written and selected by the editors of National Geographic Traveler, Walks of a Lifetime is a showcase of the world's greatest walking tours. </description>
+            </program>
 
+	</channel>
 	<channel category="en">
 		<name>Divers</name>
-	
 
 			<program url="http://wwitv.com/t1/b2661.asx">
 				<name> TMF </name>
 				<description> The Music Factory. (1500K) </description>
 			</program>
-
 
 			<program url="http://wwitv.com/t1/b2570.asx">
 				<name> America one </name>
