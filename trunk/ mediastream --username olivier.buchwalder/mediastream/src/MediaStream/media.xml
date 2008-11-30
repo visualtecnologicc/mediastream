@@ -280,8 +280,14 @@
 		category="fr">
 		<name>France Télévisions</name>
 		<program 
+			url="$URL/horsgv/regions/siege/infos/f2/13h/HD_13h_$YEAR4$MONTH$DAY.wmv" imagelink="fr\fr2_13h.jpg" >
+			<name>Le Journal de 13h France 2</name>
+			<diffusion id="7"/>
+			<avail type="nbdays" value="7"/>
+		</program>
+		<program 
 			url="$URL/horsgv/regions/siege/infos/f2/20h/HD_20h_$YEAR4$MONTH$DAY.wmv" imagelink="fr\fr2_jt20h.jpg" >
-			<name>Le Journal de France 2</name>
+			<name>Le Journal de 20h France 2</name>
 			<diffusion id="7"/>
 			<avail type="nbdays" value="7"/>
 		</program>
