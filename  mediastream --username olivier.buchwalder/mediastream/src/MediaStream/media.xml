@@ -935,7 +935,7 @@
 			</program>
 	</channel>
     
-	<channel category="en" imagelink="fr\national_geographic.jpg">
+	<channel category="en" imagelink="en\national_geographic.jpg">
 		<name>National Geographic</name>
             <program ispodcast="true"
                 url="http://podcast.nationalgeographic.com/ng-video-shorts/">
@@ -979,6 +979,46 @@
             </program>
 
 	</channel>
+    
+	<channel category="en" imagelink="en\Discovery.jpg">
+		<name>Discovery</name>
+            <program ispodcast="true"
+                url="http://www.discovery.com/radio/xml/discovery_video.xml" 
+                imagelink="en\Discovery_video.jpg">
+                <name>Discovery Channel Video Podcasts (Podcast)</name>
+				<description> Explore your world with Discovery Channel video podcasts! </description>
+            </program>
+            
+            <program ispodcast="true"
+                url="http://www.discovery.com/radio/xml/news_video.xml" 
+                imagelink="en\Discovery_news.jpg">
+                <name>Discovery News Video Podcasts (Podcast)</name>
+				<description> Stay on top of the latest developments in science news </description>
+            </program>
+            
+            <program ispodcast="true"
+                url="http://www.discovery.com/radio/xml/DiscoverySpace.xml" 
+                imagelink="en\Discovery_space.jpg">
+                <name>Discovery Space Video Podcasts (Podcast)</name>
+				<description> Discovery Space video podcasts take you inside the world of NASA and deep into space. </description>
+            </program>
+            
+            <program ispodcast="true"
+                url="http://www.discovery.com/radio/xml/sharkweek.xml" 
+                imagelink="en\Discovery_sharkweek.jpg">
+                <name>Shark Week (Podcast)</name>
+            </program>
+            
+            <program ispodcast="true"
+                url="http://www.discovery.com/radio/xml/breastcancer.xml" 
+                imagelink="en\Discovery_health.jpg">
+                <name>Discovery Health Channel (Audio Podcast)</name>
+				<description> Discovery Health brings you the latest health news, tips on living well, and much more </description>
+            </program>
+            
+
+	</channel>
+    
 	<channel category="en">
 		<name>Divers</name>
 
