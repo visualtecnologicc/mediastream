@@ -404,6 +404,10 @@
             <description> Infos et coups de gueule sur l'actu jeux vidéo de la semaine... </description> 
 		</program>
         
+		<program ispodcast="true" url="http://rss.gamekult.com/rss/podcast/video_retro.xml">
+			<name>Gamekult.com (Podcast): Vidéos de jeux - Retro gaming</name>
+		</program>
+        
 		<program ispodcast="true" url="http://rss.gamekult.com/rss/podcast/video_tout.xml">
 			<name>Gamekult.com (Podcast): Vidéos de jeux</name>
 		</program>
@@ -931,22 +935,47 @@
 			</program>
 	</channel>
     
-	<channel category="en">
+	<channel category="en" imagelink="fr\national_geographic.jpg">
 		<name>National Geographic</name>
             <program ispodcast="true"
                 url="http://podcast.nationalgeographic.com/ng-video-shorts/">
                 <name>Wild Chronicles Digital Shorts (Video Podcast)</name>
 				<description> Watch videos from National Geographic, including Mysteries of Lost Civilizations, the World's Most Unusual Foods, Extreme Healing, the World's Toughest Jobs, Spotlights of countries around the world, and more! </description>
             </program>
+            
             <program ispodcast="true"
                 url="http://podcast.nationalgeographic.com/dog-whisperer/">
                 <name>Dog Whisperer (Video Podcast)</name>
 				<description> Watch sneak peeks and favorite moments from National Geographic Channel's popular series Dog Whisperer with Cesar Millan. </description>
             </program>
+            
             <program ispodcast="true"
-                url="http://podcast.nationalgeographic.com/walks-of-a-lifetime?format=xml">
+                url="http://www1.natgeochannel.co.uk/podcasts/perfectweapon.xml">
+                <name>Perfect Weapon (UK Video Podcast)</name>
+				<description> While resting between takes of stabbing, slashing and shooting, ex-Royal Marine Monty Halls and bearded biker archaeologist Stuart Prior describe their favourite finds in the series that aims to uncover The Perfect Weapon. </description>
+            </program>
+
+            <program ispodcast="true"
+                url="http://www1.natgeochannel.co.uk/podcasts/dangerousencounters.xml">
+                <name>Dangerous Encounters (UK Video Podcast)</name>
+				<description> Swimming with sharks, wrestling crocodiles and capturing giant snakes it's just another day in the life of Croc Doc Brady Barr. </description>
+            </program>
+
+            <program ispodcast="true"
+                url="http://www1.natgeochannel.co.uk/podcasts/dangerousencounters.xml">
+                <name>What Would Happen if..? (UK Video Podcast)</name>
+				<description> Swimming with sharks, wrestling crocodiles and capturing giant snakes it's just another day in the life of Croc Doc Brady Barr. </description>
+            </program>
+
+            <program ispodcast="true"
+                url="http://www1.natgeochannel.co.uk/podcasts/hd.xml">
+                <name>National Geographic Channel HD (UK Video Podcast)</name>
+            </program>
+
+            <program ispodcast="true"
+                url="http://www1.natgeochannel.co.uk/podcasts/wwhi.xml">
                 <name>Walks of a Lifetime (Audio Podcast)</name>
-				<description> Narrated by radio and television travel authority Rudy Maxa and written and selected by the editors of National Geographic Traveler, Walks of a Lifetime is a showcase of the world's greatest walking tours. </description>
+				<description> Dr Marty Jopson and his team of human guinea pigs investigate life's many mysteries. </description>
             </program>
 
 	</channel>
