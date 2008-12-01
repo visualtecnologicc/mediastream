@@ -396,6 +396,19 @@
 		</program>
 	</channel>	
 			
+	<channel imagelink="fr\gamekult.jpg" category="fr">
+		<name>Gamekult.com</name>
+        
+		<program ispodcast="true" url="http://www.cnettv.fr/rss/jeux/gamekult/">
+			<name>Gamekult l'émission (Podcast)</name>
+            <description> Infos et coups de gueule sur l'actu jeux vidéo de la semaine... </description> 
+		</program>
+        
+		<program ispodcast="true" url="http://rss.gamekult.com/rss/podcast/video_tout.xml">
+			<name>Gamekult.com (Podcast): Vidéos de jeux</name>
+		</program>
+	</channel>	
+
 	<channel category="fr" >
 		<name>Sport</name>
         
