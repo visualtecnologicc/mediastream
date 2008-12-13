@@ -591,6 +591,50 @@
             <name> Alouette FM </name>
         </program>
         
+        <program url="http://player.cheriefm.fr/V4/cheriefm/cheriefm.asx" imagelink="fr\cheriefm.jpg">
+            <name> Cherie FM </name>
+        </program>
+        
+        <program url="http://live.europe1.fr/V4/europe1/europe1.asx" imagelink="fr\europe1.jpg">
+            <name> Europe 1</name>
+        </program>
+
+        <program url="http://www.tv-radio.com/station/france_culture_mp3/france_culture_mp3-128k.m3u" imagelink="fr\culture.jpg">
+            <name> France culture</name>
+        </program>
+	
+        <program url="http://mp3.live.tv-radio.com/lemouv/all/lemouvhautdebit.mp3" imagelink="fr\le mouv'.jpg">
+            <name> Le mouv'</name>
+        </program>
+        
+        <program url="http://player.nostalgie.fr/V4/nostalgie/nostalgie.asx" imagelink="fr\nostalgie.jpg">
+            <name> Nostalgie</name>
+        </program>
+        
+        <program url="http://broadcast.infomaniak.net/radionova-high.mp3" imagelink="fr\Nova.jpg">
+            <name> Nova</name>
+        </program>
+        
+        <program url="http://www.ouifm.fr/player/metafile/Ouifm-hautdebit-wmp.asx" imagelink="fr\oui.jpg">
+            <name> Oui FM</name>
+        </program>
+        
+        <program url="http://viphttp.yacast.net/V4/player_rfm/rfm.asx" imagelink="fr\rfm.jpg">
+            <name> RFM</name>
+        </program>
+        
+        <program url="http://player.rireetchansons.fr/V4/rireetchansons/rireetchansons.asx" imagelink="fr\rire.jpg">
+            <name> Rires et chansons</name>
+        </program>
+        
+        <program url="http://cache.yacast.fr/V4/rmc/rmc.m3u" imagelink="fr\rmc.jpg">
+            <name> RMC Info</name>
+        </program>
+        
+        <program url="http://streaming.radio.rtl.fr/rtl-1-44-96" imagelink="fr\rtl.jpg">
+            <name> RTL</name>
+        </program>
+
         <program ispodcast="true" url="http://www.france-info.com/rss/accueil.xml">
             <name>France info - A la Une (Podcast)</name>
         </program>
@@ -1021,6 +1065,13 @@
     
 	<channel category="en">
 		<name>Divers</name>
+
+            <program ispodcast="true"
+                url="http://www.fxguide.com/fxguidetv.rss" 
+                imagelink="en\fxguide.jpg">
+				<name> fxguidetv (Podcast) </name>
+				<description> A high definition video netcast covering the visual effects industry and software from a high-end professional vfx artists' perspective </description>
+			</program>
 
 			<program url="http://wwitv.com/t1/b2661.asx">
 				<name> TMF </name>
