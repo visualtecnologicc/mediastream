@@ -147,18 +147,18 @@ class ChannelWindow(xbmcgui.Window):
                             selPodItem = podcastInfo.itemsInfo[eltIdx]
                             
                             # read the prefs
-                            mustDownload = program.mustDownload   # overrides global when defined
-                            if mustDownload == None:
-                                mustDownload = config.podcastDownload
+                            #mustDownload = program.mustDownload   # overrides global when defined
+                            #if mustDownload == None:
+                            #    mustDownload = config.podcastDownload                            
                             
                             # if exist and finish always play
                             if os.path.exists(selPodItem.fileLocation) and selPodItem.flagfinish:
                                 urlemission = selPodItem.fileLocation
-                                mustDownload = False
-                            #---------------                            
-                                                           
+                            #loca file
+                            elif selPodItem.url == None or selPodItem.url == '':  ### isLocal ?!
+                                urlemission = selPodItem.fileLocation                                                                                           
                             # download activated and not a local file
-                            if mustDownload and selPodItem.url != None and selPodItem.url != '':
+                            elif program.mustDownload or (program.mustDownload == None and config.podcastDownload): #and selPodItem.url != None and selPodItem.url != '':
                                 
                                 # try to create dir or pass if exist
                                 if not createDirectory(podcastInfo.targetDirectory):
@@ -193,8 +193,8 @@ class ChannelWindow(xbmcgui.Window):
                         
                             #---------------
                             # url doesn't exist -> local file
-                            elif selPodItem.url == None or selPodItem.url == '':  ### isLocal ?!
-                                urlemission = selPodItem.fileLocation                                
+                            #elif selPodItem.url == None or selPodItem.url == '':  ### isLocal ?!
+                            #    urlemission = selPodItem.fileLocation                                
                             #---------------
                             # streaming only                             
                             else:
