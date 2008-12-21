@@ -18,6 +18,7 @@
 	- add test dead links, before playing?
     - add support badly named podcast for downloading
     - add support window XML skins
+    - add list of categories (id transformed to list of ids)
 """
 
 
@@ -145,16 +146,17 @@ class ChannelWindow(xbmcgui.Window):
                             # the selected pod info
                             selPodItem = podcastInfo.itemsInfo[eltIdx]
                             
-                            # if exist and finish always play
-                            if os.path.exists(selPodItem.fileLocation) and selPodItem.flagfinish:
-                                urlemission = selPodItem.fileLocation   
-                            #---------------
-                            
                             # read the prefs
                             mustDownload = program.mustDownload   # overrides global when defined
                             if mustDownload == None:
                                 mustDownload = config.podcastDownload
-                                
+                            
+                            # if exist and finish always play
+                            if os.path.exists(selPodItem.fileLocation) and selPodItem.flagfinish:
+                                urlemission = selPodItem.fileLocation
+                                mustDownload = False
+                            #---------------                            
+                                                           
                             # download activated and not a local file
                             if mustDownload and selPodItem.url != None and selPodItem.url != '':
                                 
