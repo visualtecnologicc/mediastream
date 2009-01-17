@@ -10,6 +10,25 @@ from elementtree.ElementTree import Element, ElementTree, parse, SubElement, Pro
 from constants import *
 
 
+def get_system_platform():
+    """ 
+    Get xbmc current platform
+    Credit: Frost
+    """
+    platform = "unknown"
+    if xbmc.getCondVisibility( "system.platform.linux" ):
+        platform = "linux"
+    elif xbmc.getCondVisibility( "system.platform.xbox" ):
+        platform = "xbox"
+    elif xbmc.getCondVisibility( "system.platform.windows" ):
+        platform = "windows"
+    elif xbmc.getCondVisibility( "system.platform.osx" ):
+        platform = "osx"
+    return platform
+
+SYSTEM_PLATFORM = get_system_platform()
+
+
 class MyCancel(Exception):
     def __init__(self, value):
         self.value = value
@@ -19,7 +38,7 @@ class MyCancel(Exception):
 
 def outPrint (message, e=None):  
     """
-    Debuf fonction for printing and debugging
+    Debug function for printing and debugging
     """
     outstr = '\nMStream:'
     if message :
@@ -35,7 +54,15 @@ def outPrint (message, e=None):
         if e:
             traceback.print_exc()
     if LOG_VALUE >= 3:
-        logfile = open(DEBUG_FILE,'a+')
+        # Temporary fix while append (a+) has been broken on Linux, Windows, Mac 
+        # Consequence is we lose the log of previous sessions but at least we run
+        # Credit: Seb
+        # TODO: fix that when it will be fix in XBMC
+        # logfile = open(DEBUG_FILE,'a+')
+        WRITE_OPTION = 'w'
+        if SYSTEM_PLATFORM == "xbox":
+            WRITE_OPTION = 'a+' # We keep normal behavior on XBOX
+        logfile = open(DEBUG_FILE, WRITE_OPTION)            
         logfile.write ( outstr )
         if e:
             traceback.print_exc(file=logfile)
