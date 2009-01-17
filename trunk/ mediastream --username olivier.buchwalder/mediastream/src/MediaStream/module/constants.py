@@ -18,7 +18,7 @@ CONFIG_FULL_PATH     = os.path.join(CONFIG_DIR_ROOT, 'userconfig.xml')
 MEDIA_CONF           = os.path.join(HOME, 'media.xml')
 MEDIA_TMP_CONF       = os.path.join(HOME, '_tempmedia.xml')
 
-VERSION              = '0.90'
+VERSION              = '0.91'
 
 PODCAST_DOWNLOAD     = True
 
