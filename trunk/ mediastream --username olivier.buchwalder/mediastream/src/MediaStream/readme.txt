@@ -1,6 +1,6 @@
 #####################################################
 #         Media Stream script for XBMC by Oliv      #
-#                Version 0.90                       #
+#                Version 0.91                       #
 #              oli AT euromobile.ch                 #
 ##################################################### 
 
@@ -22,6 +22,12 @@ please read the configuration tips below, and enter your settings into the file 
 ##################################################### 
  History:
 
+   Version 0.91
+    - Added new media entries (streams, podcasts)
+    - reorganized some categories 
+    - temporary fix in order to be compatible with last release of XBMC on Linux, Windows 
+      and Mac since append on file ('a+') in currently broken in XBMC
+      
    Version 0.90
     - clean and add media entries into media.xml (Thanks to Temhil)
 
