@@ -569,7 +569,7 @@
 		</program>
 		
 		<program ispodcast="true"
-			url="http://sloa.serieslive.com/feed/podcast">
+			url="http://theslchronicles.serieslive.com/feed/">
 			<name>SeriesLive on Air (Podcast Audio)</name>
 				  <description> Podast Uadio de l'équipe du site Web de SeriesLive </description>
 		</program>
@@ -1113,6 +1113,50 @@
 	</channel>
 	
 	<channel category="en">
+		<name>msnbc</name>
+		<program ispodcast="true"
+			url="http://podcast.msnbc.com/audio/podcast/MSNBC-MTP-NETCAST-M4V.xml">
+			<name> Meet the Press (Podcast) </name>
+			<description> Featuring headline-making interviews with world leaders and U.S. newsmakers. Watch the complete show, updated each Sunday morning. </description>
+		</program>
+		<program ispodcast="true"
+			url="http://podcast.msnbc.com/audio/podcast/MSNBC-NN-NETCAST-M4V.xml">
+			<name> Nightly News with Brian Williams (Podcast) </name>
+			<description> The news of the day from around the globe. Watch the complete show, updated each weekday evening. </description>
+		</program>
+		<program ispodcast="true"
+			url="http://podcast.msnbc.com/audio/podcast/MSNBC-TDY-PODCAST-M4V.xml">
+			<name> TODAY (Podcast) </name>
+			<description> Reporting from NBC News and interviews with celebrities, newsmakers and more. Watch the full first hour of TODAY every weekday after 11 a.m. ET. </description>
+		</program>
+		<program ispodcast="true"
+			url="http://podcast.msnbc.com/audio/podcast/MSNBC-COUNTDOWN-NETCAST-M4V.xml">
+			<name> Countdown (Podcast) </name>
+			<description> Keith Olbermann takes a fast-paced look at the top five news stories of the day, from politics to pop culture and from the mainstream to the oddball. Watch the complete show every evening. </description>
+		</program>
+		<program ispodcast="true"
+			url="http://podcast.msnbc.com/audio/podcast/MSNBC-MADDOW-NETCAST-M4V.xml">
+			<name> Rachel Maddow (Podcast) </name>
+			<description> The Rachel Maddow Show, which airs 9 p.m. ET weeknights on MSNBC, is a smart look at politics, pop culture, and all the day's top stories. Watch the complete show every evening. </description>
+		</program>
+		<program ispodcast="true"
+			url="http://podcast.msnbc.com/audio/podcast/MSNBC-SCARBOROUGH-NETCAST-M4V.xml">
+			<name> Morning Joe (Podcast) </name>
+			<description> Wake up every morning with former Florida Congressman Joe Scarborough and the Morning Joe team, including MSNBC's Willie Geist and Mika Brzezinski. </description>
+		</program>
+		<program ispodcast="true"
+			url="http://podcast.msnbc.com/audio/podcast/pdm_zeitgeist.xml">
+			<name> ZeitGeist  (Podcast) </name>
+			<description> Host Willie Geist proudly delivers the day's most irrelevant stories. It's all the news you cannot use. </description>
+		</program>
+		<program ispodcast="true"
+			url="http://podcast.msnbc.com/audio/podcast/MSNBC-YB-NETCAST-M4V.xml">
+			<name> Your Business  (Podcast) </name>
+			<description> Host JJ Ramberg focuses on the world of America's small business entrepreneurs. A highlight from the weekly show. </description>
+		</program>
+	</channel>	
+
+	<channel category="en">
 		<name>Divers</name>
 		<program ispodcast="true"
 			url="http://www.fxguide.com/fxguidetv.rss" 
@@ -1120,7 +1164,6 @@
 			<name> fxguidetv (Podcast) </name>
 			<description> A high definition video netcast covering the visual effects industry and software from a high-end professional vfx artists' perspective </description>
 		</program>
-
 		<program url="http://wwitv.com/t1/b2661.asx">
 			<name> TMF </name>
 			<description> The Music Factory. (1500K) </description>
