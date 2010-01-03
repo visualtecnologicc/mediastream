@@ -22,6 +22,12 @@ please read the configuration tips below, and enter your settings into the file 
 ##################################################### 
  History:
 
+   Version 0.92
+	- Merged changes made by evade (http://passion-xbmc.org/releases-scripts-et-plugins/mediastream-1028/msg24508/#msg24508)
+	- Updated media.xml
+	- Added new pictures
+	- Added week support (not fully tested)
+	
    Version 0.91
     - Added new media entries (streams, podcasts)
     - reorganized some categories 
@@ -117,7 +123,7 @@ please read the configuration tips below, and enter your settings into the file 
  ----------------------------------------------------
  Program parameters
  ----------------------------------------------------
- name			: the string name of the channel (mandatory)
+ name			: the string name of the program (mandatory)
  url			: url (string) of the program (can use string replacement keys, as $MONTH, $URL, ..)
  prooption	    : list of option, defined using a dico, selected value -> '$PR_OPTIONi', i = 1->n
  desc			: the description string
@@ -141,6 +147,7 @@ please read the configuration tips below, and enter your settings into the file 
  ----------------------------------------------------
  $DAY			: day indentifier 00-31
  $MONTH			: month identifier 00-12
+ $WEEK			: week The ISO 8601 week number of the current year (01 to 53), where week 1 is the first week that has at least 4 days in the current year, and with Monday as the first day of the week
  $YEAR2			: year identifier in 2 decimals, e.g. 07
  $YEAR4			: year identifier in 4 decimals, e.g. 2007
  $CH_OPTIONi	: optional value selected by the user from the channel 'options' value

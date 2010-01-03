@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<media version="0.91" author="oli_AT_euromobile.ch" date="17.01.2009" >
+<media version="0.90" author="oli_AT_euromobile.ch" date="30.10.2008" >
 
 	<category id="ch" imagelink="dp\dp_suisse.jpg">Switzerland</category>
 
@@ -129,7 +129,7 @@
 			<diffusion id="2"/>
 		</program>
 
-	</channel>
+   	</channel>
 	
 	<channel baseurl="http://helix-1.sri.ch/ramgen/rsr" imagelink="tsr\rsr.jpg"
 		category="ch">
@@ -242,68 +242,638 @@
 	
 	
 	<!-- ************************************************************************************* -->
-	<category id="fr" imagelink="dp\dp_france.jpg">France</category>
+		<category id="fr" imagelink="dp\dp_france.jpg">France</category>
 
-	<channel baseurl="http://s.tf1.fr" imagelink="fr\tf1.jpg" category="fr">
-		<name>TF1</name>
-				
-		<program imagelink="fr\lci_journal.jpg" ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,204,00.xml">
-			<name>JT 13h (Podcast)</name>
-		</program>
-		<program imagelink="fr\lci_journal.jpg" ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,205,00.xml">
-			<name>JT 20h (Podcast)</name>
-		</program>
 
-		<program imagelink="fr\lci_journal.jpg" ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,14,00.xml">
-			<name>JT LCI (Podcast)</name>
-		</program>
-		<program ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,150,00.xml">
-			<name>LCI est à vous (Podcast)</name>
-		</program>
-		<program ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,304,00.xml">
-			<name>Le journal du monde  (Podcast)</name>
-		</program>
-		<program ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,23,00.xml">
-			<name>Meteo (Podcast)</name>
-		</program>
-		<program ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,74,00.xml">
-			<name>Le Journal du web - par LCI (Podcast)</name>
-			<description> L'actualité du web dans des épisodes quotidiens de 15mn. Présentation des dernières nouveautés technologiques et des avancées du monde numérique vues par Internet. </description> 
-		</program>
-		<program ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,19,00.xml">
-			<name>Plein écran 2.0 - Les nouveautés High Tech par LCI (Podcast)</name>
-			<description> Rubriques informatives sur ce que l'on trouve de mieux sur le web, du maillot de bain solaire au mp3 à manivelles, en passant par les sex-toys écolos. Un condensé du meilleur comme du pire dans l'univers du web. A ne pas manquer également, l'emission :"Le zapping du web". </description> 
-		</program>
-	</channel>
+								   ---------------------TF1--------------------
 
-	<channel baseurl="mms://sdmc.contents.edgestreams.net" imagelink="fr\fr2.jpg" category="fr">
-		<name>France Télévisions</name>
-		<program 
-			url="$URL/horsgv/regions/siege/infos/f2/13h/HD_13h_$YEAR4$MONTH$DAY.wmv" imagelink="fr\fr2_13h.jpg" >
-			<name>Le Journal de 13h France 2</name>
-			<diffusion id="7"/>
-			<avail type="nbdays" value="7"/>
-		</program>
-		<program 
-			url="$URL/horsgv/regions/siege/infos/f2/20h/HD_20h_$YEAR4$MONTH$DAY.wmv" imagelink="fr\fr2_jt20h.jpg" >
-			<name>Le Journal de 20h France 2</name>
-			<diffusion id="7"/>
-			<avail type="nbdays" value="7"/>
-		</program>
-		
-		<program  ispodcast="true" url="http://www.rss-one.com/rss-2364-Le-1920---France-3">
-			<name>France 3, 19|20 (Podcast)</name>
-		</program>      
-		<program  ispodcast="true" url="http://www.rss-one.com/rss-2363-Le-1213---France-3">
-			<name>France 3, 12|13 (Podcast)</name>
-		</program>      
-		<program  ispodcast="true" url="http://www.rss-one.com/rss-2365-Le-Soir-3---France-3">
-			<name>France 3, Le soir (Podcast)</name>
-		</program>      
+
+	<category id="tf1" imagelink="fr\tf1.jpg"  parentid="fr">TF1</category>	
+
+	<channel baseurl="" imagelink="fr\tf1.jpg" category="tf1">
+		<name>JT de TF1</name>
+
+	<program imagelink="fr\tf1_13h.jpg" ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,204,00.xml">
+		<name>Le 13 H de TF1</name>
+	</program>
+
+	<program imagelink="fr\tf1_20h.jpg" ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,205,00.xml">
+		<name>Le 20 H de TF1</name>
+	</program>
 
 	</channel>
+
+
+	<channel baseurl="" imagelink="fr\TF1_NEWS.jpg" category="tf1">
+		<name>Actualité</name>
+
+	<program imagelink="fr\lci.jpg" ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,14,00.xml">
+		<name>JT de LCI</name>
+	</program>
+
+	<program imagelink="fr\lci.jpg" ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,304,00.xml">
+		<name>Le journal du monde</name>
+	</program>
+
+	<program imagelink="fr\lci.jpg" ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,23,00.xml">
+		<name>Dernier flash Météo</name>
+	</program>
+	</channel>
+
+
+	<channel baseurl="" imagelink="fr\lci.jpg" category="tf1">
+		<name>Actu du net</name>
+
+	<program imagelink="fr\lci.jpg" ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,618,00.xml">
+		<name>Zap Net</name>
+	</program>
+
+	<program imagelink="fr\lci.jpg" ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,622,00.xml">
+		<name>Le buzz</name>
+	</program>
+
+	<program imagelink="fr\lci.jpg" ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,150,00.xml">
+		<name>LCI est a vous</name>
+	</program>
+	</channel>
+
 	
-	<channel baseurl="" imagelink="fr\cp2.jpg" category="fr">
+	<channel baseurl="" imagelink="fr\lci.jpg" category="tf1">
+		<name>Politique</name>
+
+	<program imagelink="fr\lci.jpg" ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,625,00.xml">
+		<name>Blog politique</name>
+	</program>
+
+	<program imagelink="fr\lci.jpg" ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,69,00.xml">
+		<name>Le commentaire politique de Christophe Barbier</name>
+	</program>
+
+	<program imagelink="fr\lci.jpg" ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,70,00.xml">
+		<name>L'invité politique de Christophe Barbier</name>
+	</program>
+	</channel>
+
+
+	<channel baseurl="" imagelink="fr\lci.jpg" category="tf1">
+		<name>Economie</name>
+
+	<program imagelink="fr\lci.jpg" ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,303,00.xml">
+		<name>La chronique de Jean-Marc Sylvestre</name>
+	</program>
+
+	<program imagelink="fr\lci.jpg" ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,71,00.xml">
+		<name>Le journal de l'économie</name>
+	</program>
+
+	<program imagelink="fr\lci.jpg" ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,72,00.xml">
+		<name>Le dernier flash Bourse</name>
+	</program>
+	</channel>
+
+
+	<channel baseurl=""  imagelink="fr\lci.jpg" category="tf1">
+		<name>inedit LCI</name>
+
+	<program imagelink="fr\lci.jpg" ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,650,00.xml">
+		<name>Le JT OFF</name>
+	</program>
+
+	<program imagelink="fr\lci.jpg" ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,15,00.xml">
+		<name>Vous avez un message</name>
+	</program>
+
+	</channel>
+
+
+	<channel baseurl="" imagelink="fr\lci.jpg" category="tf1">
+		<name>Autre</name>
+
+	<program imagelink="fr\lci.jpg" ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,19,00.xml">
+		<name>Plein Écran</name>
+	</program>
+
+	<program imagelink="fr\lci.jpg" ispodcast="true" url="http://tf1.lci.fr/xml/rss/0,,12,00.xml">
+		<name>Auto-Info</name>
+	</program>
+
+	</channel>
+
+
+								---------------------France 2--------------------
+
+
+	<category id="fr2" imagelink="fr\fr2.jpg"  parentid="fr">France 2</category>	
+	<channel baseurl="mms://a988.v101995.c10199.e.vm.akamaistream.net/7/988/10199/3f97c7e6/ftvigrp.download.akamai.com/10199/cappuccino/production/publication/France_2/Autre" imagelink="fr\fr2.jpg" category="fr2">
+		<name>JT de France 2</name>
+	</channel>
+
+
+								   ---------------------France 3--------------------
+
+
+	<category id="fr3" imagelink="fr\fr3.jpg"  parentid="fr">France 3</category>	
+	<category id="region" imagelink="fr\fr3.jpg"  parentid="fr3">EDITIONS REGIONALES</category>
+
+	<channel baseurl="http://dl.francetelevisions.com.ipercast.net/xml" imagelink="region\Alsace.png" category="region">
+		<name>Alsace</name>
+
+	<program ispodcast="true" url="$URL/strasbourg_midipile.xml">
+		<name>midi-pile</name>
+	</program>
+	<program ispodcast="true" url="$URL/strasbourg_1920.xml">
+		<name>19/20</name>
+	</program>
+	<program ispodcast="true" url="$URL/strasbourg_soir3.xml">
+		<name>soir3</name>
+	</program>	
+	</channel>
+			
+	<channel baseurl="http://dl.francetelevisions.com.ipercast.net/xml" imagelink="region\Aquitaine.png" category="region">
+	<name>Aquitaine</name>
+
+	<program ispodcast="true"  url="$URL/bordeaux_midipile.xml">
+			<name>midi-pile</name>
+		</program>
+		<program ispodcast="true" url="$URL/bordeaux_1920.xml">
+			<name>19/20</name>
+		</program>
+		<program ispodcast="true" url="$URL/bordeaux_soir3.xml">
+			<name>soir3</name>
+		</program>
+	</channel>
+
+	<channel baseurl="http://dl.francetelevisions.com.ipercast.net/xml" category="region">
+		<name>Alpes</name>
+
+		<program ispodcast="true" url="$URL/grenoble_midipile.xml">
+			<name>midi-pile</name>
+		</program>
+		<program ispodcast="true" url="$URL/grenoble_1920.xml">
+			<name>19/20</name>
+		</program>
+		<program ispodcast="true" url="$URL/grenoble_soir3.xml">
+			<name>19/20</name>
+		</program>
+	</channel>
+
+	<channel baseurl="http://dl.francetelevisions.com.ipercast.net/xml" imagelink="region\bassenormandie.jpg" category="region">
+		<name>Basse-Normandie</name>
+
+		<program ispodcast="true" url="$URL/caen_midipile.xml">
+			<name>midi-pile</name>
+		</program>
+		<program ispodcast="true" url="$URL/caen_1920.xml">
+			<name>19/20</name>
+		</program>
+		<program ispodcast="true" url="$URL/caen_soir3.xml">
+			<name>soir3</name>
+		</program>
+	</channel>
+
+	<channel baseurl="http://dl.francetelevisions.com.ipercast.net/xml" imagelink="region\Bourgogne.png" category="region">
+		<name>Bourgogne</name>
+
+		<program ispodcast="true" url="$URL/dijon_midipile.xml">
+			<name>midi-pile</name>
+		</program>
+		<program ispodcast="true" url="$URL/dijon_1920.xml">
+			<name>19/20</name>
+		</program>
+		<program ispodcast="true" url="$URL/dijon_soir3.xml">
+			<name>soir3</name>
+		</program>
+	</channel>
+
+	<channel baseurl="http://dl.francetelevisions.com.ipercast.net/xml" imagelink="region\Bretagne.png" category="region">
+		<name>Bretagne</name>
+
+		<program ispodcast="true" url="$URL/rennes_midipile.xml">
+			<name>midi-pile</name>
+		</program>
+		<program ispodcast="true" url="$URL/rennes_1920.xml">
+			<name>19/20</name>
+		</program>
+		<program ispodcast="true" url="$URL/rennes_soir3.xml">
+			<name>soir3</name>
+		</program>
+	</channel>
+
+	<channel baseurl="http://dl.francetelevisions.com.ipercast.net/xml" imagelink="region\centre.png" category="region">
+		<name>Centre</name>
+
+		<program ispodcast="true" url="$URL/orleans_midipile.xml">
+			<name>midi-pile</name>
+		</program>
+		<program ispodcast="true" url="$URL/orleans_1920.xml">
+			<name>19/20</name>
+		</program>
+		<program ispodcast="true" url="$URL/orleans_soir3.xml">
+			<name>soir3</name>
+		</program>
+	</channel>
+
+	<channel baseurl="http://dl.francetelevisions.com.ipercast.net/xml" imagelink="region\corse.png" category="region">
+		<name>Corse</name>
+
+		<program ispodcast="true" url="$URL/ajaccio_midipile.xml">
+			<name>midi-pile</name>
+		</program>
+		<program ispodcast="true" url="$URL/ajaccio_1920.xml">
+			<name>19/20</name>
+		</program>
+		<program ispodcast="true" url="$URL/ajaccio_soir3.xml">
+			<name>soir3</name>
+		</program>
+	</channel>
+
+	<channel baseurl="http://dl.francetelevisions.com.ipercast.net/xml" imagelink="region\Provence.png" category="region">
+		<name>Cote d'azur</name>
+
+		<program ispodcast="true" url="$URL/nice_midipile.xml">
+			<name>midi-pile</name>
+		</program>
+		<program ispodcast="true" url="$URL/nice_1920.xml">
+			<name>19/20</name>
+		</program>
+		<program ispodcast="true" url="$URL/nice_soir3.xml">
+			<name>soir3</name>
+		</program>
+	</channel>
+
+	<channel baseurl="http://dl.francetelevisions.com.ipercast.net/xml" imagelink="region\Franche-Comte.png" category="region">
+		<name>France-Comte</name>
+
+		<program ispodcast="true" url="$URL/besancon_midipile.xml">
+			<name>midi-pile</name>
+		</program>
+		<program ispodcast="true" url="$URL/besancon_1920.xml">
+			<name>19/20</name>
+		</program>
+		<program ispodcast="true" url="$URL/besancon_soir3.xml">
+			<name>soir3</name>
+		</program>
+	</channel>
+
+	<channel baseurl="http://dl.francetelevisions.com.ipercast.net/xml" imagelink="region\Haute-Normandie.png" category="region">
+		<name>Haute-Normandie</name>
+
+		<program ispodcast="true" url="$URL/rouen_midipile.xml">
+			<name>midi-pile</name>
+		</program>
+		<program ispodcast="true" url="$URL/rouen_1920.xml">
+			<name>19/20</name>
+		</program>
+		<program ispodcast="true" url="$URL/rouen_soir3.xml">
+			<name>soir3</name>
+		</program>
+	</channel>
+
+	<channel baseurl="http://dl.francetelevisions.com.ipercast.net/xml" imagelink="region\Languedoc-Roussillon.png" category="region">
+		<name>Languedoc-Rousillon</name>
+
+		<program ispodcast="true" url="$URL/montpellier_midipile.xml">
+			<name>midi-pile</name>
+		</program>
+		<program ispodcast="true" url="$URL/montpellier_1920.xml">
+			<name>19/20</name>
+		</program>
+		<program ispodcast="true" url="$URL/montpellier_soir3.xml">
+			<name>soir3</name>
+		</program>
+	</channel>
+
+	<channel baseurl="http://dl.francetelevisions.com.ipercast.net/xml" imagelink="region\Limousin.png" category="region">
+		<name>Limousin</name>
+
+		<program ispodcast="true" url="$URL/limoges_midipile.xml">
+			<name>midi-pile</name>
+		</program>
+		<program ispodcast="true" url="$URL/limoges_1920.xml">
+			<name>19/20</name>
+		</program>
+		<program ispodcast="true" url="$URL/limoges_soir3.xml">
+			<name>soir3</name>
+		</program>
+	</channel>
+
+	<channel baseurl="http://dl.francetelevisions.com.ipercast.net/xml" imagelink="region\Lorraine.png" category="region">
+		<name>Lorraine</name>
+
+		<program ispodcast="true" url="$URL/nancy_midipile.xml">
+			<name>midi-pile</name>
+		</program>
+		<program ispodcast="true" url="$URL/nancy_1920.xml">
+			<name>19/20</name>
+		</program>
+		<program ispodcast="true" url="$URL/nancy_soir3.xml">
+			<name>soir3</name>
+		</program>
+	</channel>
+
+	<channel baseurl="http://dl.francetelevisions.com.ipercast.net/xml" imagelink="region\Midi-Pyrenees.png" category="region">
+		<name>Midi-Pyrenees</name>
+
+		<program ispodcast="true" url="$URL/toulouse_midipile.xml">
+			<name>midi-pile</name>
+		</program>
+		<program ispodcast="true" url="$URL/toulouse_1920.xml">
+			<name>19/20</name>
+		</program>
+		<program ispodcast="true" url="$URL/toulouse_soir3.xml">
+			<name>soir3</name>
+		</program>
+	</channel>
+
+	<channel baseurl="http://dl.francetelevisions.com.ipercast.net/xml" imagelink="region\Nord-Pas-de-Calais.png" category="region">
+		<name>Nord-Pas-de-Calais</name>
+
+		<program ispodcast="true" url="$URL/lille_midipile.xml">
+			<name>midi-pile</name>
+		</program>
+		<program ispodcast="true" url="$URL/lille_1920.xml">
+			<name>19/20</name>
+		</program>
+		<program ispodcast="true" url="$URL/lille_soir3.xml">
+			<name>soir3</name>
+		</program>
+	</channel>
+
+	<channel baseurl="http://dl.francetelevisions.com.ipercast.net/xml" imagelink="region\ile-de-France.png" category="region">
+		<name>Paris Ile-de-France</name>
+
+		<program ispodcast="true" url="$URL/vanves_midipile.xml">
+			<name>midi-pile</name>
+		</program>
+		<program ispodcast="true" url="$URL/vanves_1920.xml">
+			<name>19/20</name>
+		</program>
+		<program ispodcast="true" url="$URL/vanves_soir3.xml">
+			<name>soir3</name>
+		</program>
+	</channel>
+
+	<channel baseurl="http://dl.francetelevisions.com.ipercast.net/xml" imagelink="region\Pays-de-la-Loire.png" category="region">
+		<name>Pays-de-la-Loire</name>
+
+		<program ispodcast="true" url="$URL/nantes_midipile.xml">
+			<name>midi-pile</name>
+		</program>
+		<program ispodcast="true" url="$URL/nantes_1920.xml">
+			<name>19/20</name>
+		</program>
+		<program ispodcast="true" url="$URL/nantes_soir3.xml">
+			<name>soir3</name>
+		</program>
+	</channel>
+
+	<channel baseurl="http://dl.francetelevisions.com.ipercast.net/xml" imagelink="region\Provence.png" category="region">
+		<name>Provence-Alpes</name>
+
+		<program ispodcast="true" url="$URL/marseille_midipile.xml">
+			<name>midi-pile</name>
+		</program>
+		<program ispodcast="true" url="$URL/marseille_1920.xml">
+			<name>19/20</name>
+		</program>
+		<program ispodcast="true" url="$URL/marseille_soir3.xml">
+			<name>soir3</name>
+		</program>
+	</channel>
+
+	<channel baseurl="http://dl.francetelevisions.com.ipercast.net/xml" imagelink="region\Picardie.png" category="region">
+		<name>Picardie</name>
+
+		<program ispodcast="true" url="$URL/amiens_midipile.xml">
+			<name>midi-pile</name>
+		</program>
+		<program ispodcast="true" url="$URL/amiens_1920.xml">
+			<name>19/20</name>
+		</program>
+		<program ispodcast="true" url="$URL/amiens_soir3.xml">
+			<name>soir3</name>
+		</program>
+	</channel>
+
+	<channel baseurl="http://dl.francetelevisions.com.ipercast.net/xml" imagelink="region\Poitou-Charentes.png" category="region">
+		<name>Poitou-Charentes</name>
+
+		<program ispodcast="true" url="$URL/poitiers_midipile.xml">
+			<name>midi-pile</name>
+		</program>
+		<program ispodcast="true" url="$URL/poitiers_1920.xml">
+			<name>19/20</name>
+		</program>
+		<program ispodcast="true" url="$URL/poitiers_soir3.xml">
+			<name>soir3</name>
+		</program>
+	</channel>
+
+	<channel baseurl="http://dl.francetelevisions.com.ipercast.net/xml" imagelink="region\rhonalpe.png" category="region">
+		<name>Rhône-Alpes</name>
+
+		<program ispodcast="true" url="$URL/lyon_midipile.xml">
+			<name>midi-pile</name>
+		</program>
+		<program ispodcast="true" url="$URL/lyon_1920.xml">
+			<name>19/20</name>
+		</program>
+		<program ispodcast="true" url="$URL/lyon_soir3.xml">
+			<name>soir3</name>
+		</program>
+
+	</channel>
+
+	<channel baseurl="" imagelink="fr\fr3.jpg" category="fr3">
+		<name>EDITIONS LOCALES</name>
+
+	<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/larochelle.xml">
+		<name>Atlantique</name>
+	</program>
+
+	<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/havre.xml">
+		<name>Baie de Seine</name>
+	</program>
+
+	<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/bordeaux.xml">
+		<name>Bordeaux Métropole</name>
+	</program>
+ 
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/chateauroux.xml">
+			<name>Berry</name>
+	</program>
+ 
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/caen.xml">
+			<name>Caen Métropole</name>
+	</program>
+
+	<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/reims.xml">
+			<name>Champagne Info</name>
+	</program>
+ 
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/clermont.xml">
+			<name>Clermont soir</name>
+	</program>
+ 
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/boulogne.xml">
+			<name>Côte d'Opale</name>
+	</program>
+ 
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/nantes.xml">
+			<name>Estuaire</name>
+	</program>
+ 
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/grenoble.xml">
+			<name>Grenoble</name>
+	</program>
+ 
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/bayonne.xml">
+			<name>Euskal-Herri Pays-Basque</name>
+	</program>
+ 
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/brest.xml">
+			<name>Iroise</name>
+	</program>
+
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/lille.xml">
+			<name>Lille Métropole</name>
+	</program>
+ 
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/lyon.xml">
+			<name>Grand Lyon</name>
+	</program>
+ 
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/mulhouse.xml">
+			<name>Haute-Alsace</name>
+	</program>
+ 
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/rennes.xml">
+			<name>Haute-Bretagne</name>
+	</program>
+ 
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/lemans.xml">
+			<name>Maine</name>
+	</program>
+ 
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/marseille.xml">
+			<name>Marseille</name>
+	</program>
+ 
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/metz.xml">
+			<name>Metz</name>
+	</program>
+ 
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/montpellier.xml">
+			<name>Montpellier</name>
+	</program>
+ 
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/nancy.xml">
+			<name>Nancy</name>
+	</program>
+ 
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/nice.xml">
+			<name>Nice</name>
+	</program>
+ 
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/nfc.xml">
+			<name>NordFranche-Comté</name>
+	</program>
+ 
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/orleans.xml">
+			<name>Orléans Loiret</name>
+	</program>
+ 
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/nimes_paysgardois.xml">
+			<name>Pays Gardois</name>
+	</program>
+ 
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/pau.xml">
+			<name>Pau Sud-Aquitaine</name>
+	</program>
+ 
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/perpignan_payscatalan.xml">
+			<name>Pays Catalan</name>
+	</program>
+ 
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/brive_paysdecorreze.xml">
+			<name>Pays de Corrèze</name>
+	</program>
+ 
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/perigord.xml">
+			<name>Perigords</name>
+	</program>
+ 
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/rouen.xml">
+			<name>Rouen Métropole</name>
+	</program>
+ 
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/saintetienne.xml">
+			<name>Saint-Etienne</name>
+	</program>
+ 
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/strasbourg.xml">
+			<name>Strasbourg Deux Rives</name>
+	</program>
+ 
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/dijon.xml">
+			<name>Sud Bourgogne</name>
+	</program>
+ 
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/albi.xml">
+			<name>Tarn</name>
+	</program>
+ 
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/toulouse.xml">
+			<name>Toulouse</name>
+	</program>
+ 
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/tours.xml">
+			<name>Touraine Val de Loire</name>
+	</program>
+ 
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/toulon.xml">
+			<name>Var</name>
+	</program>
+ 
+		<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/cherbourg.xml">
+			<name>7jours en Cotentin</name>
+	</program>
+
+	</channel>
+
+	<channel baseurl="" imagelink="fr\fr3.jpg" category="fr3">
+		<name>LANGUES REGIONALES</name>
+
+	<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/ajaccio.xml">
+		<name>Ultima edizione</name>
+	<description>en langue corse</description>
+	</program>
+
+	<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/brest1200.xml">
+		<name>An Taol Lagad</name>
+	<description>en langue bretonne</description>
+	</program>
+
+	<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/perpignan_editioncatalane.xml">
+		<name>Pais Catala:</name>
+	<description>en langue catalane</description>
+	</program>
+
+	<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/strasbourg_rundum.xml">
+		<name>Rund Um</name>
+	<description>en langue alsacienne</description>
+	</program>
+
+	<program ispodcast="true" url="http://dl.francetelevisions.com.ipercast.net/xml/toulouse_editionoccitane.xml">
+		<name>Edicion Occitana</name>
+	<description>en langue occitane</description>
+	</program>
+
+	</channel>
+
+								------------------canal +-----------------------
+	
+	<channel baseurl="" imagelink="fr\cp1.jpg" category="fr">
 		<name>Canal+</name>
 		
 		<program ispodcast="true" url="http://www.rss-one.com/rss-3950-Canal-Plus---Le-Zapping" imagelink="fr\cp_zapping.jpg" >
@@ -330,9 +900,11 @@
 		</program>
 
 	</channel>
-	
-	<channel
-		baseurl="mms://a533.v55778.c5577.e.vm.akamaistream.net/7/533/5577/42c40fe4/lacinq.download.akamai.com/5577/internet"
+
+
+								------------------France 5-----------------------
+
+	<channel baseurl="mms://a533.v55778.c5577.e.vm.akamaistream.net/7/533/5577/42c40fe4/lacinq.download.akamai.com/5577/internet"
 		imagelink="fr\fr5.jpg" category="fr">
 		<name>France 5</name>
 		
@@ -341,38 +913,37 @@
 			<avail type="nbdays" value="8"/>
 			<diffusion id="5"/>
 		</program>
-		
 		<program imagelink="fr\fr5_cdanslair.jpg" url="$URL/cdanslair/cdanslair_$YEAR4$MONTH$DAY.wmv">
 			<name>C dans l'Air</name>
 			<diffusion id="8"/>
 		</program>
-		
-			<program imagelink="fr\fr5_echappee.jpg" url="$URL/echappeesbelles/echappeesbelles_$YEAR4$MONTH$DAY.wmv">
-				<name>Echappées Belles</name>
-				<diffusion id="5"/>
-			</program>
-			
-			<program imagelink="fr\fr5_maternelles.jpg" url="$URL/maternelles/maternelles_$YEAR4$MONTH$DAY.wmv">
-				<name>Les Maternelles</name>
-				<diffusion id="0"/>
-				<diffusion id="1"/>
-				<diffusion id="3"/>
-				<diffusion id="4"/>
-			</program>
-			
-			<program imagelink="fr\fr5_scheffer.jpg" url="$URL/dossier-scheffer/dossier-scheffer.wmv">
-				<name>Dossier Scheffer</name>
-			</program>
-			
-		<program ispodcast="true"
-			url="http://www.arretsurimages.net/podcast.xml">
-			<name>Arret sur Images (Podcast)</name>
+		<program imagelink="fr\fr5_echappee.jpg" url="$URL/echappeesbelles/echappeesbelles_$YEAR4$MONTH$DAY.wmv">
+			<name>Echappées Belles</name>
+			<diffusion id="5"/>
 		</program>
-
-	</channel>
+		<program imagelink="fr\fr5_maternelles.jpg" url="$URL/maternelles/maternelles_$YEAR4$MONTH$DAY.wmv">
+			<name>Les Maternelles</name>
+			<diffusion id="0"/>
+			<diffusion id="1"/>
+			<diffusion id="3"/>
+			<diffusion id="4"/>
+		</program>
+		<program imagelink="fr\fr5_scheffer.jpg" url="$URL/dossier-scheffer/dossier-scheffer.wmv">
+			<name>Dossier Scheffer</name>
+		</program>
+  		<program ispodcast="true" url="http://www.arretsurimages.net/podcast.xml">
+			<name>Arret sur Images</name>
+		</program>
 	
-	<channel imagelink="fr\arte.jpg" category="fr">
-		<name>ARTE</name>
+	</channel>
+
+
+
+
+								------------------Arte-----------------------
+
+	<channel baseurl="" imagelink="fr\arte.jpg" category="fr">
+		<name>arte</name>
 		<program ispodcast="true" url="http://feeds.feedburner.com/arte/fr/Metropolis?format=xml">
 			<name>Metropolis (Podcast)</name>
 			<description> L'émission Metropolis Le magazine culturel d'ARTE tous les samedis à 20h15 et les dimanches à 12h00. Streaming après la diffusion du dimanche pendant 7 jours sur www.arte.tv/metropolis </description> 
@@ -382,60 +953,189 @@
 			<name>Mini Tracks (Podcast)</name>
 			<description> Tracks, le magazine qui ne fait rien comme les autres, déboule, défriche et décrypte partout où ça bouge... Tous les vendredi soirs sur Arte. Découvrez plus d'informations sur l'émission grâce au site www.arte.tv/tracks </description> 
 		</program>
-	</channel>	
-	
-	<channel baseurl="mms://stream1.m6.fr.ipercast.net/m6.fr/6minutes"
-		imagelink="fr\m6.jpg" category="fr">
-		<name>M6</name>
+	</channel>
 
-		<program ispodcast="true" url="http://www.rss-one.com/rss-4997-M6---Six-Minutes" >
-			<name>Six Minutes National (Podcast)</name>
+
+								------------------France 24-----------------------
+
+	<channel baseurl="" imagelink="fr\france24.jpg" category="fr">
+		<name>FRANCE 24</name>
+		<program url="mms://stream1.france24.yacast.net/f24_livefr" imagelink="fr\france24.jpg">
+			<name>FRANCE 24</name>
+			<description>FRANCE 24 (Live)</description>
+		</program>
+		<program ispodcast="true" url="http://www.france24.com/static/podcast/fr/REPORTAGES/reportages-fr.xml" imagelink="fr\france24.jpg">
+			<name>FRANCE 24 Reportage</name>
+		</program>
+
+		<program ispodcast="true" url="http://www.france24.com/static/podcast/fr/REPORTERS/reporters-fr.xml" imagelink="fr\france24.jpg">
+			<name>FRANCE 24 Reporter</name>
+		</program>
+
+		<program ispodcast="true" url="http://www.france24.com/static/podcast/fr/LA_REVUE_DE_PRESSE/la-revue-de-presse-fr.xml" imagelink="fr\france24.jpg">
+			<name>FRANCE 24 Revue de presse internationale</name>
+		</program>
+
+		<program ispodcast="true" url="http://www.france24.com/static/podcast/fr/SUR_LE_NET/sur-le-net-fr.xml" imagelink="fr\france24.jpg">
+			<name>FRANCE 24 Sur le net</name>
+		</program>
+
+	</channel>
+
+
+
+								 --------------------Music--------------------------
+	<category id="music" parentid="fr">Musique</category>	
+
+									--------------------Nrj--------------------------
+	<category id="nrj" imagelink="fr\nrj.jpg" parentid="music">Musique</category>	
+
+	<channel imagelink="fr\nrj.jpg" category="nrj" >
+		<name>NRJ TV</name>
+	   
+		 <program url="mms://vipnrj.yacast.net/nrj_tvhit" imagelink="">
+			<name>NRJ web tv</name>
+		</program>
+
+		 <program url="mms://vipnrj.yacast.net/nrj_webtv02" imagelink="">
+			<name>NRJ dance</name>
+		</program>
+
+		 <program url="mms://vipnrj.yacast.net/nrj_webtv03" imagelink="">
+			<name>NRJ pop rock</name>
+		</program>
+
+		 <program url="mms://vipnrj.yacast.net/nrj_webtv01" imagelink="">
+			<name>NRJ groove</name>
+		</program>
+
+		 <program url="mms://vipnrj.yacast.net/nrj_tvparis" imagelink="">
+			<name>NRJ paris</name>
 		</program>
 		
-		<program ispodcast="true" url="http://www.m6.fr/podcast_info/podcast_6mn_nancy.xml" >
-			<name>Six Minutes Nancy (Podcast)</name>
-		</program>
-		
-		<program ispodcast="true" url="http://www.m6.fr/podcast_info/podcast_6mn_bordeaux.xml" >
-			<name>Six Minutes Bordeaux (Podcast)</name>
-		</program>
-		
-		<program ispodcast="true" url="http://www.m6.fr/podcast_info/podcast_6mn_marseille.xml" >
-			<name>Six Minutes Marseille (Podcast)</name>
-		</program>
-		
-		<program ispodcast="true" url="http://www.m6.fr/podcast_info/podcast_6mn_lille.xml" >
-			<name>Six Minutes Lille (Podcast)</name>
+		<program url="mms://vipnrj.yacast.net/nrj_tvhit" imagelink="fr\nrjhits.jpg">
+			<name>NRJ Hits</name>
 		</program>
 		
 	</channel>
-		
-	<channel imagelink="fr\13emerue.jpg" category="fr">
-		<name>13ème Rue</name>
-		
-		<program ispodcast="true" url="http://podcast.13emerue.fr/13emeruepodcast.xml">
-			<name>13ème Rue (Podcast)</name>
-			<description> la chaîne action et suspense - Les magazines de la chaîne 13ème Rue </description> 
-		</program>
-	</channel>	
-			
-	<channel imagelink="fr\gamekult.jpg" category="fr">
-		<name>Gamekult.com</name>
-		
-		<program ispodcast="true" url="http://www.cnettv.fr/rss/jeux/gamekult/">
-			<name>Gamekult l'émission (Podcast)</name>
-			<description> Infos et coups de gueule sur l'actu jeux vidéo de la semaine... </description> 
-		</program>
-		
-		<program ispodcast="true" url="http://rss.gamekult.com/rss/podcast/video_retro.xml">
-			<name>Gamekult.com (Podcast): Vidéos de jeux - Retro gaming</name>
-		</program>
-		
-		<program ispodcast="true" url="http://rss.gamekult.com/rss/podcast/video_tout.xml">
-			<name>Gamekult.com (Podcast): Vidéos de jeux</name>
-		</program>
-	</channel>	
 
+
+	<channel imagelink="fr\nrj.jpg" baseurl="" category="nrj">
+		<name>NRJ Radio</name>
+
+		 <program url="mms://vipnrj.yacast.net/encodernrj" imagelink="fr\nrjhits.jpg">
+			<name>NRJ</name>
+		</program>
+
+		 <program url="mms://vipnrj.yacast.net/nrj_webradio01" imagelink="fr\nrjhits.jpg">
+			<name>NRJ hits</name>
+		</program>
+
+		 <program url="mms://vipnrj.yacast.net/nrj_webradio10" imagelink="fr\nrjhits.jpg">
+			<name>NRJ music tour</name>
+		</program>
+
+		 <program url="mms://vipnrj.yacast.net/nrj_webradio13" imagelink="fr\nrjhits.jpg">
+			<name>NRJ all french</name>
+		</program>
+
+		 <program url="mms://vipnrj.yacast.net/nrj_webradio07" imagelink="fr\nrjhits.jpg">
+			<name>NRJ music awars</name>
+		</program>
+
+		 <program url="mms://vipnrj.yacast.net/nrj_webradio14" imagelink="fr\nrjhits.jpg">
+			<name>NRJ nouveauté</name>
+		</program>
+
+		 <program url="mms://vipnrj.yacast.net/nrj_webradio03" imagelink="fr\nrjhits.jpg">
+			<name>NRJ pop rock</name>
+		</program>
+
+		 <program url="mms://vipnrj.yacast.net/nrj_webradio02" imagelink="fr\nrjhits.jpg">
+			<name>NRJ groove</name>
+		</program>
+
+		 <program url="mms://vipnrj.yacast.net/nrj_webradio04" imagelink="fr\nrjhits.jpg">
+			<name>NRJ dance</name>
+		</program>
+
+		 <program url="mms://vipnrj.yacast.net/nrj_webradio11" imagelink="fr\nrjhits.jpg">
+			<name>NRJ electro</name>
+		</program>
+
+		 <program url="mms://vipnrj.yacast.net/nrj_webradio12" imagelink="fr\nrjhits.jpg">
+			<name>NRJ tech</name>
+		</program>
+
+	</channel>
+
+	<channel imagelink="fr\nrj.jpg" category="nrj" >
+		<name>NRJ podcast</name>
+
+		<program ispodcast="true" url="http://www.nrj.fr/radio/podcasts/flux210">
+			<name>Le 6/9 integrale</name>
+			<description>Retrouve l'intégrale des émissions du 6/9:le 6/9, le Télévengeur, les Fausses Pubs, les infos de Florian Gazan !!</description>	
+		</program>
+
+		<program ispodcast="true" url="http://www.nrj.fr/radio/podcasts/flux208">
+			<name>best of du 6/9</name>
+			<description>Se lever le matin, c'est parfois difficile. Alors commencer du bon pied avec une bande de potes qui n'a pour seul objectif qu'un bon délire en direct, assorti de bonne musique et de rendez-vous sympas !</description>
+		</program>
+
+		<program ispodcast="true" url="http://www.nrj.fr/radio/podcasts/flux39">
+			<name>best of miki</name>
+			<description>Une vraie zone de libre parole et d'échange entre potes ! 4h de direct sans filet, pour discuter avec les auditeurs des sujets qui les intéressent, les préoccupent et les font rire.</description>
+		</program>
+
+		<program ispodcast="true" url="http://www.nrj.fr/radio/podcasts/flux87">
+			<name>best of T-miss</name>
+			<description>Libre antenne de la nuit de minuit à 4h sur la première des radios, T-Miss vous attends si vous voulez qu'on discute, vous savez où la trouver.</description>
+		</program>
+
+		<program ispodcast="true" url="http://www.nrj.fr/radio/podcasts/flux93">
+			<name>horoscope T-miss</name>
+			<description>Chacun son signe, chacun son horoscope... </description>
+		</program>
+
+		<program ispodcast="true" url="http://www.nrj.fr/radio/podcasts/flux89">
+			<name>best of Televengeur</name>
+			<description>Tous les matins, le Télévengeur piège pour vous,au téléphone,vos amis ou ennemi en utilisant des morceaux de film !</description>
+		</program>
+
+		<program ispodcast="true" url="http://www.nrj.fr/radio/podcasts/flux94">
+			<name>les infos tv de florian Gazan</name>
+			<description>Florian Gazan décortique les nouvelles émissions télé pour vous et commente les dernières audiences !</description>
+		</program>
+
+		<program ispodcast="true" url="http://www.nrj.fr/radio/podcasts/flux95">
+			<name>les chroniques Cine</name>
+			<description>Les Chroniques Ciné </description>
+		</program>
+
+		<program ispodcast="true" url="http://www.nrj.fr/radio/podcasts/flux206">
+			<name>carre VIP de mustapha</name>
+			<description>Mustapha nous parle des stars... </description>
+		</program>
+
+		<program ispodcast="true" url="http://www.nrj.fr/radio/podcasts/flux211">
+			<name>les fausses pubs</name>
+			<description>Les fausses pubs délirantes du 6/9</description>
+		</program>
+
+
+		<program ispodcast="true" url="http://www.nrj.fr/radio/podcasts/flux236">
+			<name>La chronique jeux vidéos de Bertrand Amar</name>
+			<description>Chaque semaine retrouve la chronique jeux vidéos de Bertrand Amar !</description>
+		</program>
+
+		<program ispodcast="true" url="http://www.nrj.fr/radio/podcasts/flux99">
+			<name>flash info paris IDF</name>
+			<description>Retrouve les flash INFO Paris-IDF d'NRJ</description>
+		</program>
+	
+	</channel>
+
+								 --------------------Sport--------------------------
 	<channel category="fr" >
 		<name>Sport</name>
 		
@@ -456,19 +1156,8 @@
 		
 	</channel>
 	
-	<channel category="fr" >
-		<name>Musique</name>
-		
-		<program url="mms://vipmms9.yacast.net/mcm_top" imagelink="fr\mcmtop.jpg">
-			<name>MCM Top</name>
-		</program>
-		
-		<program url="mms://vipnrj.yacast.net/nrj_tvhit" imagelink="fr\nrjhits.jpg">
-			<name>NRJ Hits</name>
-		</program>
-		
-	</channel>
 	
+								 --------------------Sciences / Educatif--------------------------
 	<channel category="fr" >
 		<name>Sciences / Educatif</name>
 		
@@ -520,8 +1209,42 @@
 
 	 </channel>
 	
+								 --------------------Télévision et cinéma Podcast--------------------------
+
 	<channel category="fr" >
-		<name>Divers Live</name>
+		<name>Télévision et cinéma Podcast</name>
+		<program ispodcast="true" 
+			url="http://rss.allocine.fr/bandesannonces/ipod">
+			<name>AlloCiné: Bandes Annonces (Podcast)</name>
+		</program>
+
+		<program ispodcast="true" 
+			url="http://rss.allocine.fr/laminute/ipod?format=xml">
+			<name>AlloCiné: La Minute (Podcast)</name>
+		</program>
+
+		<program ispodcast="true" 
+			url="http://rss.allocine.fr/tueursenseries/ipod?format=xml">
+			<name>AlloCiné: Tueurs en Séries (Podcast)</name>
+		</program>
+
+		<program ispodcast="true"
+			url="http://theslchronicles.serieslive.com/feed/">
+			<name>SeriesLive on Air (Podcast Audio)</name>
+				  <description> Podast Uadio de l'équipe du site Web de SeriesLive </description>
+		</program>
+
+		<program ispodcast="true" 
+			url="http://feeds.feedburner.com/CanalDeltar">
+			<name>Canal DELTAR (Podcast Audio)</name>
+		</program>
+
+	</channel>
+
+								   ------------------Web TV-----------------------
+
+	<channel category="fr" >
+		<name>Web TV</name>
 
 		<program url="mms://vipmms9.yacast.net/bfm_bfmtv" imagelink="fr\div_bfmtv.jpg">
 			<name>BFM TV (Live)</name>
@@ -529,11 +1252,6 @@
 		
 		<program url="mms://a1807.l2489855499.c24898.n.lm.akamaistream.net/D/1807/24898/v0001/reflector:55499" imagelink="fr\bloomberg.jpg">
 			<name>Bloomberg TV</name>
-		</program>
-		
-		<program url="mms://stream1.france24.yacast.net/f24_livefr" imagelink="fr\france24.jpg">
-			<name>France 24</name>
-			<description> France 24 propose des bulletins d’informations toutes les 30 minutes, des magazines et émissions de plateau </description>
 		</program>
 		
 		<program url="http://movix.sdv.fr:8083/orleanstv.asf" imagelink="fr\orleanstv.jpg">
@@ -545,102 +1263,90 @@
 			<name>Télé102 </name>
 			<description> Télévision locale de Vendée </description>
 		</program>
-		
-		<!-- program url="http://wwitv.com/a1/b2743.asx" imagelink="fr\div_france24.jpg">
-			<name>France 24 (Live)</name>
-		</program-->
 
+		<program url="mms://rr93.diffusepro.com/rr93">
+			<name>clap tv</name>
+		</program>
+
+		<program url="http://88.191.24.226:3450/ ">
+			<name>accro tv </name>
+			<description>Vidéo drôles et insolites, en musique. Reportages, concerts, spectacles, événements musicaux. Parodies et fausses pub. Clips vidéos des artistes web. Détournement de films. Emissions, courts-métrages.</description>
+		</program>
+
+		<program url="mms://vipmms9.yacast.net/aptv_live03">
+			<name>aptv martinique</name>
+		</program>
+
+		<program url="mms://stream.tvsf.fr/live">
+			<name>tvsf</name>
+			<description>la tele people francaise</description>
+		</program>
+
+		<program url="mms://www.labelletv.net/labelleTV">
+			<name>labelletv</name>
+			<description>television independante</description>
+		</program>
+
+		<program url="mms://91.121.179.127/sseven">
+			<name>sevent tv</name>
+		</program>
+
+		<program url="mms://91.121.179.127/shiphop">
+			<name>seven hip hop</name>
+		</program>
+
+		<program url="mms://91.121.179.127/srock">
+			<name>seven rock</name>
+		</program>
+
+		<program url="mms://vipmms9.yacast.net/rcs_lcplive">
+			<name>lcp</name>
+			<description>chaine de l'assemblé national</description>
+		</program>
+
+		<program url="mms://85.31.214.46/live">
+			<name>ct2e</name>
+			<description>tv local de toulouse</description>
+		</program>
+
+		<program url="mms://91.121.38.105/tlm">
+			<name>tlm</name>
+			<description>tv local de lyon</description>
+		</program>
+
+		<program url="http://movix.sdv.fr:8084/teleg1.asf">
+			<name>tele grenoble</name>
+		</program>
+
+		<program url="mms://live.tv8.fr/tv">
+			<name>tv8 moselle est</name>
+		</program>
+
+		<program url="mms://91.121.2.60/calaistv">
+			<name>calais tv</name>
+		</program>
+
+		<program url="http://88.191.24.226:6969">
+			<name>accro sex</name>
+			<description>interdit au moins de 18 ans</description>
+		</program>
 	</channel>
-	<channel category="fr" >
-		<name>Télévision et cinéma Podcast</name>
-		<program ispodcast="true" 
-			url="http://rss.allocine.fr/bandesannonces/ipod">
-			<name>AlloCiné: Bandes Annonces (Podcast)</name>
-		</program>
-		
-		<program ispodcast="true" 
-			url="http://rss.allocine.fr/laminute/ipod?format=xml">
-			<name>AlloCiné: La Minute (Podcast)</name>
-		</program>
-		
-		<program ispodcast="true" 
-			url="http://rss.allocine.fr/tueursenseries/ipod?format=xml">
-			<name>AlloCiné: Tueurs en Séries (Podcast)</name>
-		</program>
-		
-		<program ispodcast="true"
-			url="http://theslchronicles.serieslive.com/feed/">
-			<name>SeriesLive on Air (Podcast Audio)</name>
-				  <description> Podast Uadio de l'équipe du site Web de SeriesLive </description>
-		</program>
+	
+	
+								 --------------------Radios--------------------------
 
-		<program ispodcast="true"
-			url="http://www.nrj.fr/radio/podcasts/flux95b">
-			<name>NRJ: Les Chroniques Cine (Podcast Audio)</name>
-		</program>
-
-		<program ispodcast="true" 
-			url="http://feeds.feedburner.com/CanalDeltar">
-			<name>Canal DELTAR (Podcast Audio)</name>
-		</program>
-		
-	</channel>
-
-	<channel category="fr" >
-		<name>Divers Podcast</name>
-		
-		<program ispodcast="true"
-			url="http://www.explicit-tv.com/v3/index.php/feed/">
-			<name>Explicit TV (Podcast)</name>
-		</program>
-
-		<program  ispodcast="true" url="http://www.rss-one.com/rss-4456-Le-Monde.fr--podcast-telezapping">
-			<name>Le Monde.fr, Télézapping (Podcast)</name>
-		</program>      
-
-		<program  ispodcast="true" url="http://www.ericetramzy.com/podcast/index.xml">
-			<name>Eric et Ramzy (Podcast)</name>
-		</program>      
-
-		<program  ispodcast="true" url="http://www.lezappingduweb.com/LZWpodcasts/podcast.xml">
-			<name>Le Zapping du Web (Podcast)</name>
-		</program>      
-
-		<program  ispodcast="true" url="http://www.tetesaclaques.blip.tv/rss/">
-			<name>Têtes à Claques (Podcast)</name>
-		</program>      
-		
-		 <program ispodcast="true" 
-			url="http://feeds.feedburner.com/concertsaemporter">
-			<name>Concerts à Emporter (Podcast)</name>
-		</program>
-				
-		 <program ispodcast="true" 
-			url="http://www.apple.com/podcasts/apple_keynotes/apple_keynotes.xml">
-			<name>Apple Keynotes (Podcast)</name>
-		</program>
-		
-		<program ispodcast="true"
-			url="http://feeds.feedburner.com/Euronews-NoComment">
-			<name>Euronews No Comment</name>
-		</program>
-
-		<program ispodcast="true"
-			url="http://www.lelab.tv/rss">
-			<name>Le Lab</name>
-		</program>
-		
-		
-	</channel>
-	<channel category="fr" >
+										------------------Misc Radios-----------------------
+	<category id="radio" imagelink="radio.png" parentid="fr">Radios</category>
+	
+	<channel imagelink="radio.png" category="radio" >
 		<name>Radios</name>
-		
+
 		<program url="http://streaming.radio.funradio.fr:80/fun-1-44-96" imagelink="fr\funradio.jpg">
 			<name> Fun Radio </name>
 		</program>
 					
 		<program url="http://ns57.ovh.net:80/" imagelink="fr\alouette.jpg">
-			<name> Alouette FM </name>
+				<name> Alouette FM </name>
 		</program>
 		
 		<program url="http://player.cheriefm.fr/V4/cheriefm/cheriefm.asx" imagelink="fr\cheriefm.jpg">
@@ -654,7 +1360,7 @@
 		<program url="http://www.tv-radio.com/station/france_culture_mp3/france_culture_mp3-128k.m3u" imagelink="fr\culture.jpg">
 			<name> France culture</name>
 		</program>
-	
+
 		<program url="http://mp3.live.tv-radio.com/lemouv/all/lemouvhautdebit.mp3" imagelink="fr\le mouv'.jpg">
 			<name> Le mouv'</name>
 		</program>
@@ -686,7 +1392,6 @@
 		<program url="http://streaming.radio.rtl.fr/rtl-1-44-96" imagelink="fr\rtl.jpg">
 			<name> RTL</name>
 		</program>
-
 		<program url="http://213.251.174.20:9044/">
 			<name> Radio-Chalette</name>
 		</program>
@@ -706,9 +1411,90 @@
 		<program ispodcast="true" url="http://www.france-info.com/rss/monde.xml">
 			<name>France info -Monde (Podcast)</name>
 		</program>
-				
 	</channel>
-	
+
+										------------------oxyradio-----------------------
+
+
+	<channel imagelink="fr\oxyradio.jpeg" category="radio" >
+		<name>oxyradio</name>
+		<description>la radio du libre (diffuse musique libre et gratuite)</description>
+		<program url="http://relay1.oxyradio.net:8000/hd.ogg" imagelink="">
+			<name>radio (haut debit ogg)</name>
+		</program>
+
+		<program url="http://relay1.oxyradio.net:8000/bd.ogg" imagelink="">
+			<name>radio (bas debit ogg)</name>
+		</program>
+
+		<program url="http://relay1.oxyradio.net:8000/hd.mp3" imagelink="">
+			<name>radio (haut debitmp3)</name>
+		</program>
+
+		<program url="http://relay1.oxyradio.net:8000/bd.mp3" imagelink="">
+			<name>radio (bas debit mp3)</name>
+		</program>
+
+		<program ispodcast="true" url="http://www.oxyradio.net/podcast_ogg.xml" imagelink="">
+				<name>podcast (ogg)</name>
+		</program>
+
+		<program ispodcast="true" url="http://www.oxyradio.net/podcast_mp3.xml" imagelink="">
+			<name>podcast (mp3)</name>
+		</program>
+	</channel>
+
+
+								 --------------------Divers--------------------------
+
+
+	<channel category="fr" >
+		<name>Divers Podcast</name>
+
+		<program ispodcast="true" url="http://www.cnettv.fr/rss/jeux/gamekult/">
+			<name>Gamekult l'émission (Podcast)</name>
+			<description> Infos et coups de gueule sur l'actu jeux vidéo de la semaine... </description> 
+		</program>
+
+		<program ispodcast="true" url="http://rss.gamekult.com/rss/podcast/video_retro.xml">
+			<name>Gamekult.com (Podcast): Vidéos de jeux - Retro gaming</name>
+		</program>
+
+		<program ispodcast="true" url="http://rss.gamekult.com/rss/podcast/video_tout.xml">
+			<name>Gamekult.com (Podcast): Vidéos de jeux</name>
+		</program>
+
+		<program  ispodcast="true" url="http://www.rss-one.com/rss-4456-Le-Monde.fr--podcast-telezapping">
+			<name>Le Monde.fr, Télézapping (Podcast)</name>
+		</program>	  
+
+		<program  ispodcast="true" url="http://www.ericetramzy.com/podcast/index.xml">
+			<name>Eric et Ramzy (Podcast)</name>
+		</program>	  
+
+		<program  ispodcast="true" url="http://www.lezappingduweb.com/LZWpodcasts/podcast.xml">
+			<name>Le Zapping du Web (Podcast)</name>
+		</program>	  
+
+		 <program ispodcast="true" 
+			url="http://feeds.feedburner.com/concertsaemporter">
+			<name>Concerts à Emporter (Podcast)</name>
+		</program>
+				
+		 <program ispodcast="true" url="http://www.apple.com/podcasts/apple_keynotes/apple_keynotes.xml">
+			<name>Apple Keynotes (Podcast)</name>
+		</program>
+		
+		<program ispodcast="true" url="http://feeds.feedburner.com/Euronews-NoComment">
+			<name>Euronews No Comment</name>
+		</program>
+
+		<program ispodcast="true" url="http://www.lelab.tv/rss">
+			<name>Le Lab</name>
+		</program>
+		
+	</channel>
+
 		<!-- ************************************************************************************* -->
 	<category id="ger" imagelink="dp\dp_allemagne.jpg" >Germany</category>
 	
@@ -755,50 +1541,50 @@
 	</channel>
 	
 	<channel category="ger">
-		<name>Video on Demand</name>
-		<program url="http://mam.anixe.tv/MAM/data/Film/c_00000/3273/format3772.wmv">
-			<name>American History X 1MBit/s</name>
-		</program>
-		<program url="http://mam.anixe.tv/MAM/data/Film/c_00000/3091/format3779.wmv">
-			<name>Balzac 1MBit/s</name>
-		</program>
-		<program url="http://mam.anixe.tv/MAM/data/Film/c_00000/3079/format3778.wmv">
-			<name>Die Kreuzritter</name>
-		</program>
-		<program url="http://mam.anixe.tv/MAM/data/Film/c_00000/3080/format3774.wmv">
-			<name>Eine Hochzeit zum Verlieben</name>
-		</program>
-		<program url="http://mam.anixe.tv/MAM/data/Film/c_00000/2980/format3775.wmv">
-			<name>Lost in Space</name>
-		</program>
-		<program url="http://mam.anixe.tv/MAM/data/Film/c_00000/2970/format3916.wmv">
-			<name>Mambo Cafe</name>
-		</program>
-		<program url="http://mam.anixe.tv/MAM/data/Film/c_00000/3076/format3770.wmv">
-			<name>Mr. Nice Guy</name>
-		</program>
-		<program url="http://mam.anixe.tv/MAM/data/Film/c_00000/3085/format3768.wmv">
-			<name>Novocaine</name>
-		</program>
-		<program url="http://mam.anixe.tv/MAM/data/Film/c_00000/3262/format3777.wmv">
-			<name>Papillon</name>
-		</program>
-		<program url="http://mam.anixe.tv/MAM/data/Film/c_00000/3094/format3773.wmv">
-			<name>Rush Hour</name>
-		</program>
-		<program url="http://mam.anixe.tv/MAM/data/Film/c_00000/2973/format3776.wmv">
-			<name>Slow Burn</name>
-		</program>
-		<program url="http://mam.anixe.tv/MAM/data/Film/c_00000/3090/format3769.wmv">
-			<name>Star Camp</name>
-		</program>
-		<program url="http://mam.anixe.tv/MAM/data/Film/c_00000/3082/format3767.wmv">
-			<name>They Nest</name>
-		</program>
-		<program url="http://mam.anixe.tv/MAM/data/Film/c_00000/2983/format3771.wmv">
-			<name>Wolfgirl</name>
-		</program>
-	</channel>
+	   <name>Video on Demand</name>
+	   <program url="http://mam.anixe.tv/MAM/data/Film/c_00000/3273/format3772.wmv">
+		   <name>American History X 1MBit/s</name>
+	   </program>
+	   <program url="http://mam.anixe.tv/MAM/data/Film/c_00000/3091/format3779.wmv">
+		   <name>Balzac 1MBit/s</name>
+	   </program>
+	   <program url="http://mam.anixe.tv/MAM/data/Film/c_00000/3079/format3778.wmv">
+		   <name>Die Kreuzritter</name>
+	   </program>
+	   <program url="http://mam.anixe.tv/MAM/data/Film/c_00000/3080/format3774.wmv">
+		   <name>Eine Hochzeit zum Verlieben</name>
+	   </program>
+	   <program url="http://mam.anixe.tv/MAM/data/Film/c_00000/2980/format3775.wmv">
+		   <name>Lost in Space</name>
+	   </program>
+	   <program url="http://mam.anixe.tv/MAM/data/Film/c_00000/2970/format3916.wmv">
+		   <name>Mambo Cafe</name>
+	   </program>
+	   <program url="http://mam.anixe.tv/MAM/data/Film/c_00000/3076/format3770.wmv">
+		   <name>Mr. Nice Guy</name>
+	   </program>
+	   <program url="http://mam.anixe.tv/MAM/data/Film/c_00000/3085/format3768.wmv">
+		   <name>Novocaine</name>
+	   </program>
+	   <program url="http://mam.anixe.tv/MAM/data/Film/c_00000/3262/format3777.wmv">
+		   <name>Papillon</name>
+	   </program>
+	   <program url="http://mam.anixe.tv/MAM/data/Film/c_00000/3094/format3773.wmv">
+		   <name>Rush Hour</name>
+	   </program>
+	   <program url="http://mam.anixe.tv/MAM/data/Film/c_00000/2973/format3776.wmv">
+		   <name>Slow Burn</name>
+	   </program>
+	   <program url="http://mam.anixe.tv/MAM/data/Film/c_00000/3090/format3769.wmv">
+		   <name>Star Camp</name>
+	   </program>
+	   <program url="http://mam.anixe.tv/MAM/data/Film/c_00000/3082/format3767.wmv">
+		   <name>They Nest</name>
+	   </program>
+	   <program url="http://mam.anixe.tv/MAM/data/Film/c_00000/2983/format3771.wmv">
+		   <name>Wolfgirl</name>
+	   </program>
+   </channel>
 	
 	<channel category="ger">
 		<name>Local TV</name>
@@ -831,15 +1617,22 @@
 		<program url="mms://wm.broadcast.tneg.de/AstroTV">
 			<name>Astro TV</name>
 		</program>
+
+
 		<program url="mms://streamer11.streaming.szm.de/9live_wmt_mid">
 			<name>9 Live</name>
 		</program>
+
 		<program url="mms://wm.broadcast.tneg.de/kanaltelemedial">
 			<name>Kanal Telemedial</name>
 		</program>	
+		
 		<program url="mms://wm.broadcast.tneg.de/primetime">
 			<name>Primetime</name>
 		</program>
+		
+
+
 	</channel>
 	
 	<channel category="ger">
@@ -1020,220 +1813,184 @@
 		<program url="http://wwitv.com/t1/b2143.qtl">
 			<name> AFTV 9 </name>
 			<description> Comedy movies. (300K) </description>
-		</program>		
+		</program>
+		
 	</channel>
 	
 	<channel category="en">
 		<name>Sports</name>
-		<program url="http://wwitv.com/t1/b2520.asx">
-			<name> ESPN </name>
-			<description> Sports network. (100K) </description>
-		</program>
+			<program url="http://wwitv.com/t1/b2520.asx">
+				<name> ESPN </name>
+				<description> Sports network. (100K) </description>
+			</program>
 	</channel>
 	
 	<channel category="en" imagelink="en\national_geographic.jpg">
 		<name>National Geographic</name>
-		<program ispodcast="true"
-			url="http://podcast.nationalgeographic.com/ng-video-shorts/">
-			<name>Wild Chronicles Digital Shorts (Video Podcast)</name>
-			<description> Watch videos from National Geographic, including Mysteries of Lost Civilizations, the World's Most Unusual Foods, Extreme Healing, the World's Toughest Jobs, Spotlights of countries around the world, and more! </description>
-		</program>
-		
-		<program ispodcast="true"
-			url="http://podcast.nationalgeographic.com/dog-whisperer/">
-			<name>Dog Whisperer (Video Podcast)</name>
-			<description> Watch sneak peeks and favorite moments from National Geographic Channel's popular series Dog Whisperer with Cesar Millan. </description>
-		</program>
-		
-		<program ispodcast="true"
-			url="http://www1.natgeochannel.co.uk/podcasts/perfectweapon.xml">
-			<name>Perfect Weapon (UK Video Podcast)</name>
-			<description> While resting between takes of stabbing, slashing and shooting, ex-Royal Marine Monty Halls and bearded biker archaeologist Stuart Prior describe their favourite finds in the series that aims to uncover The Perfect Weapon. </description>
-		</program>
+			<program ispodcast="true"
+				url="http://podcast.nationalgeographic.com/ng-video-shorts/">
+				<name>Wild Chronicles Digital Shorts (Video Podcast)</name>
+				<description> Watch videos from National Geographic, including Mysteries of Lost Civilizations, the World's Most Unusual Foods, Extreme Healing, the World's Toughest Jobs, Spotlights of countries around the world, and more! </description>
+			</program>
+			
+			<program ispodcast="true"
+				url="http://podcast.nationalgeographic.com/dog-whisperer/">
+				<name>Dog Whisperer (Video Podcast)</name>
+				<description> Watch sneak peeks and favorite moments from National Geographic Channel's popular series Dog Whisperer with Cesar Millan. </description>
+			</program>
+			
+			<program ispodcast="true"
+				url="http://www1.natgeochannel.co.uk/podcasts/perfectweapon.xml">
+				<name>Perfect Weapon (UK Video Podcast)</name>
+				<description> While resting between takes of stabbing, slashing and shooting, ex-Royal Marine Monty Halls and bearded biker archaeologist Stuart Prior describe their favourite finds in the series that aims to uncover The Perfect Weapon. </description>
+			</program>
 
-		<program ispodcast="true"
-			url="http://www1.natgeochannel.co.uk/podcasts/dangerousencounters.xml">
-			<name>Dangerous Encounters (UK Video Podcast)</name>
-			<description> Swimming with sharks, wrestling crocodiles and capturing giant snakes it's just another day in the life of Croc Doc Brady Barr. </description>
-		</program>
+			<program ispodcast="true"
+				url="http://www1.natgeochannel.co.uk/podcasts/dangerousencounters.xml">
+				<name>Dangerous Encounters (UK Video Podcast)</name>
+				<description> Swimming with sharks, wrestling crocodiles and capturing giant snakes it's just another day in the life of Croc Doc Brady Barr. </description>
+			</program>
 
-		<program ispodcast="true"
-			url="http://www1.natgeochannel.co.uk/podcasts/dangerousencounters.xml">
-			<name>What Would Happen if..? (UK Video Podcast)</name>
-			<description> Swimming with sharks, wrestling crocodiles and capturing giant snakes it's just another day in the life of Croc Doc Brady Barr. </description>
-		</program>
+			<program ispodcast="true"
+				url="http://www1.natgeochannel.co.uk/podcasts/dangerousencounters.xml">
+				<name>What Would Happen if..? (UK Video Podcast)</name>
+				<description> Swimming with sharks, wrestling crocodiles and capturing giant snakes it's just another day in the life of Croc Doc Brady Barr. </description>
+			</program>
 
-		<program ispodcast="true"
-			url="http://www1.natgeochannel.co.uk/podcasts/hd.xml">
-			<name>National Geographic Channel HD (UK Video Podcast)</name>
-		</program>
+			<program ispodcast="true"
+				url="http://www1.natgeochannel.co.uk/podcasts/hd.xml">
+				<name>National Geographic Channel HD (UK Video Podcast)</name>
+			</program>
 
-		<program ispodcast="true"
-			url="http://www1.natgeochannel.co.uk/podcasts/wwhi.xml">
-			<name>Walks of a Lifetime (Audio Podcast)</name>
-			<description> Dr Marty Jopson and his team of human guinea pigs investigate life's many mysteries. </description>
-		</program>
+			<program ispodcast="true"
+				url="http://www1.natgeochannel.co.uk/podcasts/wwhi.xml">
+				<name>Walks of a Lifetime (Audio Podcast)</name>
+				<description> Dr Marty Jopson and his team of human guinea pigs investigate life's many mysteries. </description>
+			</program>
+
 	</channel>
 	
 	<channel category="en" imagelink="en\Discovery.jpg">
 		<name>Discovery</name>
-		<program ispodcast="true"
-			url="http://www.discovery.com/radio/xml/discovery_video.xml" 
-			imagelink="en\Discovery_video.jpg">
-			<name>Discovery Channel Video Podcasts (Podcast)</name>
-			<description> Explore your world with Discovery Channel video podcasts! </description>
-		</program>
-		
-		<program ispodcast="true"
-			url="http://www.discovery.com/radio/xml/news_video.xml" 
-			imagelink="en\Discovery_news.jpg">
-			<name>Discovery News Video Podcasts (Podcast)</name>
-			<description> Stay on top of the latest developments in science news </description>
-		</program>
-		
-		<program ispodcast="true"
-			url="http://www.discovery.com/radio/xml/DiscoverySpace.xml" 
-			imagelink="en\Discovery_space.jpg">
-			<name>Discovery Space Video Podcasts (Podcast)</name>
-			<description> Discovery Space video podcasts take you inside the world of NASA and deep into space. </description>
-		</program>
-		
-		<program ispodcast="true"
-			url="http://www.discovery.com/radio/xml/sharkweek.xml" 
-			imagelink="en\Discovery_sharkweek.jpg">
-			<name>Shark Week (Podcast)</name>
-		</program>
-		
-		<program ispodcast="true"
-			url="http://www.discovery.com/radio/xml/breastcancer.xml" 
-			imagelink="en\Discovery_health.jpg">
-			<name>Discovery Health Channel (Audio Podcast)</name>
-			<description> Discovery Health brings you the latest health news, tips on living well, and much more </description>
-		</program>
+			<program ispodcast="true"
+				url="http://www.discovery.com/radio/xml/discovery_video.xml" 
+				imagelink="en\Discovery_video.jpg">
+				<name>Discovery Channel Video Podcasts (Podcast)</name>
+				<description> Explore your world with Discovery Channel video podcasts! </description>
+			</program>
+			
+			<program ispodcast="true"
+				url="http://www.discovery.com/radio/xml/news_video.xml" 
+				imagelink="en\Discovery_news.jpg">
+				<name>Discovery News Video Podcasts (Podcast)</name>
+				<description> Stay on top of the latest developments in science news </description>
+			</program>
+			
+			<program ispodcast="true"
+				url="http://www.discovery.com/radio/xml/DiscoverySpace.xml" 
+				imagelink="en\Discovery_space.jpg">
+				<name>Discovery Space Video Podcasts (Podcast)</name>
+				<description> Discovery Space video podcasts take you inside the world of NASA and deep into space. </description>
+			</program>
+			
+			<program ispodcast="true"
+				url="http://www.discovery.com/radio/xml/sharkweek.xml" 
+				imagelink="en\Discovery_sharkweek.jpg">
+				<name>Shark Week (Podcast)</name>
+			</program>
+			
+			<program ispodcast="true"
+				url="http://www.discovery.com/radio/xml/breastcancer.xml" 
+				imagelink="en\Discovery_health.jpg">
+				<name>Discovery Health Channel (Audio Podcast)</name>
+				<description> Discovery Health brings you the latest health news, tips on living well, and much more </description>
+			</program>
+			
+
 	</channel>
 	
 	<channel category="en">
-		<name>msnbc</name>
-		<program ispodcast="true"
-			url="http://podcast.msnbc.com/audio/podcast/MSNBC-MTP-NETCAST-M4V.xml">
-			<name> Meet the Press (Podcast) </name>
-			<description> Featuring headline-making interviews with world leaders and U.S. newsmakers. Watch the complete show, updated each Sunday morning. </description>
-		</program>
-		<program ispodcast="true"
-			url="http://podcast.msnbc.com/audio/podcast/MSNBC-NN-NETCAST-M4V.xml">
-			<name> Nightly News with Brian Williams (Podcast) </name>
-			<description> The news of the day from around the globe. Watch the complete show, updated each weekday evening. </description>
-		</program>
-		<program ispodcast="true"
-			url="http://podcast.msnbc.com/audio/podcast/MSNBC-TDY-PODCAST-M4V.xml">
-			<name> TODAY (Podcast) </name>
-			<description> Reporting from NBC News and interviews with celebrities, newsmakers and more. Watch the full first hour of TODAY every weekday after 11 a.m. ET. </description>
-		</program>
-		<program ispodcast="true"
-			url="http://podcast.msnbc.com/audio/podcast/MSNBC-COUNTDOWN-NETCAST-M4V.xml">
-			<name> Countdown (Podcast) </name>
-			<description> Keith Olbermann takes a fast-paced look at the top five news stories of the day, from politics to pop culture and from the mainstream to the oddball. Watch the complete show every evening. </description>
-		</program>
-		<program ispodcast="true"
-			url="http://podcast.msnbc.com/audio/podcast/MSNBC-MADDOW-NETCAST-M4V.xml">
-			<name> Rachel Maddow (Podcast) </name>
-			<description> The Rachel Maddow Show, which airs 9 p.m. ET weeknights on MSNBC, is a smart look at politics, pop culture, and all the day's top stories. Watch the complete show every evening. </description>
-		</program>
-		<program ispodcast="true"
-			url="http://podcast.msnbc.com/audio/podcast/MSNBC-SCARBOROUGH-NETCAST-M4V.xml">
-			<name> Morning Joe (Podcast) </name>
-			<description> Wake up every morning with former Florida Congressman Joe Scarborough and the Morning Joe team, including MSNBC's Willie Geist and Mika Brzezinski. </description>
-		</program>
-		<program ispodcast="true"
-			url="http://podcast.msnbc.com/audio/podcast/pdm_zeitgeist.xml">
-			<name> ZeitGeist  (Podcast) </name>
-			<description> Host Willie Geist proudly delivers the day's most irrelevant stories. It's all the news you cannot use. </description>
-		</program>
-		<program ispodcast="true"
-			url="http://podcast.msnbc.com/audio/podcast/MSNBC-YB-NETCAST-M4V.xml">
-			<name> Your Business  (Podcast) </name>
-			<description> Host JJ Ramberg focuses on the world of America's small business entrepreneurs. A highlight from the weekly show. </description>
-		</program>
-	</channel>	
-
-	<channel category="en">
 		<name>Divers</name>
-		<program ispodcast="true"
-			url="http://www.fxguide.com/fxguidetv.rss" 
-			imagelink="en\fxguide.jpg">
-			<name> fxguidetv (Podcast) </name>
-			<description> A high definition video netcast covering the visual effects industry and software from a high-end professional vfx artists' perspective </description>
-		</program>
-		<program url="http://wwitv.com/t1/b2661.asx">
-			<name> TMF </name>
-			<description> The Music Factory. (1500K) </description>
-		</program>
 
-		<program url="http://wwitv.com/t1/b2570.asx">
-			<name> America one </name>
-			<description> General TV station. (391K) </description>
-		</program>
+			<program ispodcast="true"
+				url="http://www.fxguide.com/fxguidetv.rss" 
+				imagelink="en\fxguide.jpg">
+				<name> fxguidetv (Podcast) </name>
+				<description> A high definition video netcast covering the visual effects industry and software from a high-end professional vfx artists' perspective </description>
+			</program>
 
-		<program url="http://wwitv.com/t1/b3183.asx">
-			<name> Channel Live TV </name>
-			<description> Urban reality TV. (256K) </description>
-		</program>
-		<program url="http://wwitv.com/t1/8051.ram">
-			<name> Coffee Shop TV </name>
-			<description> LIVE shows, featuring 8 or more live bands from the coffee
-				s... (270K) </description>
-		</program>
-		<program url="http://wwitv.com/t1/b2521.asx">
-			<name> Cyber comic </name>
-			<description> Comedy channel. (512K) </description>
-		</program>
-		<program url="http://wwitv.com/t1/b3236.asx">
-			<name> Galaxy cartoons </name>
-			<description> Cartoons. (341K) </description>
-		</program>
-		<program url="http://wwitv.com/t1/b2133.asx">
-			<name> GNF </name>
-			<description> Movies and games. (273K) </description>
-		</program>
-		<program url="http://wwitv.com/t1/b3624.asx">
-			<name> GNF Music </name>
-			<description> Music Channel. (539K) </description>
-		</program>
-		<program url="http://wwitv.com/t1/7448.asx">
-			<name> Kulaks Woodshed </name>
-			<description> Live Acoustic Music Performance (Web TV only). (500K)
-				</description>
-		</program>
-		<program url="http://wwitv.com/t1/7777.asx">
-			<name> Mania TV </name>
-			<description> Pop culture, short films, talk shows. (500K)
-				</description>
-		</program>
-		<program url="http://wwitv.com/t1/b3190.asx">
-			<name> Market News </name>
-			<description> Market News. (305K) </description>
-		</program>
-		<program url="http://wwitv.com/t1/b2243.asx">
-			<name> Mezz TV </name>
-			<description> Rock Music. (100K) </description>
-		</program>
-		<program url="http://wwitv.com/t1/b2610.asx">
-			<name> MTV Uber </name>
-			<description> Populair music. (700K) </description>
-		</program>
-		<program url="http://wwitv.com/t1/8210.asx">
-			<name> Music Plus TV </name>
-			<description> A Los Angeles-based live Internet TV station that promotes
-				i... (330K) </description>
-		</program>
-		<program url="http://wwitv.com/t1/8280.asx">
-			<name> NASDAQ </name>
-			<description> Financial view from NASDAQ. (300K) </description>
-		</program>
-		<program url="http://wwitv.com/t1/b2408.asx">
-			<name> Rock Me TV </name>
-			<description> Live Performances and Interviews. (531K) </description>
-		</program>
+			<program url="http://wwitv.com/t1/b2661.asx">
+				<name> TMF </name>
+				<description> The Music Factory. (1500K) </description>
+			</program>
+
+			<program url="http://wwitv.com/t1/b2570.asx">
+				<name> America one </name>
+				<description> General TV station. (391K) </description>
+			</program>
+
+			<program url="http://wwitv.com/t1/b3183.asx">
+				<name> Channel Live TV </name>
+				<description> Urban reality TV. (256K) </description>
+			</program>
+			<program url="http://wwitv.com/t1/8051.ram">
+				<name> Coffee Shop TV </name>
+				<description> LIVE shows, featuring 8 or more live bands from the coffee
+					s... (270K) </description>
+			</program>
+			<program url="http://wwitv.com/t1/b2521.asx">
+				<name> Cyber comic </name>
+				<description> Comedy channel. (512K) </description>
+			</program>
+			<program url="http://wwitv.com/t1/b3236.asx">
+				<name> Galaxy cartoons </name>
+				<description> Cartoons. (341K) </description>
+			</program>
+			<program url="http://wwitv.com/t1/b2133.asx">
+				<name> GNF </name>
+				<description> Movies and games. (273K) </description>
+			</program>
+			<program url="http://wwitv.com/t1/b3624.asx">
+				<name> GNF Music </name>
+				<description> Music Channel. (539K) </description>
+			</program>
+			<program url="http://wwitv.com/t1/7448.asx">
+				<name> Kulaks Woodshed </name>
+				<description> Live Acoustic Music Performance (Web TV only). (500K)
+					</description>
+			</program>
+			<program url="http://wwitv.com/t1/7777.asx">
+				<name> Mania TV </name>
+				<description> Pop culture, short films, talk shows. (500K)
+					</description>
+			</program>
+			<program url="http://wwitv.com/t1/b3190.asx">
+				<name> Market News </name>
+				<description> Market News. (305K) </description>
+			</program>
+			<program url="http://wwitv.com/t1/b2243.asx">
+				<name> Mezz TV </name>
+				<description> Rock Music. (100K) </description>
+			</program>
+			<program url="http://wwitv.com/t1/b2610.asx">
+				<name> MTV Uber </name>
+				<description> Populair music. (700K) </description>
+			</program>
+			<program url="http://wwitv.com/t1/8210.asx">
+				<name> Music Plus TV </name>
+				<description> A Los Angeles-based live Internet TV station that promotes
+					i... (330K) </description>
+			</program>
+			<program url="http://wwitv.com/t1/8280.asx">
+				<name> NASDAQ </name>
+				<description> Financial view from NASDAQ. (300K) </description>
+			</program>
+			<program url="http://wwitv.com/t1/b2408.asx">
+				<name> Rock Me TV </name>
+				<description> Live Performances and Interviews. (531K) </description>
+			</program>
+
+				
 	</channel>	
 	
 	
@@ -1241,7 +1998,7 @@
 
 	<category id="pt" imagelink="dp\dp_portugal.jpg">Portugal</category>
 	<channel category="pt">
-		<name>Portuguese Radio</name>
+	 <name>Portuguese Radio</name>
 		<program imagelink="pt\antena1.jpg" 
 		url="mms://195.245.176.20/antena1?MSWMExt=.asf">
 			<name>Antena 1 [22 Kbit]</name>
@@ -1319,40 +2076,43 @@
 	<!-- ************************************************************************************* -->
 	
 
-	<category id="nl" >The Netherlands</category>
-	<channel baseurl="http://www.radioschool.fm/downloads/podcasts/" category="nl">		
-		<name>Radio</name>
-		<description>Dutch Radio Station Podcasts</description>
-		<program ispodcast="true"
-			url="http://www.radioschool.fm/downloads/podcasts/rss.xml?feed=$PR_OPTION1">
-			<name>Kink FM (Podcast)</name>
-			<prooption>
-				<descr>Programma's</descr>
-				<item value="/downloads/podcasts/kinkfm_2_meter_live/">2 Meter Live</item>
-				<item value="/downloads/podcasts/kinkfm_aardschok/">Aardschok</item>
-				<item value="/downloads/podcasts/kinkfm_arthur_albracht/">Arthur Albracht</item>
-				<item value="/downloads/podcasts/kinkfm_avondland/">Avondland</item>
-				<item value="/downloads/podcasts/kinkfm_blitzkriegpop/">Blitzkriegpop</item>
-				<item value="/downloads/podcasts/kinkfm_club_casablanca/">Club Casablanca</item>
-				<item value="/downloads/podcasts/kinkfm__black_music_specialist_/">Dr. Black Music Specialist</item>
-				<item value="/downloads/podcasts/kinkfm_droomlijst/">Droomlijst</item>
-				<item value="/downloads/podcasts/kinkfm_dutch_delight/">Dutch Delight</item>
-				<item value="/downloads/podcasts/kinkfm_electronation/">Electronation</item>
-				<item value="/downloads/podcasts/kinkfm_heavy_alternative/">Heavy Alternative</item>
-				<item value="/downloads/podcasts/kinkfm_hiphop_in_je_smoel/">Hiphop In Je Smoel</item>
-				<item value="/downloads/podcasts/kinkfm_kink_40/">KINK 40</item>
-				<item value="/downloads/podcasts/kinkfm_kink_7/">Kink 7</item>
-				<item value="/downloads/podcasts/kinkfm_longplay/">Longplay</item>
-				<item value="/downloads/podcasts/kinkfm_maestro/">Maestro</item>
-				<item value="/downloads/podcasts/kinkfm_new_music/">New Music</item>
-				<item value="/downloads/podcasts/kinkfm_oeverloos/">Oeverloos</item>
-				<item value="/downloads/podcasts/kinkfm_s_in_parties/">She's In Parties</item>
-				<item value="/downloads/podcasts/kinkfm_tegenwicht_voor_evenwicht/">Tegenwicht voor Evenwicht</item>
-				<item value="/downloads/podcasts/kinkfm_walk_the_line/">Walk The Line</item>
-				<item value="/downloads/podcasts/kinkfm_rated_/">X-Rated</item>
-			</prooption>
-		</program>
-	</channel>
+<category id="nl" >The Netherlands</category>
+
+<channel baseurl="http://www.radioschool.fm/downloads/podcasts/" 
+category="nl">
+
+<name>Radio</name>
+<description>Dutch Radio Station Podcasts</description>
+<program ispodcast="true"
+url="http://www.radioschool.fm/downloads/podcasts/rss.xml?feed=$PR_OPTION1">
+<name>Kink FM (Podcast)</name>
+<prooption>
+<descr>Programma's</descr>
+<item value="/downloads/podcasts/kinkfm_2_meter_live/">2 Meter Live</item>
+<item value="/downloads/podcasts/kinkfm_aardschok/">Aardschok</item>
+<item value="/downloads/podcasts/kinkfm_arthur_albracht/">Arthur Albracht</item>
+<item value="/downloads/podcasts/kinkfm_avondland/">Avondland</item>
+<item value="/downloads/podcasts/kinkfm_blitzkriegpop/">Blitzkriegpop</item>
+<item value="/downloads/podcasts/kinkfm_club_casablanca/">Club Casablanca</item>
+<item value="/downloads/podcasts/kinkfm__black_music_specialist_/">Dr. Black Music Specialist</item>
+<item value="/downloads/podcasts/kinkfm_droomlijst/">Droomlijst</item>
+<item value="/downloads/podcasts/kinkfm_dutch_delight/">Dutch Delight</item>
+<item value="/downloads/podcasts/kinkfm_electronation/">Electronation</item>
+<item value="/downloads/podcasts/kinkfm_heavy_alternative/">Heavy Alternative</item>
+<item value="/downloads/podcasts/kinkfm_hiphop_in_je_smoel/">Hiphop In Je Smoel</item>
+<item value="/downloads/podcasts/kinkfm_kink_40/">KINK 40</item>
+<item value="/downloads/podcasts/kinkfm_kink_7/">Kink 7</item>
+<item value="/downloads/podcasts/kinkfm_longplay/">Longplay</item>
+<item value="/downloads/podcasts/kinkfm_maestro/">Maestro</item>
+<item value="/downloads/podcasts/kinkfm_new_music/">New Music</item>
+<item value="/downloads/podcasts/kinkfm_oeverloos/">Oeverloos</item>
+<item value="/downloads/podcasts/kinkfm_s_in_parties/">She's In Parties</item>
+<item value="/downloads/podcasts/kinkfm_tegenwicht_voor_evenwicht/">Tegenwicht voor Evenwicht</item>
+<item value="/downloads/podcasts/kinkfm_walk_the_line/">Walk The Line</item>
+<item value="/downloads/podcasts/kinkfm_rated_/">X-Rated</item>
+</prooption>
+</program>
+</channel>
 
 	<!-- ************************************************************************************* -->
 	<category id="div">Divers</category>
@@ -1360,6 +2120,7 @@
 		
 	<channel category="div_pod">
 		<name>Info</name>
+
 		<program ispodcast="true"
 			url="http://downloads.bbc.co.uk/rmhttp/downloadtrial/bbc2/newsnightvideopodcast/rss.xml">
 			<name>newsnightvideopodcast</name>
@@ -1367,7 +2128,8 @@
 		<program ispodcast="true"
 			url="http://downloads.bbc.co.uk/rmhttp/downloadtrial/bbc1/tenoclocknews/rss.xml">
 			<name>tenoclocknews</name>
-		</program>				
+		</program>
+				
 	</channel>
 			
 	<channel category="div_pod">
@@ -1395,38 +2157,12 @@
 		
 		<program ispodcast="true" url="http://feeds.feedburner.com/Emobpodcast">
 			<name>Le Podcast d'emob</name>
-		</program>		
+		</program>
+		
 	</channel>
 	
 	<channel category="div_pod">
 		<name>Music</name>
-		<program ispodcast="true"
-			url="http:/www.rss-one.com/rss-7374-MANU-CHAO">
-			<name>Manu Chao</name>
-		</program>
-	
-		<program ispodcast="true"
-			url="http://www.labels.tm.fr/fr/podcast/labels.xml">
-			<name>labels</name>
-		</program>
-		<program ispodcast="true" url="http://feeds.feedburner.com/noisepodvideo">
-			<name>noisepodvideo</name>
-		</program>
-		<program ispodcast="true" url="http://feeds.feedburner.com/rockmuzic">
-			<name>rockmuzic</name>
-		</program>
-		<program ispodcast="true"
-			url="http://radiofrance-podcast.net/podcast/rss_10255.xml">
-			<name>Lemouv1</name>
-		</program>
-		<program ispodcast="true"
-			url="http://radiofrance-podcast.net/podcast/rss_10263.xml">
-			<name>Lemouv2</name>
-		</program>
-		<program ispodcast="true"
-			url="http://radiofrance-podcast.net/podcast/rss_10252.xml">
-			<name>Lemouv3</name>
-		</program>
 	</channel>
 	
 	

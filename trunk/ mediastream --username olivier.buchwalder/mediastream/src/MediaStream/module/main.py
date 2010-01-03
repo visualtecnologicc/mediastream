@@ -251,6 +251,7 @@ class Program:
                 fullURL = fullURL.replace('$YEAR2', aDate.strftime('%y'))
                 fullURL = fullURL.replace('$YEAR4', aDate.strftime('%Y'))
                 fullURL = fullURL.replace('$YEAR', aDate.strftime('%Y'))
+                fullURL = fullURL.replace('$WEEK', aDate.strftime('%V'))
             
             return fullURL
 
